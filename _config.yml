@@ -1,1 +1,29 @@
+title: DevOps Jeremy
+author:
+  name: Jeremy
+  email: DevOpsJeremy@gmail.com
+
+description: >
+  Welcome to my site!
+
+url: "https://DevOpsJeremy.github.io"
+
+markdown: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+header_pages:
+  - posts/index.md
+  - documentation/index.md
+  - about.md
+
 theme: minima
+minima:
+  social_links:
+    - platform: github
+      user_url: "https://github.com/DevOpsJeremy"
+    - platform: linkedin
+      user_url: "https://www.linkedin.com/in/jeremiah-watkins"
+    - platform: twitter
+      user_url: "https://twitter.com/DevOpsJeremy"
