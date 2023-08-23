@@ -10,6 +10,7 @@
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
+    font-size: large;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
