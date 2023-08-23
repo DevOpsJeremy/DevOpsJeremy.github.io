@@ -93,14 +93,7 @@
 }
 */
 
-.post-list {
-    a {
-        color: $text-color;
-    }
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 
 // Click version
 .toc-dropdown {
@@ -179,6 +172,34 @@
             &:hover, :focus {
                 text-decoration: underline;
             }
+        }
+    }
+
+    @media screen and (min-width: $on-medium) {
+        float: left;
+        position: sticky;
+        width: 200px;
+        left: 0px;
+        top: 0px;
+        scroll-behavior: smooth;
+        height: 500px;
+        white-space: nowrap;
+        line-height: 5px;
+        display: block;
+        margin: 10px;
+        overflow: hidden;
+
+        &:hover {
+            overflow: auto
+        }
+
+        .post-list {
+            a {
+                color: $text-color;
+            }
+        
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     }
 }
