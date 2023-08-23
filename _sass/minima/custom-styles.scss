@@ -105,75 +105,72 @@
 // Click version
 .toc-dropdown {
     position: relative;
-    display: inline-block;
     float: left;
-}
 
-.toc-dropdown > input[type="checkbox"] {
-    position: absolute;
-    left: -100vw;
-}
+    input[type="checkbox"] {
+        position: absolute;
+        left: -100vw;
 
-.toc-dropdown > label {
-    display: inline-block;
-    padding: 6px 15px;
-    color: #333;
-    line-height: 1.5em;
-    text-decoration: none;
-    border: 1px solid #8c8c8c;
-    cursor: pointer;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
+        :checked  ~ ul {
+            left: 0;
+        }
 
-.toc-dropdown > label:hover {
-    border-color: #333;
-}
+        :checked + label:after {
+            content: "\f0d8";
+        }
+    }
 
-.toc-dropdown > label:after {
-    content: "\f0d7";
-    font-family: FontAwesome;
-    display: inline-block;
-    margin-left: 6px;
-}
+    label {
+        display: inline-block;
+        padding: 6px 15px;
+        color: inherit;
+        line-height: 1.5em;
+        text-decoration: none;
+        border: 1px solid $border-color-01;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
 
-.toc-dropdown > ul {
-    position: absolute;
-    z-index: 999;
-    display: block;
-    left: -100vw;
-    top: calc(1.5em + 14px);
-    border: 1px solid #8c8c8c;
-    background: #fff;
-    padding: 6px 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);
-    -moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);
-    box-shadow: 0 3px 8px rgba(0,0,0,.15);
-}
+        &:hover {
+            border-color: $border-color-02;
+        }
 
-.toc-dropdown > ul a {
-    display: block;
-    padding: 6px 15px;
-    text-decoration: none;
-    color: #333;
-}
+        ::after {
+            content: "\f0d7";
+            font-family: FontAwesome;
+            display: inline-block;
+            margin-left: 6px;
+        }
+    }
 
-.toc-dropdown > ul a:hover,
-.toc-dropdown > ul a:focus {
-background: #ececec;
-}
+    ul {
+        position: absolute;
+        z-index: 999;
+        display: block;
+        left: -100vw;
+        top: calc(1.5em + 14px);
+        border: 1px solid $border-color-01;
+        background: inherit;
+        padding: 6px 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+        -moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+        box-shadow: 0 3px 8px rgba(0,0,0,.15);
 
-.toc-dropdown > input[type="checkbox"]:checked ~ ul {
-    left: 0;
-}
+        a {
+            display: block;
+            padding: 6px 15px;
+            text-decoration: none;
+            color: $border-color-01;
 
-.toc-dropdown > [type="checkbox"]:checked + label:after {
-    content: "\f0d8";
+            &:hover, :focus {
+                background: $border-color-02;
+            }
+        }
+    }
 }
