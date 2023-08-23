@@ -1,2 +1,15 @@
-// Placeholder to allow defining custom styles that override everything else.
-// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+---
+---
+
+.doc-page-link {
+    color: pink;
+    line-height: $base-line-height;
+    display: block;
+    padding: 5px 10px;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+        margin-right: 0;
+    }
+    margin-left: 20px;
+}
