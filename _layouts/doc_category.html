@@ -6,7 +6,7 @@ layout: doc_base
     | where_exp:"item", "item.category contains 'documentation'"
     | where_exp:"item", "item.category contains lower_title" %}
 {%- if pages.size > 0 -%}
-<div class="TOC">
+<div class="TOC toc-dropdown">
     <!--
     <input type="checkbox" id="toc-trigger" class="toc-trigger" />
     <label for="toc-trigger">
@@ -17,8 +17,9 @@ layout: doc_base
         </span>
     </label>
     -->
+    <button class="dropbtn">Reference</button>
 
-    <ul class="post-list trigger">
+    <ul class="post-list toc-dropdown-list">
         {% for indvpage in pages | sort title %}
         <li><a href="{{ indvpage.url | absolute_url }}">{{ indvpage.title }}</a></li>
         {%- endfor %}
