@@ -47,56 +47,8 @@
     text-decoration: underline;
 }
 
+/*
 .TOC {
-    /*
-    position: absolute;
-    top: 9px;
-    left: $spacing-unit * .5;
-    background-color: $background-color;
-    border: 1px solid $border-color-01;
-    border-radius: 5px;
-    text-align: left;
-    overflow: hidden;
-
-    &:hover {
-        overflow: auto
-    }
-
-    .toc-trigger {
-        display: none;
-    }
-
-    .menu-icon {
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center;
-
-        > svg path {
-            fill: $border-color-03;
-        }
-    }
-
-    label[for="toc-trigger"] {
-        display: block;
-        float: left;
-        width: 36px;
-        height: 36px;
-        z-index: 2;
-        cursor: pointer;
-    }
-
-    input ~ .trigger {
-        clear: both;
-        display: none;
-    }
-
-    input:checked ~ .trigger {
-        display: block;
-        padding-bottom: 5px;
-    }*/
     position: absolute;
     display: inline-block;
 
@@ -107,8 +59,6 @@
     .dropbtn {
         background-color: inherit;
         color: $text-color;
-        /*padding: 16px;
-        font-size: 16px;*/
         border: 1px solid $border-color-01;
     }
 
@@ -121,7 +71,7 @@
         z-index: 1;
     }
 
-    /*@media screen and (min-width: $on-medium) {
+    @media screen and (min-width: $on-medium) {
         float: left;
         position: sticky;
         width: 200px;
@@ -138,8 +88,9 @@
         &:hover {
             overflow: auto
         }
-    }*/
+    }
 }
+*/
 
 .post-list {
     a {
@@ -150,12 +101,76 @@
     padding-bottom: 10px;
 }
 
+.toc-dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+.toc-dropdown > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+}
+
+.toc-dropdown > label {
+    display: inline-block;
+    padding: 6px 15px;
+    color: #333;
+    line-height: 1.5em;
+    text-decoration: none;
+    border: 1px solid #8c8c8c;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.toc-dropdown > label:hover {
+    border-color: #333;
+}
+
+.toc-dropdown > label:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.toc-dropdown > ul {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    left: -100vw;
+    top: calc(1.5em + 14px);
+    border: 1px solid #8c8c8c;
+    background: #fff;
+    padding: 6px 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+}
+
+.toc-dropdown > ul a {
+    display: block;
+    padding: 6px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.toc-dropdown > ul a:hover,
+.toc-dropdown > ul a:focus {
+background: #ececec;
+}
+
+.toc-dropdown > input[type="checkbox"]:checked ~ ul {
+    left: 0;
+}
+
+.toc-dropdown > [type="checkbox"]:checked + label:after {
+    content: "\f0d8";
+}

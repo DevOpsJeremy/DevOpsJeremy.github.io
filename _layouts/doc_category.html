@@ -16,8 +16,13 @@ layout: doc_base
             </svg>
         </span>
     </label>
-    -->
     <button class="dropbtn">Reference</button>
+    -->
+    <input type="checkbox" id="toc-dropdown-check" value="" name="toc-checkbox">
+    <label for="toc-dropdown-check" data-toggle="dropdown">
+        Reference
+    </label>
+
 
     <ul class="post-list toc-dropdown-list">
         {% for indvpage in pages | sort title %}
@@ -29,3 +34,17 @@ layout: doc_base
 <section class="doc-page">
 {{ content }}
 </section>
+
+
+<div class="dropdown">
+    <input type="checkbox" id="my-dropdown" value="" name="my-checkbox">
+    <label for="my-dropdown"
+       data-toggle="dropdown">
+    Choose one
+    </label>
+    <ul>
+      <li><a href="#">Coffee</a></li>
+      <li><a href="#">Coverage</a></li>
+      <li><a href="https://twitter.com/hashtag/covfefe">Covfefe</a></li>
+    </ul>
+  </div>
