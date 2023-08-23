@@ -48,6 +48,29 @@
 }
 
 .TOC {
+    width: auto;
+    white-space: nowrap;
+    z-index: 1000;
+    background-color: inherit;
+    border: 1px solid $border-color-01;
+    position: absolute;
+    top: 100%;
+
+    .dropdown-button {
+        width: 100%;
+        border-width: 1px;
+        border-color: $border-color-01;
+        background-color: inherit;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.125rem;
+        justify-content: center;
+        padding-block: calc(0.375em - 1px);
+        padding-inline: 0.75em;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
     @media screen and (min-width: $on-medium) {
         float: left;
         position: sticky;

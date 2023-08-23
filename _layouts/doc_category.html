@@ -7,11 +7,12 @@ layout: doc_base
     | where_exp:"item", "item.category contains lower_title" %}
 {%- if pages.size > 0 -%}
 <div class="TOC">
-<ul class="post-list">
-{% for indvpage in pages | sort title %}
-<li><a href="{{ indvpage.url | absolute_url }}">{{ indvpage.title }}</a></li>
-{%- endfor %}
-</ul>
+    <button class="dropdown-button">Reference</button>
+    <ul class="post-list">
+        {% for indvpage in pages | sort title %}
+        <li><a href="{{ indvpage.url | absolute_url }}">{{ indvpage.title }}</a></li>
+        {%- endfor %}
+    </ul>
 </div>
 {%- endif -%}
 <section class="doc-page">
