@@ -112,11 +112,11 @@
         position: absolute;
         left: -100vw;
 
-        :checked  ~ ul {
+        &:checked  ~ ul {
             left: 0;
         }
 
-        :checked + label:after {
+        &:checked + label:after {
             content: "\f0d8";
         }
     }
