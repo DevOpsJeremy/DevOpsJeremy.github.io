@@ -97,7 +97,7 @@
         display: block;
         padding-bottom: 5px;
     }*/
-    position: relative;
+    position: absolute;
     display: inline-block;
 
     &:hover .toc-dropdown-list {
@@ -105,17 +105,17 @@
     }
 
     .dropbtn {
-        background-color: #04AA6D;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
+        background-color: inherit;
+        color: $text-color;
+        /*padding: 16px;
+        font-size: 16px;*/
+        border: 1px solid $border-color-01;
     }
 
     .toc-dropdown-list {
         display: none;
         position: absolute;
-        background-color: #f1f1f1;
+        background-color: inherit;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
