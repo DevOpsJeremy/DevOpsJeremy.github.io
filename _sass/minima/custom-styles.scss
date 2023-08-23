@@ -36,3 +36,15 @@
 .underline-text {
     text-decoration: underline;
 }
+
+.TOC {
+    float: left;
+    position: sticky;
+    width: 300px;
+    left: 0px;
+    top: 0px;
+    scroll-behavior: smooth;
+    height: 1000px;
+    overflow-y: scroll;
+    white-space: nowrap;
+}

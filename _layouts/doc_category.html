@@ -13,7 +13,7 @@ layout: doc_base
     | where_exp:"item", "item.category contains lower_title" %}
 {%- if pages.size > 0 -%}
 <h2>Reference</h2>
-<ul class="post-list">
+<ul class="post-list TOC">
 {% for indvpage in pages | sort title %}
 <li><a href="{{ indvpage.url | absolute_url }}">{{ indvpage.title }}</a></li>
 {%- endfor %}
