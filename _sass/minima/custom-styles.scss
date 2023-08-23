@@ -136,7 +136,7 @@
             border-color: $border-color-02;
         }
 
-        ::after {
+        &:after {
             content: "\f0d7";
             font-family: FontAwesome;
             display: inline-block;
