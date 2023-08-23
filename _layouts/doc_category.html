@@ -6,7 +6,6 @@ layout: doc_base
     | where_exp:"item", "item.category contains 'documentation'"
     | where_exp:"item", "item.category contains lower_title" %}
 {%- if pages.size > 0 -%}
-<h2>Reference</h2>
 <div class="TOC">
 <ul class="post-list">
 {% for indvpage in pages | sort title %}
