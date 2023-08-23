@@ -11,8 +11,8 @@
       <nav class="doc-nav">
         {%- for cat in categories-%}
         {%- if cat.title -%}
-        {%- if cat.url == page.url -%}
-        <a class="doc-page-link underline-text" href="{{ cat.url | relative_url }}">{{ cat.title | escape }}</a>
+        {%- if page.url contains cat.url -%}
+        <a class="doc-page-link current-doc-cat" href="{{ cat.url | relative_url }}">{{ cat.title | escape }}</a>
         {%- else -%}
         <a class="doc-page-link" href="{{ cat.url | relative_url }}">{{ cat.title | escape }}</a>
         {%- endif -%}
