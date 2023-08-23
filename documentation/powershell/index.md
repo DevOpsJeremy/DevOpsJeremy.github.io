@@ -1,6 +1,6 @@
 ---
 title: PowerShell
 description: PowerShell Documentation
-layout: doc_category
+layout: documentation
 category: doc_category
 ---
