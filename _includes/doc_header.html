@@ -12,7 +12,7 @@
         {%- for cat in categories-%}
         {%- if cat.title -%}
         {%- if cat.url == page.url -%}
-        <a class="doc-page-link bold-text" href="{{ cat.url | relative_url }}">{{ cat.title | escape }}</a>
+        <a class="doc-page-link underline-text" href="{{ cat.url | relative_url }}">{{ cat.title | escape }}</a>
         {%- else -%}
         <a class="doc-page-link" href="{{ cat.url | relative_url }}">{{ cat.title | escape }}</a>
         {%- endif -%}
