@@ -162,6 +162,12 @@
         -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);
         -moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);
         box-shadow: 0 3px 8px rgba(0,0,0,.15);
+        
+        overflow: hidden;
+
+        &:hover {
+            overflow: auto
+        }
 
         a {
             display: block;
