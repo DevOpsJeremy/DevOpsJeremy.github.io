@@ -97,9 +97,6 @@
         display: block;
         padding-bottom: 5px;
     }*/
-    a {
-        color: $text-color;
-    }
     
     @media screen and (min-width: $on-medium) {
         float: left;
@@ -122,6 +119,10 @@
 }
 
 .post-list {
+    a {
+        color: $text-color;
+    }
+    
     padding-top: 10px;
     padding-bottom: 10px;
 }
