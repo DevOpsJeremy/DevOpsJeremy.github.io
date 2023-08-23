@@ -55,11 +55,15 @@
     top: 0px;
     scroll-behavior: smooth;
     height: 500px;
-    overflow: auto;
     white-space: nowrap;
     line-height: 5px;
     display: block;
     margin: 10px;
+    overflow: hidden;
+
+    &:hover {
+        overflow: auto
+    }
 }
 
 .post-list {
