@@ -48,27 +48,53 @@
 }
 
 .TOC {
-    width: auto;
-    white-space: nowrap;
-    z-index: 1000;
-    background-color: inherit;
-    border: 1px solid $border-color-01;
     position: absolute;
-    top: 100%;
+    top: 9px;
+    left: $spacing-unit * .5;
+    background-color: $background-color;
+    border: 1px solid $border-color-01;
+    border-radius: 5px;
+    text-align: left;
+    overflow: hidden;
 
-    .dropdown-button {
-        width: 100%;
-        border-width: 1px;
-        border-color: $border-color-01;
-        background-color: inherit;
+    &:hover {
+        overflow: auto
+    }
+
+    .toc-trigger {
+        display: none;
+    }
+
+    .menu-icon {
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 10px;
         text-align: center;
+
+        > svg path {
+            fill: $border-color-03;
+        }
+    }
+
+    label[for="toc-trigger"] {
+        display: block;
+        float: left;
+        width: 36px;
+        height: 36px;
+        z-index: 2;
         cursor: pointer;
-        border-radius: 0.125rem;
-        justify-content: center;
-        padding-block: calc(0.375em - 1px);
-        padding-inline: 0.75em;
-        font-weight: 600;
-        text-decoration: none;
+    }
+
+    input ~ .trigger {
+        clear: both;
+        display: none;
+    }
+
+    input:checked ~ .trigger {
+        display: block;
+        padding-bottom: 5px;
     }
 
     @media screen and (min-width: $on-medium) {
