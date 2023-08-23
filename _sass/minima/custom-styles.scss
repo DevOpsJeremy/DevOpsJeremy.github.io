@@ -97,7 +97,10 @@
         display: block;
         padding-bottom: 5px;
     }*/
-
+    a {
+        color: $text-color;
+    }
+    
     @media screen and (min-width: $on-medium) {
         float: left;
         position: sticky;
