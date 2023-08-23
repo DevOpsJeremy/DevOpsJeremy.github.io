@@ -1,22 +1,20 @@
 ---
 layout: doc_base
 ---
-{%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-{%- endif -%}
-{%- if page.description -%}
-  <p>{{ page.description }}</p>
-{%- endif -%}
 {% assign lower_title = page.title | downcase %}
 {% assign pages = site.pages
     | where_exp:"item", "item.category contains 'documentation'"
     | where_exp:"item", "item.category contains lower_title" %}
 {%- if pages.size > 0 -%}
 <h2>Reference</h2>
-<ul class="post-list TOC">
+<div class="TOC">
+<ul class="post-list">
 {% for indvpage in pages | sort title %}
 <li><a href="{{ indvpage.url | absolute_url }}">{{ indvpage.title }}</a></li>
 {%- endfor %}
 </ul>
+</div>
 {%- endif -%}
+<section class="doc-page">
 {{ content }}
+</section>
