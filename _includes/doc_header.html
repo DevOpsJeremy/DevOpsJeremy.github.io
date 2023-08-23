@@ -1,0 +1,20 @@
+<header class="doc-header">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign categories = site.pages
+      | where_exp:"item", "item.category contains 'doc_category'"
+      | sort: 'title' -%}
+    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+    {%- if titles_size > 0 -%}
+      <nav class="doc-nav">
+        {%- for cat in categories-%}
+        {%- if cat.title -%}
+        <a class="doc-page-link" href="{{ cat.url | relative_url }}">{{ cat.title | escape }}</a>
+        {%- endif -%}
+        {%- endfor -%}
+      </nav>
+    {%- endif -%}
+  </div>
+</header>
