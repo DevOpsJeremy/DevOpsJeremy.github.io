@@ -151,7 +151,7 @@
         left: -100vw;
         top: calc(1.5em + 14px);
         border: 1px solid $border-color-01;
-        background: inherit;
+        background: $code-background-color;
         padding: 6px 0;
         margin: 0;
         list-style: none;
@@ -170,7 +170,7 @@
             color: $border-color-01;
 
             &:hover, :focus {
-                background: $border-color-02;
+                text-decoration: underline;
             }
         }
     }
