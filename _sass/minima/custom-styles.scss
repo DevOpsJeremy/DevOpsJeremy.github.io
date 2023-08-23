@@ -48,21 +48,23 @@
 }
 
 .TOC {
-    float: left;
-    position: sticky;
-    width: 200px;
-    left: 0px;
-    top: 0px;
-    scroll-behavior: smooth;
-    height: 500px;
-    white-space: nowrap;
-    line-height: 5px;
-    display: block;
-    margin: 10px;
-    overflow: hidden;
+    @media screen and (min-width: $on-medium) {
+        float: left;
+        position: sticky;
+        width: 200px;
+        left: 0px;
+        top: 0px;
+        scroll-behavior: smooth;
+        height: 500px;
+        white-space: nowrap;
+        line-height: 5px;
+        display: block;
+        margin: 10px;
+        overflow: hidden;
 
-    &:hover {
-        overflow: auto
+        &:hover {
+            overflow: auto
+        }
     }
 }
 
