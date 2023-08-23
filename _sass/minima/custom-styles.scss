@@ -121,7 +121,7 @@
         z-index: 1;
     }
 
-    @media screen and (min-width: $on-medium) {
+    /*@media screen and (min-width: $on-medium) {
         float: left;
         position: sticky;
         width: 200px;
@@ -138,7 +138,7 @@
         &:hover {
             overflow: auto
         }
-    }
+    }*/
 }
 
 .post-list {
