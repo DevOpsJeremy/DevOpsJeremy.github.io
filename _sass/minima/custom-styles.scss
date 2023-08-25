@@ -32,13 +32,13 @@
 
 .doc-page {
     display: block;
-    max-width: 66.6666%;
+    max-width: 100%;
     float: left;
     margin: 10px;
 
-    @media screen and (min-width: $on-medium) {
+    /*@media screen and (min-width: $on-medium) {
         max-width: 100%;
-    }
+    }*/
 }
 
 .wrapper-border {
