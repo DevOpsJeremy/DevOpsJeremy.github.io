@@ -37,9 +37,9 @@
     margin: 10px;
     max-width: 100%;
 
-    /*@media screen and (min-width: $on-medium) {
-        max-width: 100%;
-    }*/
+    @media screen and (min-width: $on-medium) {
+        min-width: 66.6666%;
+    }
 }
 
 .wrapper-border {
