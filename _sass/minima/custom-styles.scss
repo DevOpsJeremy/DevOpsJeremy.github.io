@@ -191,24 +191,24 @@
             display: none;
         }
 
-        float: left;
-        position: sticky;
-        width: 200px;
-        left: 0px;
-        top: 0px;
-        scroll-behavior: smooth;
-        height: 500px;
-        white-space: nowrap;
-        line-height: 5px;
-        display: block;
-        margin: 10px;
-        overflow: hidden;
 
         &:hover {
             overflow: auto
         }
 
         .post-list {
+            float: left;
+            position: sticky;
+            width: 200px;
+            left: 0px;
+            top: 0px;
+            scroll-behavior: smooth;
+            height: 500px;
+            white-space: nowrap;
+            line-height: 5px;
+            display: block;
+            margin: 10px;
+            overflow: hidden;
             a {
                 color: $text-color;
             }
