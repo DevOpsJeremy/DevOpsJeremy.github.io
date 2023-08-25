@@ -176,6 +176,13 @@
     }
 
     @media screen and (min-width: $on-medium) {
+        button {
+            display: none;
+        }
+        input {
+            display: none;
+        }
+        
         float: left;
         position: sticky;
         width: 200px;
