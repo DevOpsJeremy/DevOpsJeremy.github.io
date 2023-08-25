@@ -192,9 +192,6 @@
         }
 
 
-        &:hover {
-            overflow: auto
-        }
 
         .post-list {
             float: left;
@@ -209,6 +206,12 @@
             display: block;
             margin: 10px;
             overflow: hidden;
+            overflow-x: hidden;
+
+            &:hover {
+                overflow: auto
+            }
+
             a {
                 color: $text-color;
             }
