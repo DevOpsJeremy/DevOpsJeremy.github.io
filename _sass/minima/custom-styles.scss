@@ -137,7 +137,7 @@
         }
     }
 
-    ul {
+    .post-list {
         position: absolute;
         z-index: 999;
         display: block;
@@ -176,13 +176,13 @@
     }
 
     @media screen and (min-width: $on-medium) {
-        button {
+        label {
             display: none;
         }
         input {
             display: none;
         }
-        
+
         float: left;
         position: sticky;
         width: 200px;
