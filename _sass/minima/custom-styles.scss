@@ -97,7 +97,6 @@
 
 // Click version
 .toc-dropdown {
-/*
     position: relative;
     float: left;
     width: 200px;
@@ -175,8 +174,8 @@
             }
         }
     }
-*/
-   // @media screen and (min-width: $on-medium) {
+
+    @media screen and (min-width: $on-medium) {
         float: left;
         position: sticky;
         width: 200px;
@@ -202,6 +201,6 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
-    //}
+    }
 }
 
