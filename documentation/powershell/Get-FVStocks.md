@@ -4,28 +4,31 @@ category:
   - powershell
   - documentation
 ---
-# Set-FVFilters
+# Get-FVStocks
 ## Syntax
 ```powershell
-Set-FVFilters
-    -FinVizFilter <Object>
-    -Filter <Object>
-    -Value <Object>
+Get-FVStocks
+    [-URL <string>]
+    [-FormatCurrency]
+    [-WhatIf]
+    [-Confirm]
 ```
 ```powershell
-Set-FVFilters
-    -FinVizFilter <Object>
-    -Hashtable <hashtable>
+Get-FVStocks
+    [-FinVizFilter <Object>]
+    [-FormatCurrency]
+    [-WhatIf]
+    [-Confirm]
 ```
 ## Description
 
 ## Examples
 ## Parameters
-### **-Filter**
+### **-Confirm**
 | Attribute | Value |
 | --- | --- |
-| Type | Object |
-| Aliases | None |
+| Type | switch |
+| Aliases | cf |
 | Position | Named |
 | Default value | None |
 | Accept pipeline input | False |
@@ -36,26 +39,35 @@ Set-FVFilters
 | Aliases | None |
 | Position | Named |
 | Default value | None |
-| Accept pipeline input | True |
-### **-Hashtable**
+| Accept pipeline input | False |
+### **-FormatCurrency**
 | Attribute | Value |
 | --- | --- |
-| Type | hashtable |
+| Type | switch |
 | Aliases | None |
 | Position | Named |
 | Default value | None |
 | Accept pipeline input | False |
-### **-Value**
+### **-URL**
 | Attribute | Value |
 | --- | --- |
-| Type | Object |
+| Type | string |
 | Aliases | None |
+| Position | Named |
+| Default value | None |
+| Accept pipeline input | True |
+### **-WhatIf**
+| Attribute | Value |
+| --- | --- |
+| Type | switch |
+| Aliases | wi |
 | Position | Named |
 | Default value | None |
 | Accept pipeline input | False |
 ## Inputs
+#### [**String**](https://learn.microsoft.com/en-us/dotnet/api/System.String)
+#### [**Switch**](https://learn.microsoft.com/en-us/dotnet/api/System.Diagnostics.Switch)
 #### [**Object**](https://learn.microsoft.com/en-us/dotnet/api/System.Object)
-#### [**Hashtable**](https://learn.microsoft.com/en-us/dotnet/api/System.Collections.Hashtable)
 ## Outputs
 #### **None**
 ## Notes

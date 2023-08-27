@@ -1,3 +1,9 @@
+---
+layout: documentation
+category:
+  - powershell
+  - documentation
+---
 # New-Documentation
 ## Syntax
 ```powershell
