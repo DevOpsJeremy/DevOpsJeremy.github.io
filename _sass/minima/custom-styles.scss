@@ -52,55 +52,6 @@
     text-decoration: underline;
 }
 
-/*
-// Hover-over version
-.TOC {
-    position: absolute;
-    display: inline-block;
-
-    &:hover .toc-dropdown-list {
-        display: block;
-    }
-
-    .dropbtn {
-        background-color: inherit;
-        color: $text-color;
-        border: 1px solid $border-color-01;
-    }
-
-    .toc-dropdown-list {
-        display: none;
-        position: absolute;
-        background-color: inherit;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    @media screen and (min-width: $on-medium) {
-        float: left;
-        position: sticky;
-        width: 200px;
-        left: 0px;
-        top: 0px;
-        scroll-behavior: smooth;
-        height: 500px;
-        white-space: nowrap;
-        line-height: 5px;
-        display: block;
-        margin: 10px;
-        overflow: hidden;
-
-        &:hover {
-            overflow: auto
-        }
-    }
-}
-*/
-
-
-
-// Click version
 .toc-dropdown {
     position: relative;
     float: left;
@@ -191,8 +142,6 @@
         button {
             display: none;
         }
-
-
 
         .post-list {
             float: left;
