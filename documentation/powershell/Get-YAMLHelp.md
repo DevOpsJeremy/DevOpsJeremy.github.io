@@ -1,5 +1,8 @@
 ---
 layout: documentation
+module:
+  - name: Documentation
+    path: https://github.com/DevOpsJeremy/Documentation
 category:
   - powershell
   - documentation
