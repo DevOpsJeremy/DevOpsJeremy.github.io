@@ -1,5 +1,8 @@
 ---
 layout: documentation
+module:
+  - name: FinViz
+    path: https://github.com/DevOpsJeremy/FinViz
 category:
   - powershell
   - documentation

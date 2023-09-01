@@ -1,5 +1,8 @@
 ---
 layout: documentation
+module:
+  - name: ConvertTo-Module
+    path: https://github.com/DevOpsJeremy/ConvertTo-Module
 category:
   - powershell
   - documentation
