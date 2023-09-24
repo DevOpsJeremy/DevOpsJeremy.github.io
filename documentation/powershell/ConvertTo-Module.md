@@ -11,7 +11,7 @@ category:
 ## Syntax
 ```powershell
 ConvertTo-Module
-    [-Source] <FileInfo>
+    [-Source] <String>
     [-RequiredAssemblies <String[]>]
     [-FileList <String[]>]
     [-ModuleList <Object[]>]
@@ -33,7 +33,7 @@ ConvertTo-Module
     [-TypesToProcess <String[]>]
     [-RequiredModules <Object[]>]
     [-Name <String>]
-    [-Destination <DirectoryInfo>]
+    [-Destination <String>]
     [-PrivateFunctions <String[]>]
     [-CompatiblePSEditions <String[]>]
     [-NestedModules <Object[]>]
@@ -60,7 +60,6 @@ The directory structure is as follows:
         private\
             functions\
                 <Private Function Files (`.ps1`)>
-            Assemblies.ps1
             Types.ps1
         public\
             functions\
@@ -86,7 +85,7 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 
 | Attribute | Value |
 | --- | --- |
-| Type | FileInfo |
+| Type | String |
 | Position | 1 |
 | Default value | None |
 | Accept pipeline input | False |
@@ -306,7 +305,7 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 
 | Attribute | Value |
 | --- | --- |
-| Type | DirectoryInfo |
+| Type | String |
 | Position | named |
 | Default value | $PWD.Path |
 | Accept pipeline input | False |
@@ -484,9 +483,7 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Default value | None |
 | Accept pipeline input | False |
 ## Inputs
-#### [**FileInfo**](https://learn.microsoft.com/en-us/dotnet/api/System.IO.FileInfo)
 #### [**String**](https://learn.microsoft.com/en-us/dotnet/api/System.String)
-#### [**DirectoryInfo**](https://learn.microsoft.com/en-us/dotnet/api/System.IO.DirectoryInfo)
 #### [**String[]**](https://learn.microsoft.com/en-us/dotnet/api/System.String)
 #### [**Object[]**](https://learn.microsoft.com/en-us/dotnet/api/System.Object)
 #### [**Guid**](https://learn.microsoft.com/en-us/dotnet/api/System.Guid)
@@ -497,32 +494,8 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 ## Outputs
 #### **None**
 ## Notes
-Script: ConvertTo-Module.ps1
-
-CANES Subsystem: AIR
-
-\-------------------------------------------------
-
-DEPENDENCIES
-
-N/A
-
-CALLED BY
-
-Stand alone
-
-\-------------------------------------------------
-
-History:
-
-Ver         Date         Modifications
-
-\-------------------------------------------------
-
-1.0.0.0     07/27/2023   JSW: CANES-52630 Delivery
-
-\===================================================================
+Version: 1.0.0.0
 ## Related Links
-- [ConvertTo-Module](https://services.csa.spawar.navy.mil/confluence/display/CANES/PowerShell+Modules#PowerShellModules-ConvertTo-Module)
+- [ConvertTo-Module](https://devopsjeremy.github.io/documentation/powershell/ConvertTo-Module.html)
 - [About PowerShell Modules](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_modules)
 - [New-ModuleManifest](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest)
