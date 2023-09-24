@@ -2,3 +2,12 @@
 layout: doc_category
 ---
 {{ content }}
+{%- if page.feedback %}
+<section class="feedback-section">
+    <h2 id="feedback">Feedback</h2>
+    {%- if page.source %}
+    <li><a href="{{ page.source }}" class="feedback-button">Source code</a></li>
+    {%- endif %}
+    <li><a href="https://github.com/DevOpsJeremy/DevOpsJeremy.github.io/{{ page.path }}" class="feedback-button">This page</a></li>
+</section>
+{%- endif %}

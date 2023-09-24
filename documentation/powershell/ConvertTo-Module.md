@@ -1,6 +1,8 @@
 ---
 layout: documentation
 toc: true
+source: https://github.com/DevOpsJeremy/ConvertTo-Module
+feedback: true
 module:
   - name: ConvertTo-Module
     path: https://github.com/DevOpsJeremy/ConvertTo-Module
@@ -498,5 +500,6 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 Version: 1.0.0.0
 ## Related Links
 - [ConvertTo-Module](https://devopsjeremy.github.io/documentation/powershell/ConvertTo-Module.html)
+- [Source](https://github.com/DevOpsJeremy/ConvertTo-Module)
 - [About PowerShell Modules](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_modules)
 - [New-ModuleManifest](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest)
