@@ -1,5 +1,6 @@
 ---
 layout: documentation
+toc: true
 module:
   - name: ConvertTo-Module
     path: https://github.com/DevOpsJeremy/ConvertTo-Module
