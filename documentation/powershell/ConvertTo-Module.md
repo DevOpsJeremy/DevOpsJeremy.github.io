@@ -13,8 +13,8 @@ category:
 ```powershell
 ConvertTo-Module
     [-Source] <String>
-    [[-Name] <String>]
     [[-Destination] <String>]
+    [[-Name] <String>]
     [-FileList <String[]>]
     [-ModuleList <Object[]>]
     [-FunctionsToExport <String[]>]
@@ -90,16 +90,6 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Position | 1 |
 | Default value | None |
 | Accept pipeline input | False |
-### **-Name**
-&ensp;&ensp;&ensp;&ensp;The name of the module. This will be used as the directory, mainifest, and module script names.
-
-
-| Attribute | Value |
-| --- | --- |
-| Type | String |
-| Position | 2 |
-| Default value | None |
-| Accept pipeline input | False |
 ### **-Destination**
 &ensp;&ensp;&ensp;&ensp;Destination directory. A new sub-directory will be created using the name provided to the `-Name` parameter. Default is the current directory.
 
@@ -107,8 +97,18 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Attribute | Value |
 | --- | --- |
 | Type | String |
-| Position | 3 |
+| Position | 2 |
 | Default value | $PWD.Path |
+| Accept pipeline input | False |
+### **-Name**
+&ensp;&ensp;&ensp;&ensp;The name of the module. This will be used as the directory, mainifest, and module script names.
+
+
+| Attribute | Value |
+| --- | --- |
+| Type | String |
+| Position | 3 |
+| Default value | None |
 | Accept pipeline input | False |
 ### **-FileList**
 &ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-filelist
