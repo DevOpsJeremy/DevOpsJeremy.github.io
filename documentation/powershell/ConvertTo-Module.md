@@ -13,16 +13,17 @@ category:
 ```powershell
 ConvertTo-Module
     [-Source] <String>
-    [-RequiredAssemblies <String[]>]
+    [[-Name] <String>]
+    [[-Destination] <String>]
     [-FileList <String[]>]
     [-ModuleList <Object[]>]
     [-FunctionsToExport <String[]>]
     [-AliasesToExport <String[]>]
     [-VariablesToExport <String[]>]
     [-CmdletsToExport <String[]>]
-    [-ScriptsToProcess <String[]>]
     [-DscResourcesToExport <String[]>]
     [-Tags <String[]>]
+    [-RequiredAssemblies <String[]>]
     [-ProjectUri <Uri>]
     [-LicenseUri <Uri>]
     [-IconUri <Uri>]
@@ -30,11 +31,9 @@ ConvertTo-Module
     [-Prerelease <String>]
     [-ExternalModuleDependencies <String[]>]
     [-PrivateData <Object>]
-    [-FormatsToProcess <String[]>]
+    [-ScriptsToProcess <String[]>]
     [-TypesToProcess <String[]>]
-    [-RequiredModules <Object[]>]
-    [-Name <String>]
-    [-Destination <String>]
+    [-HelpInfoUri <String>]
     [-PrivateFunctions <String[]>]
     [-CompatiblePSEditions <String[]>]
     [-NestedModules <Object[]>]
@@ -42,15 +41,16 @@ ConvertTo-Module
     [-Author <String>]
     [-CompanyName <String>]
     [-Copyright <String>]
+    [-FormatsToProcess <String[]>]
     [-ModuleVersion <Version>]
-    [-Description <String>]
     [-ProcessorArchitecture <ProcessorArchitecture>]
     [-PowerShellVersion <Version>]
     [-CLRVersion <Version>]
     [-DotNetFrameworkVersion <Version>]
     [-PowerShellHostName <String>]
     [-PowerShellHostVersion <Version>]
-    [-HelpInfoUri <String>]
+    [-RequiredModules <Object[]>]
+    [-Description <String>]
     [-DefaultCommandPrefix <String>]
 ```
 ## Description
@@ -90,15 +90,25 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Position | 1 |
 | Default value | None |
 | Accept pipeline input | False |
-### **-RequiredAssemblies**
-&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-requiredassemblies
+### **-Name**
+&ensp;&ensp;&ensp;&ensp;The name of the module. This will be used as the directory, mainifest, and module script names.
 
 
 | Attribute | Value |
 | --- | --- |
-| Type | String[] |
-| Position | named |
+| Type | String |
+| Position | 2 |
 | Default value | None |
+| Accept pipeline input | False |
+### **-Destination**
+&ensp;&ensp;&ensp;&ensp;Destination directory. A new sub-directory will be created using the name provided to the `-Name` parameter. Default is the current directory.
+
+
+| Attribute | Value |
+| --- | --- |
+| Type | String |
+| Position | 3 |
+| Default value | $PWD.Path |
 | Accept pipeline input | False |
 ### **-FileList**
 &ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-filelist
@@ -160,16 +170,6 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Position | named |
 | Default value | None |
 | Accept pipeline input | False |
-### **-ScriptsToProcess**
-&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-scriptstoprocess
-
-
-| Attribute | Value |
-| --- | --- |
-| Type | String[] |
-| Position | named |
-| Default value | None |
-| Accept pipeline input | False |
 ### **-DscResourcesToExport**
 &ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-dscresourcestoexport
 
@@ -182,6 +182,16 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Accept pipeline input | False |
 ### **-Tags**
 &ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-tags
+
+
+| Attribute | Value |
+| --- | --- |
+| Type | String[] |
+| Position | named |
+| Default value | None |
+| Accept pipeline input | False |
+### **-RequiredAssemblies**
+&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-requiredassemblies
 
 
 | Attribute | Value |
@@ -260,8 +270,8 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Position | named |
 | Default value | None |
 | Accept pipeline input | False |
-### **-FormatsToProcess**
-&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-formatstoprocess
+### **-ScriptsToProcess**
+&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-scriptstoprocess
 
 
 | Attribute | Value |
@@ -280,18 +290,8 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Position | named |
 | Default value | None |
 | Accept pipeline input | False |
-### **-RequiredModules**
-&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-requiredmodules
-
-
-| Attribute | Value |
-| --- | --- |
-| Type | Object[] |
-| Position | named |
-| Default value | None |
-| Accept pipeline input | False |
-### **-Name**
-&ensp;&ensp;&ensp;&ensp;The name of the module. This will be used as the directory, mainifest, and module script names.
+### **-HelpInfoUri**
+&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-helpinfouri
 
 
 | Attribute | Value |
@@ -299,16 +299,6 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Type | String |
 | Position | named |
 | Default value | None |
-| Accept pipeline input | False |
-### **-Destination**
-&ensp;&ensp;&ensp;&ensp;Destination directory. A new sub-directory will be created using the name provided to the `-Name` parameter. Default is the current directory.
-
-
-| Attribute | Value |
-| --- | --- |
-| Type | String |
-| Position | named |
-| Default value | $PWD.Path |
 | Accept pipeline input | False |
 ### **-PrivateFunctions**
 &ensp;&ensp;&ensp;&ensp;Any functions from the `-Source` script which do not need to be exported for use. This is typically for any functions which are only used by other functions in the module and do not need to be available to users at the console, etc.
@@ -383,6 +373,16 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Position | named |
 | Default value | None |
 | Accept pipeline input | False |
+### **-FormatsToProcess**
+&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-formatstoprocess
+
+
+| Attribute | Value |
+| --- | --- |
+| Type | String[] |
+| Position | named |
+| Default value | None |
+| Accept pipeline input | False |
 ### **-ModuleVersion**
 &ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-moduleversion
 
@@ -390,16 +390,6 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Attribute | Value |
 | --- | --- |
 | Type | Version |
-| Position | named |
-| Default value | None |
-| Accept pipeline input | False |
-### **-Description**
-&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-description
-
-
-| Attribute | Value |
-| --- | --- |
-| Type | String |
 | Position | named |
 | Default value | None |
 | Accept pipeline input | False |
@@ -463,8 +453,18 @@ These commands create the ConfiForms PowerShell module and directory structure, 
 | Position | named |
 | Default value | None |
 | Accept pipeline input | False |
-### **-HelpInfoUri**
-&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-helpinfouri
+### **-RequiredModules**
+&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-requiredmodules
+
+
+| Attribute | Value |
+| --- | --- |
+| Type | Object[] |
+| Position | named |
+| Default value | None |
+| Accept pipeline input | False |
+### **-Description**
+&ensp;&ensp;&ensp;&ensp;Pass-through parameter for `New-ModuleManifest`. See Microsoft documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-modulemanifest#-description
 
 
 | Attribute | Value |
