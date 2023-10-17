@@ -198,7 +198,7 @@ Here I added the `$Include` and `$Exclude` parameters along with the correspondi
 - If `$Include` is used, only return parameters in the `$Include` array
 - If `$Exclude` is used, only return parameters _not_ in the `$Exclude` array
 
-While we'd hope nobody would try to use the `$Include` and `$Exclude` parameters at the same time, we'll want to follow PowerShell best practices and ensure our function can't be used in unintended ways. To accomplish this, we'll use [Parameter Sets](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parameter_sets):
+While we'd hope nobody would try to use the `$Include` and `$Exclude` parameters at the same time, we'll want to follow PowerShell [best practices](https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Style-Guide/Function-Structure.md) and ensure our function can't be used in unintended ways. To accomplish this, we'll use [Parameter Sets](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parameter_sets):
 
 ```powershell
 param (
