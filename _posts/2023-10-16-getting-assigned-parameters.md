@@ -120,7 +120,7 @@ $PSAssignedParameters = @{}
 [System.Management.Automation.CommandMetaData]::new($MyInvocation.MyCommand).Parameters.GetEnumerator() | ForEach-Object {
     $var = Get-Variable -Name $_.key -ValueOnly
     if ($var){
-        $returnParams[$_.key] = $var
+        $PSAssignedParameters[$_.key] = $var
     }
 }
 ```
