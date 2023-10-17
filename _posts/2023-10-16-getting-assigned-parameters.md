@@ -228,8 +228,6 @@ The two parameters are part of separate parameter sets and thus it's impossible 
 
 Finally, we'll add our `CmdletBinding` and some comments:
 
-<script src="https://gist.github.com/DevOpsJeremy/db0b082b39ac10533de09a83b43640e0.js"></script>
-
 ```powershell
 function Get-AssignedParameter {
     <#
