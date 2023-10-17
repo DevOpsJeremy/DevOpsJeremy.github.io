@@ -273,7 +273,7 @@ function Get-AssignedParameters {
     $PSAssignedParameters.Clone()
 }
 ```
-<sup>[Gist]()</sup>
+<sup>[Gist](https://gist.github.com/DevOpsJeremy/db0b082b39ac10533de09a83b43640e0)</sup>
 
 And now our function is complete! I hope you found this article helpful--be sure to subscribe to the RSS feed and the socials below to keep up with future posts.
 
