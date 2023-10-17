@@ -1,3 +1,9 @@
+---
+layout: documentation
+category:
+  - powershell
+  - documentation
+---
 # Get-AssignedParameter
 Gets all parameters with assigned values.
 ## Syntax
