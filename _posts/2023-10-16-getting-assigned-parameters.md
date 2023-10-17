@@ -56,6 +56,8 @@ Here are the fruits and vegetables
 - carrot
 - celery
 ```
+In this example, we use `$PSBoundParameters` to check if it contains the key 'Vegetables' (meaning the `$Vegetables` parameter was used), and if it does we add the phrase " and vegetables" to the end of the return message.
+
 Now that we understand how `$PSBoundParameters` works, let's examine where it falls short.
 
 # Default Values
@@ -92,7 +94,7 @@ In the above example you'll notice that, while the fruits and vegetables in the 
 > ## Splatting
 > As an aside, I'll briefly explain what splatting is and how it works.
 > 
-> In the `Get-UserItemsParent` function, we used a method called splatting when calling the `Get-UserItems` function. Splatting is a way to pass all parameters and values to a command as a dictionary instead of writing them out the long way. As an example, this:
+> In the `Get-UserItemsParent` function, we used a method called **splatting** when calling the `Get-UserItems` function. Splatting is a way to pass all parameters and values to a command as a dictionary instead of writing them out the long way. As an example, this:
 > ```powershell
 > $parameters = @{
 >    Name = 'Get-UserItems'
