@@ -295,8 +295,37 @@ function Get-AssignedParameter {
 ```
 <sup>[Gist](https://gist.github.com/DevOpsJeremy/db0b082b39ac10533de09a83b43640e0)</sup>
 
-And now our function is complete! For further information, check out [the documentation](/documentation/powershell/Get-AssignedParameter.html) for this function.
+And now our function is complete! Let's test it out using our function from earlier:
 
-I hope you found this article helpful--be sure to subscribe to the RSS feed and the socials below to keep up with future posts.
+```powershell
+PS > function Get-UserItems {
+    param (
+        $Name,
+        $Items
+    )
+    Write-Output "$Name has the following items:"
+    foreach ($Item in $Items){
+        "- $Item"
+    }
+}
+PS > function Get-UserItemsParent {
+    param (
+        $Name = "Bob",
+        $Items
+    )
+    $PSAssignedParameters = Get-AssignedParameters -Invocation $MyInvocation
+    Get-UserItems @PSAssignedParameters
+}
+PS > Get-UserItemsParent -Items apple, orange, carrot, celery
+Bob has the following items:
+- apple
+- orange
+- carrot
+- celery
+```
+
+As we can see, not only did the `$Items` parameter get passed to the child function, but so did the default value of `$Name`. I hope you found this article helpful--be sure to subscribe to the RSS feed and the socials below to keep up with future posts.
+
+For further information, check out [the documentation](/documentation/powershell/Get-AssignedParameter.html) for this function.
 
 #### Jeremy Watkins
