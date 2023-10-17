@@ -117,7 +117,9 @@ What we're really looking for is akin to a `$PSAssignedParameters` variable, whi
 
 ```powershell
 $PSAssignedParameters = @{}
-[System.Management.Automation.CommandMetaData]::new($MyInvocation.MyCommand).Parameters.GetEnumerator() | ForEach-Object {
+[System.Management.Automation.CommandMetaData]::new(
+    $MyInvocation.MyCommand
+).Parameters.GetEnumerator() | ForEach-Object {
     $var = Get-Variable -Name $_.key -ValueOnly
     if ($var){
         $PSAssignedParameters[$_.key] = $var
@@ -146,11 +148,11 @@ If the parameter value (`$var`) is not empty, add it to the `$PSAssignedParamete
 
 And that's it! All we need are 7 lines to get all parameters with assigned values. In the next section I'll discuss how we can build this into a function for reusability.
 
-# `Get-AssignedParameters` Function
+# `Get-AssignedParameter` Function
 
-We can use this `Get-AssignedParameters` function in our scripts as a replacement for the missing `$PSAssignedParameters` variable.
+We can use this `Get-AssignedParameter` function in our scripts as a replacement for the missing `$PSAssignedParameters` variable.
 ```powershell
-function Get-AssignedParameters {
+function Get-AssignedParameter {
     param (
         [System.Management.Automation.InvocationInfo] $Invocation
     )
@@ -167,7 +169,7 @@ function Get-AssignedParameters {
 The function can be used as-is, but let's see if we can improve it. It occurred to me that, while getting the assigned parameters is the goal, there are times when we may want to include or exclude specific parameters. Instead of repeatedly writing code in our scripts to remove unwanted keys from `$PSAssignedParameters`, let's add that functionality to the function.
 
 ```powershell
-function Get-AssignedParameters {
+function Get-AssignedParameter {
     param (
         [System.Management.Automation.InvocationInfo] $Invocation,
         [string[]] $Include,
@@ -215,19 +217,19 @@ By defining the `$Include` and `$Exclude` parameters as two different parameter 
 
 ```powershell
 NAME
-    Get-AssignedParameters
+    Get-AssignedParameter
 
 SYNTAX
-    Get-AssignedParameters [-Invocation <InvocationInfo>] [-Include <string[]>]
+    Get-AssignedParameter [-Invocation <InvocationInfo>] [-Include <string[]>]
 
-    Get-AssignedParameters [-Invocation <InvocationInfo>] [-Exclude <string[]>]
+    Get-AssignedParameter [-Invocation <InvocationInfo>] [-Exclude <string[]>]
 ```
 The two parameters are part of separate parameter sets and thus it's impossible to use both parameters at the same time.
 
 Finally, we'll add our `CmdletBinding` and some comments:
 
 ```powershell
-function Get-AssignedParameters {
+function Get-AssignedParameter {
     <#
     .SYNOPSIS
         Gets all parameters with assigned values.
@@ -241,6 +243,22 @@ function Get-AssignedParameters {
         A string array of parameter names to exclude from the returned result. If this parameter is used, any parameters in this list will not be returned.
     .OUTPUTS
         System.Collections.Hashtable
+    .LINK
+        https://DevOpsJeremy.github.io/documentation/powershell/Get-AssignedParameter.html
+    .LINK
+        Getting Assigned Parameters in PowerShell: https://devopsjeremy.github.io/powershell/2023/10/16/getting-assigned-parameters.html
+    .EXAMPLE
+        Get-AssignedParameter -Invocation $MyInvocation
+        
+        Gets any assigned parameter key/values.
+    .EXAMPLE
+        Get-AssignedParameter -Invocation $MyInvocation -Include Name,Status
+
+        Gets the 'Name' and 'Status' parameter key/values if they are assigned.
+    .EXAMPLE
+        Get-AssignedParameter -Invocation $MyInvocation -Exclude ComputerName
+
+        Gets any parameter key/values which are assigned, excluding the 'ComputerName' parameter.
     #>
     [CmdletBinding(
         DefaultParameterSetName = 'Exclude'
