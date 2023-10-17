@@ -249,7 +249,7 @@ function Get-AssignedParameter {
         Getting Assigned Parameters in PowerShell: https://devopsjeremy.github.io/powershell/2023/10/16/getting-assigned-parameters.html
     .EXAMPLE
         Get-AssignedParameter -Invocation $MyInvocation
-        
+
         Gets any assigned parameter key/values.
     .EXAMPLE
         Get-AssignedParameter -Invocation $MyInvocation -Include Name,Status
@@ -295,6 +295,8 @@ function Get-AssignedParameter {
 ```
 <sup>[Gist](https://gist.github.com/DevOpsJeremy/db0b082b39ac10533de09a83b43640e0)</sup>
 
-And now our function is complete! I hope you found this article helpful--be sure to subscribe to the RSS feed and the socials below to keep up with future posts.
+And now our function is complete! For further information, check out [the documentation](/documentation/powershell/Get-AssignedParameter.html) for this function.
+
+I hope you found this article helpful--be sure to subscribe to the RSS feed and the socials below to keep up with future posts.
 
 #### Jeremy Watkins
