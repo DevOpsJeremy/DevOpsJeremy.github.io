@@ -37,6 +37,8 @@ extra:
     - icon: fontawesome/brands/instagram
       name: Instagram
       link: https://www.instagram.com/yousuckatpowershell
+extra_css:
+  - assets/stylesheets/custom.css
 hooks:
   - hooks/socialmedia.py
 markdown_extensions:
