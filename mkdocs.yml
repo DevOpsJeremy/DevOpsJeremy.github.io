@@ -1,0 +1,10 @@
+site_name: !ENV [SITE_NAME, "DevOps Jeremy"]
+plugins:
+  - search
+  - include_dir_to_nav
+  - markdownextradata: {}
+nav:
+  - Home: index.md
+  - Posts: posts
+  - Documentation: documentation
+  - About: about.md
