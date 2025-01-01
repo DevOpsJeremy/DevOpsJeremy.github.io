@@ -3,3 +3,4 @@ mkdocs-include-dir-to-nav
 mkdocs-material
 mkdocs-markdownextradata-plugin
 pymdown-extensions
+mkdocs-rss-plugin

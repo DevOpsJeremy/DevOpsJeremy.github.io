@@ -1,6 +1,8 @@
 ---
 date:
   created: 2024-12-31
+authors:
+  - jeremy
 ---
 # Hello world
 
