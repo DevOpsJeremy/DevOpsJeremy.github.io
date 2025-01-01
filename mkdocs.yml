@@ -6,13 +6,13 @@ theme:
     - navigation.indexes
 plugins:
   - search
-  - blog
+  - blog:
+      archive_date_format: MMMM yyyy
   - tags
   - include_dir_to_nav
   - markdownextradata: {}
 nav:
   - Home: index.md
-  - Posts:
-     - blog/index.md
+  - Posts: blog/index.md
   - Documentation: documentation
   - About: about.md
