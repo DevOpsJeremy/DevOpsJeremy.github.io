@@ -1,4 +1,7 @@
 site_name: !ENV [SITE_NAME, "DevOps Jeremy"]
+site_url: https://DevOpsJeremy.github.io
+theme:
+  name: material
 plugins:
   - search
   - include_dir_to_nav
