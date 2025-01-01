@@ -4,6 +4,7 @@ theme:
   name: material
 plugins:
   - search
+  - blog
   - include_dir_to_nav
   - markdownextradata: {}
 nav:
