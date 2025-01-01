@@ -2,13 +2,17 @@ site_name: !ENV [SITE_NAME, "DevOps Jeremy"]
 site_url: https://DevOpsJeremy.github.io
 theme:
   name: material
+  features:
+    - navigation.indexes
 plugins:
   - search
   - blog
+  - tags
   - include_dir_to_nav
   - markdownextradata: {}
 nav:
   - Home: index.md
-  - Posts: posts
+  - Posts:
+     - blog/index.md
   - Documentation: documentation
   - About: about.md
