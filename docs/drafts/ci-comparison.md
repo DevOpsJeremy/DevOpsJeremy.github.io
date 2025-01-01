@@ -1,0 +1,1 @@
+Compare Gitlab CI vs Github Actions vs OpenShift pipelines
