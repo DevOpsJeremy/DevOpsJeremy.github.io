@@ -2,7 +2,7 @@
 title: Getting Assigned Parameters in PowerShell
 status: new
 date:
-  created: 2023-10-16
+  created: 2025-01-05
 authors:
   - jeremy
 tags:
@@ -333,5 +333,3 @@ Bob has the following items:
 As we can see, not only did the `$Items` parameter get passed to the child function, but so did the default value of `$Name`. I hope you found this article helpful--be sure to subscribe to the RSS feed and the socials below to keep up with future posts.
 
 For further information, check out [the documentation](/documentation/powershell/Get-AssignedParameter.html) for this function.
-
-#### Jeremy Watkins
