@@ -16,7 +16,9 @@ Have you ever needed to pass a number of parameter values from one function into
 
 If you've spent some time writing PowerShell functions, you may be familiar with the [`$PSBoundParameters`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables#psboundparameters) automatic variable. As Microsoft defines it, this variable
 
-> Contains a dictionary of the parameters that are passed to a script or function and their current values.
+!!! quote
+
+    Contains a dictionary of the parameters that are passed to a script or function and their current values.
 
 Let's take a look at the below example. We'll write a simple function to return the contents of the `$PSBoundParameters` variable:
 
@@ -71,6 +73,24 @@ While `$PSBoundParameters` is great, the issue is that it only contains _bound_ 
 
 I've run into this situation many times when writing functions that pass certain parameter key/values to other commands, such as this example:
 
+!!! info inline end "Splatting"
+
+    In the `Get-UserItemsParent` function, we used a method called **splatting** when calling the `Get-UserItems` function. Splatting is a way to pass all parameters and values to a command as a dictionary instead of writing them out the long way. As an example, this:
+    ```powershell
+    $parameters = @{
+       Name = 'Get-UserItems'
+       CommandType = 'Function'
+    }
+    Get-Command @parameters
+    ```
+    Is the same as this:
+    ```powershell
+    Get-Command -Name 'Get-UserItems' -CommandType 'Function'
+    ```
+    Note that when splatting, the dictionary variable (in this case, `$parameters`) is written with an `@` sign instead of a `$`.
+   
+    If you're unfamiliar with splatting, I highly recommend reading [the documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting) to learn how you can take advantage of it in your scripts. I'll likely cover it and more ways to use it in a future post but for now, back to the article.
+
 ```powershell
 PS > function Get-UserItems {
     param (
@@ -97,25 +117,6 @@ PS > Get-UserItemsParent -Items apple, orange, carrot, celery
 - celery
 ```
 In the above example you'll notice that, while the fruits and vegetables in the `$Items` variable were passed on from the `Get-UserItemsParent` function to the `Get-UserItems` function via the `$PSBoundParameters` variable, the name Bob was not because "Bob" is the default value of the `$Name` parameter, but that parameter wasn't actually used by the user and as such is not part of `$PSBoundParameters`. This is the dilemma we're here to solve.
-
-!!! info inline end "Lorem ipsum"
-
-    ## Splatting
-    In the `Get-UserItemsParent` function, we used a method called **splatting** when calling the `Get-UserItems` function. Splatting is a way to pass all parameters and values to a command as a dictionary instead of writing them out the long way. As an example, this:
-    ```powershell
-    $parameters = @{
-       Name = 'Get-UserItems'
-       CommandType = 'Function'
-    }
-    Get-Command @parameters
-    ```
-    Is the same as this:
-    ```powershell
-    Get-Command -Name 'Get-UserItems' -CommandType 'Function'
-    ```
-    Note that when splatting, the dictionary variable (in this case, `$parameters`) is written with an `@` sign instead of a `$`.
-   
-    If you're unfamiliar with splatting, I highly recommend reading [the documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting) to learn how you can take advantage of it in your scripts. I'll likely cover it and more ways to use it in a future post but for now, back to the article.
 
 ## Getting _Assigned_ Parameters
 
