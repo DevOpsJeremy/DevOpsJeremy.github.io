@@ -97,25 +97,27 @@ PS > Get-UserItemsParent -Items apple, orange, carrot, celery
 - celery
 ```
 In the above example you'll notice that, while the fruits and vegetables in the `$Items` variable were passed on from the `Get-UserItemsParent` function to the `Get-UserItems` function via the `$PSBoundParameters` variable, the name Bob was not because "Bob" is the default value of the `$Name` parameter, but that parameter wasn't actually used by the user and as such is not part of `$PSBoundParameters`. This is the dilemma we're here to solve.
-> ## Splatting
-> As an aside, I'll briefly explain what splatting is and how it works.
-> 
-> In the `Get-UserItemsParent` function, we used a method called **splatting** when calling the `Get-UserItems` function. Splatting is a way to pass all parameters and values to a command as a dictionary instead of writing them out the long way. As an example, this:
-> ```powershell
-> $parameters = @{
->    Name = 'Get-UserItems'
->    CommandType = 'Function'
-> }
-> Get-Command @parameters
-> ```
-> Is the same as this:
-> ```powershell
-> Get-Command -Name 'Get-UserItems' -CommandType 'Function'
-> ```
-> Note that when splatting, the dictionary variable (in this case, `$parameters`) is written with an `@` sign instead of a `$`.
->
-> If you're unfamiliar with splatting, I highly recommend reading [the documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting) to learn how you can take advantage of it in your scripts. I'll likely cover it and more ways to use it in a future post but for now, back to the article.
 
+!!! info inline end "Lorem ipsum"
+
+    ## Splatting
+    As an aside, I'll briefly explain what splatting is and how it works.
+
+    In the `Get-UserItemsParent` function, we used a method called **splatting** when calling the `Get-UserItems` function. Splatting is a way to pass all parameters and values to a command as a dictionary instead of writing them out the long way. As an example, this:
+    ```powershell
+    $parameters = @{
+       Name = 'Get-UserItems'
+       CommandType = 'Function'
+    }
+    Get-Command @parameters
+    ```
+    Is the same as this:
+    ```powershell
+    Get-Command -Name 'Get-UserItems' -CommandType 'Function'
+    ```
+    Note that when splatting, the dictionary variable (in this case, `$parameters`) is written with an `@` sign instead of a `$`.
+   
+    If you're unfamiliar with splatting, I highly recommend reading [the documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting) to learn how you can take advantage of it in your scripts. I'll likely cover it and more ways to use it in a future post but for now, back to the article.
 
 ## Getting _Assigned_ Parameters
 
@@ -332,4 +334,4 @@ Bob has the following items:
 
 As we can see, not only did the `$Items` parameter get passed to the child function, but so did the default value of `$Name`. I hope you found this article helpful--be sure to subscribe to the RSS feed and the socials below to keep up with future posts.
 
-For further information, check out [the documentation](/documentation/powershell/Get-AssignedParameter.html) for this function.
+For further information, check out [the documentation](/documentation/powershell/Get-AssignedParameter.html) for t
