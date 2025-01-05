@@ -101,8 +101,6 @@ In the above example you'll notice that, while the fruits and vegetables in the 
 !!! info inline end "Lorem ipsum"
 
     ## Splatting
-    As an aside, I'll briefly explain what splatting is and how it works.
-
     In the `Get-UserItemsParent` function, we used a method called **splatting** when calling the `Get-UserItems` function. Splatting is a way to pass all parameters and values to a command as a dictionary instead of writing them out the long way. As an example, this:
     ```powershell
     $parameters = @{
