@@ -8,9 +8,12 @@ authors:
 tags:
   - powershell
 ---
+# Getting Assigned Parameters in PowerShell
+
 Have you ever needed to pass a number of parameter values from one function into another function with some (but not all) of the same parameters? I've run into this particular pain point multiple times when writing functions in the past so I decided to find somewhat of a workaround.
 
-# `$PSBoundParameters`
+## `$PSBoundParameters`
+
 If you've spent some time writing PowerShell functions, you may be familiar with the [`$PSBoundParameters`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables#psboundparameters) automatic variable. As Microsoft defines it, this variable
 
 > Contains a dictionary of the parameters that are passed to a script or function and their current values.
@@ -63,7 +66,7 @@ In this example, we use `$PSBoundParameters` to check if it contains the key 'Ve
 
 Now that we understand how `$PSBoundParameters` works, let's examine where it falls short.
 
-# Default Values
+## Default Values
 While `$PSBoundParameters` is great, the issue is that it only contains _bound_ parameters (as the name suggests). This means that if a parameter has a default value the default value will never be included in the `$PSBoundParameters` dictionary.
 
 I've run into this situation many times when writing functions that pass certain parameter key/values to other commands, such as this example:
@@ -114,7 +117,7 @@ In the above example you'll notice that, while the fruits and vegetables in the 
 > If you're unfamiliar with splatting, I highly recommend reading [the documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting) to learn how you can take advantage of it in your scripts. I'll likely cover it and more ways to use it in a future post but for now, back to the article.
 
 
-# Getting _Assigned_ Parameters
+## Getting _Assigned_ Parameters
 
 What we're really looking for is akin to a `$PSAssignedParameters` variable, which in theory would contain _assigned_ parameters (i.e. any parameters with values, whether from the user or from default values). Unfortunately, this isn't a real variable (at least [not yet](https://github.com/PowerShell/PowerShell/issues/3285)), but the below code snippet is a suitable workaround:
 
@@ -151,7 +154,7 @@ If the parameter value (`$var`) is not empty, add it to the `$PSAssignedParamete
 
 And that's it! All we need are 7 lines to get all parameters with assigned values. In the next section I'll discuss how we can build this into a function for reusability.
 
-# `Get-AssignedParameter` Function
+## `Get-AssignedParameter` Function
 
 We can use this `Get-AssignedParameter` function in our scripts as a replacement for the missing `$PSAssignedParameters` variable.
 ```powershell
