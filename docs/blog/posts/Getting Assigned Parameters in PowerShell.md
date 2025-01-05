@@ -331,6 +331,8 @@ Bob has the following items:
 - celery
 ```
 
-As we can see, not only did the `$Items` parameter get passed to the child function, but so did the default value of `$Name`. I hope you found this article helpful--be sure to subscribe to the RSS feed and the socials below to keep up with future posts.
+As we can see, not only did the `$Items` parameter get passed to the child function, but so did the default value of `$Name`.
 
-For further information, check out [the documentation](/documentation/powershell/Get-AssignedParameter.html) for t
+I hope you found this article helpful--be sure to follow the socials below to keep up with future posts.
+
+For further information, check out [the documentation](/documentation/powershell/Get-AssignedParameter.html) for this function.
