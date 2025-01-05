@@ -3,6 +3,7 @@ site_url: https://DevOpsJeremy.github.io
 site_repo: https://github.com/DevOpsJeremy/DevOpsJeremy.github.io
 theme:
   name: material
+  custom_dir: overrides
   features:
     - navigation.indexes
     - content.code.copy
