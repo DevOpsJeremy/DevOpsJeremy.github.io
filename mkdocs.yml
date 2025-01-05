@@ -4,6 +4,8 @@ theme:
   name: material
   features:
     - navigation.indexes
+  palette:
+    scheme: slate
 plugins:
   - search
   - blog:
