@@ -3,6 +3,7 @@ date:
   created: 2024-12-31
 authors:
   - jeremy
+comments: true
 ---
 # Hello world
 
