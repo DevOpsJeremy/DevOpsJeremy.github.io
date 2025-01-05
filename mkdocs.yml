@@ -29,6 +29,7 @@ nav:
   - Documentation: documentation
   - About: about.md
 extra:
+  comments: true
   generator: false
   social:
     - icon: fontawesome/brands/square-x-twitter
