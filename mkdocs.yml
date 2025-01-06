@@ -11,7 +11,7 @@ theme:
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: &primary_color indigo
+      primary: &primary_color blue gray
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
