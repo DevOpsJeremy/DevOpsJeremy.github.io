@@ -1,14 +1,14 @@
 ---
-title: Getting Assigned Parameters in PowerShell
+title: Getting assigned parameters in PowerShell
 status: new
 date:
-  created: 2025-01-05
+  created: 2023-10-16
 authors:
   - jeremy
 tags:
   - powershell
 ---
-# Getting Assigned Parameters in PowerShell
+# Getting assigned parameters in PowerShell
 
 Have you ever needed to pass a number of parameter values from one function into another function with some (but not all) of the same parameters? I've run into this particular pain point multiple times when writing functions in the past so I decided to find somewhat of a workaround.
 
