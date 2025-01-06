@@ -13,13 +13,17 @@ tags:
 ---
 # CI showdown
 
-CI/CD pipelines have become an integral development tool for automating tedious tasks--from tests, to repository maintenance, to releases.
+Continuous Integration/Continuous Deployment (CI/CD) pipelines have become an integral development tool for automating tedious tasks--from tests, to repository maintenance, to releases.
 
 There are a number of CI/CD tools on the market, but today we'll be covering 3:
 
 - GitHub Actions
 - Gitlab CI/CD
 - Tekton
+
+!!! note
+
+    For the purposes of this article, unless otherwise specified, the terms "workflow" and "pipeline" will be used interchangeably. "CI/CD" will be colloquially abbreviated to "CI".
 
 <div hidden>
 ##### AI
