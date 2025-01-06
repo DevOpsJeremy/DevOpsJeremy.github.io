@@ -27,11 +27,27 @@ There are a number of CI/CD tools on the market, but today we'll be covering 3:
 
 ## What is a CI pipeline? 
 
-For those of you new to CI pipelines it's important to understand what they are, the main components, and how/why they're triggered. While they each different CI has unique features & idiosyncrasies, most consist of the same main aspects:
+For those of you new to CI pipelines it's important to understand what they are & what they're used for, the main components, and how/why they're triggered.
 
-- **Trigger**: What starts the pipeline. This can be manually triggered by a user or automatically on a schedule, a webhook, a git commit, etc. 
-- **Jobs**: Sometimes also called "tasks", these are individual operations that usually accomplish a single task. That could be running static analysis or unit tests, linting, building a project, interacting with another service, etc. A job usually runs in a single container.
-- **Steps**: Jobs can often be broken down into smaller steps. While each job can use a different container image, steps usually (not always) all run in the same container. Jobs frequently only use a single step, but breaking up into multiple steps can help clarify to the user what's happening. Steps also allow you to include different configurations/environment variables that may not be necessary for the whole job.
+### Pipeline components
+
+While each different CI has unique features & idiosyncrasies, most consist of the same main components.
+
+#### Trigger
+
+What starts the pipeline. This can be manually triggered by a user or automatically on a schedule, a webhook, a git commit, etc. 
+
+#### Jobs
+
+Sometimes also called "tasks", these are individual operations that usually accomplish a single task. That could be running static analysis or unit tests, linting, building a project, interacting with another service, etc. A job usually runs in a single container.
+
+#### Steps
+
+Jobs can often be broken down into smaller steps. While each job can use a different container image, steps usually (not always) all run in the same container. Jobs frequently only use a single step, but breaking up into multiple steps can help clarify to the user what's happening. Steps also allow you to include different configurations/environment variables that may not be necessary for the whole job.
+
+#### Container image
+
+As mentioned [above](#jobs), each time a pipeline runs a job, it starts a container image in which to run the job--this is a critical aspect of CI pipelines. The flexibility of containers is what allows developers to accomplish a variety of tasks without the need for managing the litany of dependencies.
 
 <div hidden>
 ##### AI
