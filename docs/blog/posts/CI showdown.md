@@ -23,7 +23,15 @@ There are a number of CI/CD tools on the market, but today we'll be covering 3:
 
 !!! note
 
-    For the purposes of this article, unless otherwise specified, the terms "workflow" and "pipeline" will be used interchangeably. "CI/CD" will be colloquially abbreviated to "CI".
+    For the purposes of this article, unless otherwise specified, the terms "workflow" and "pipeline" will be used interchangeably. "CI/CD" is colloquially abbreviated to "CI".
+
+## What is a CI pipeline? 
+
+For those of you new to CI pipelines it's important to understand what they are, the main components, and how/why they're triggered. While they each different CI has unique features & idiosyncrasies, most consist of the same main aspects:
+
+- **Trigger**: What starts the pipeline. This can be manually triggered by a user or automatically on a schedule, a webhook, a git commit, etc. 
+- **Jobs**: Sometimes also called "tasks", these are individual operations that usually accomplish a single task. That could be running static analysis or unit tests, linting, building a project, interacting with another service, etc. A job usually runs in a single container.
+- **Steps**: Jobs can often be broken down into smaller steps. While each job can use a different container image, steps usually (not always) all run in the same container. Jobs frequently only use a single step, but breaking up into multiple steps can help clarify to the user what's happening. Steps also allow you to include different configurations/environment variables that may not be necessary for the whole job.
 
 <div hidden>
 ##### AI
