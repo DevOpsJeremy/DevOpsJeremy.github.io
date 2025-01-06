@@ -11,14 +11,12 @@ theme:
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: &primary_color blue gray
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      primary: *primary_color
       scheme: default 
       toggle:
         icon: material/brightness-7
@@ -26,7 +24,6 @@ theme:
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      primary: *primary_color
       scheme: slate
       toggle:
         icon: material/brightness-4
