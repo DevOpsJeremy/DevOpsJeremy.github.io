@@ -71,12 +71,15 @@ Now let's see at what a simple pipeline would look like:
           - main
     jobs:
       lint:
+        container: markdownlint/markdownlint
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4
           - name: Run Markdown lint
             run: mdl
       build_site:
+        needs: [lint]
+        container: squidfunk/mkdocs-material
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4
