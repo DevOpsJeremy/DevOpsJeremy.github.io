@@ -52,6 +52,7 @@ As mentioned [above](#jobs), each time a pipeline runs a job, it starts a contai
 ## Comparing the tools
 
 | Tool | Description | Hosted on | Pros | Cons |
+| --- | --- | --- | --- | --- |
 | Github Actions | | https://github.com | | |
 | Gitlab CI | | https://gitlab.com | | |
 | Tekton | | Kubernetes | | |
