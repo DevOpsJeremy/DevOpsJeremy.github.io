@@ -63,6 +63,7 @@ Now let's see at what a simple pipeline would look like:
 
 === "Github Actions"
 
+    ```yaml
     name: build-mkdocs
     on:
       push:
@@ -86,10 +87,10 @@ Now let's see at what a simple pipeline would look like:
               fi
           - name: Build site
             run: mkdocs build
+    ```
 
 === "Gitlab CI/CD"
 
-    ![code](/.github/workflows/example.yml)
 
 <div hidden>
 
