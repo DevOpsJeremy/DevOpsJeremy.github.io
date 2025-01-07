@@ -25,9 +25,9 @@ There are a number of CI/CD tools on the market, but today we'll be covering 3:
 
     For the purposes of this article, unless otherwise specified, the terms "workflow" and "pipeline" will be used interchangeably. "CI/CD" is colloquially abbreviated to "CI".
 
-## What is a CI pipeline? 
+## What is a CI pipeline?
 
-For those of you new to CI pipelines it's important to understand what they are & what they're used for, the main components, and how/why they're triggered.
+For those of you new to CI pipelines it's important to understand what they are, the main components, and how/why they're triggered.
 
 ### Pipeline components
 
@@ -35,7 +35,7 @@ While each different CI has unique features & idiosyncrasies, most consist of th
 
 #### Trigger
 
-What starts the pipeline. This can be manually triggered by a user or automatically on a schedule, a webhook, a git commit, etc. 
+What starts the pipeline. This can be manually triggered by a user or automatically on a schedule, a webhook, a git commit, etc.
 
 #### Jobs
 
@@ -49,39 +49,47 @@ Jobs can often be broken down into smaller steps. While each job can use a diffe
 
 As mentioned [above](#jobs), each time a pipeline runs a job, it starts a container image in which to run the job--this is a critical aspect of CI pipelines. The flexibility of containers is what allows developers to accomplish a variety of tasks without the need for managing the litany of dependencies.
 
+## Comparing the tools
+
+| Tool | Description | Hosted on | Pros | Cons |
+| Github Actions | | https://github.com | | |
+| Gitlab CI | | https://gitlab.com | | |
+| Tekton | | Kubernetes | | |
+
 <div hidden>
-##### AI
+
+#### AI
 
 # ChatGPT
 
-### Comparing GitHub Actions, GitLab CI, and Tekton: Similarities, Differences, Pros, and Cons  
+### Comparing GitHub Actions, GitLab CI, and Tekton: Similarities, Differences, Pros, and Cons
 
-Continuous Integration (CI) tools play a critical role in modern software development by automating code integration, testing, and deployment processes. GitHub Actions, GitLab CI, and Tekton are three popular CI tools that cater to various workflows. This article explores their similarities, differences, and the advantages and disadvantages of each.  
-
----
-
-### **Similarities**  
-
-1. **Automation of CI/CD Pipelines**  
-   All three tools support creating, managing, and automating CI/CD pipelines for tasks like building, testing, and deploying code.  
-
-2. **Integration with Source Code Management (SCM)**  
-   - GitHub Actions integrates seamlessly with GitHub repositories.  
-   - GitLab CI is a native feature of GitLab.  
-   - Tekton, while independent of a specific SCM, integrates well with Git-based workflows.  
-
-3. **Support for Containerized Workflows**  
-   They all support containerized environments using Docker images, enabling scalable, consistent builds and deployments.  
-
-4. **Extensibility**  
-   These tools offer extensions or plugins:  
-   - GitHub Actions has a vast marketplace.  
-   - GitLab CI supports custom scripts and integrations.  
-   - Tekton allows building custom reusable tasks.  
+Continuous Integration (CI) tools play a critical role in modern software development by automating code integration, testing, and deployment processes. GitHub Actions, GitLab CI, and Tekton are three popular CI tools that cater to various workflows. This article explores their similarities, differences, and the advantages and disadvantages of each.
 
 ---
 
-### **Differences**  
+### **Similarities**
+
+1. **Automation of CI/CD Pipelines**
+   All three tools support creating, managing, and automating CI/CD pipelines for tasks like building, testing, and deploying code.
+
+2. **Integration with Source Code Management (SCM)**
+   - GitHub Actions integrates seamlessly with GitHub repositories.
+   - GitLab CI is a native feature of GitLab.
+   - Tekton, while independent of a specific SCM, integrates well with Git-based workflows.
+
+3. **Support for Containerized Workflows**
+   They all support containerized environments using Docker images, enabling scalable, consistent builds and deployments.
+
+4. **Extensibility**
+   These tools offer extensions or plugins:
+   - GitHub Actions has a vast marketplace.
+   - GitLab CI supports custom scripts and integrations.
+   - Tekton allows building custom reusable tasks.
+
+---
+
+### **Differences**
 
 | Feature                | GitHub Actions                   | GitLab CI                       | Tekton                             |
 |------------------------|----------------------------------|---------------------------------|------------------------------------|
@@ -94,52 +102,52 @@ Continuous Integration (CI) tools play a critical role in modern software develo
 
 ---
 
-### **Pros and Cons**  
+### **Pros and Cons**
 
-#### **GitHub Actions**  
-**Pros**  
-- Seamless GitHub integration for repository management.  
-- Large marketplace with prebuilt actions.  
-- User-friendly YAML configuration for workflows.  
-- Hosted runners reduce setup effort.  
+#### **GitHub Actions**
+**Pros**
+- Seamless GitHub integration for repository management.
+- Large marketplace with prebuilt actions.
+- User-friendly YAML configuration for workflows.
+- Hosted runners reduce setup effort.
 
-**Cons**  
-- Tied to GitHub repositories, limiting flexibility.  
-- Hosted runners may have resource limitations for large-scale projects.  
-- Limited free tier for private repositories.  
+**Cons**
+- Tied to GitHub repositories, limiting flexibility.
+- Hosted runners may have resource limitations for large-scale projects.
+- Limited free tier for private repositories.
 
-#### **GitLab CI**  
-**Pros**  
-- Native to GitLab, providing streamlined integration with its SCM and DevOps features.  
-- Flexible runner options (hosted and self-managed).  
-- Advanced features like security scanning and monitoring in higher-tier plans.  
+#### **GitLab CI**
+**Pros**
+- Native to GitLab, providing streamlined integration with its SCM and DevOps features.
+- Flexible runner options (hosted and self-managed).
+- Advanced features like security scanning and monitoring in higher-tier plans.
 
-**Cons**  
-- Free tier offers fewer compute minutes compared to GitHub Actions.  
-- Requires GitLab as the SCM, reducing flexibility for teams using other platforms.  
+**Cons**
+- Free tier offers fewer compute minutes compared to GitHub Actions.
+- Requires GitLab as the SCM, reducing flexibility for teams using other platforms.
 
-#### **Tekton**  
-**Pros**  
-- Kubernetes-native, enabling scalable and cloud-native pipeline orchestration.  
-- Repository-agnostic, supporting a wide variety of use cases.  
-- Highly customizable and extensible.  
+#### **Tekton**
+**Pros**
+- Kubernetes-native, enabling scalable and cloud-native pipeline orchestration.
+- Repository-agnostic, supporting a wide variety of use cases.
+- Highly customizable and extensible.
 
-**Cons**  
-- Steeper learning curve due to Kubernetes-focused setup.  
-- Requires infrastructure management and Kubernetes expertise.  
-- Limited community resources compared to GitHub Actions and GitLab CI.  
+**Cons**
+- Steeper learning curve due to Kubernetes-focused setup.
+- Requires infrastructure management and Kubernetes expertise.
+- Limited community resources compared to GitHub Actions and GitLab CI.
 
 ---
 
-### **Which Should You Choose?**  
+### **Which Should You Choose?**
 
-- **Choose GitHub Actions** if your projects are hosted on GitHub and you need a simple, integrated CI/CD tool with minimal setup.  
-- **Choose GitLab CI** if your team uses GitLab as an all-in-one DevOps platform and requires native features like issue tracking and security scans.  
-- **Choose Tekton** if you are looking for a Kubernetes-native, highly scalable, and flexible CI/CD solution for advanced workflows and multi-cloud environments.  
+- **Choose GitHub Actions** if your projects are hosted on GitHub and you need a simple, integrated CI/CD tool with minimal setup.
+- **Choose GitLab CI** if your team uses GitLab as an all-in-one DevOps platform and requires native features like issue tracking and security scans.
+- **Choose Tekton** if you are looking for a Kubernetes-native, highly scalable, and flexible CI/CD solution for advanced workflows and multi-cloud environments.
 
 Each of these tools serves a distinct audience, so the best choice depends on your specific requirements, technical expertise, and ecosystem preferences.
 
-# Copilot 
+# Copilot
 
 I apologize for any inconvenience. Let me provide you with a comprehensive comparison of GitHub Actions, GitLab CI, and Tekton, covering their similarities, differences, pros, and cons.
 
