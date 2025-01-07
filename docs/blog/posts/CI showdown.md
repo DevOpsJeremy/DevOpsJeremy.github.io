@@ -51,11 +51,13 @@ As mentioned [above](#jobs), each time a pipeline runs a job, it starts a contai
 
 ## Comparing the tools
 
-| Tool | Description | Hosted on | Pros | Cons |
-| --- | --- | --- | --- | --- |
-| Github Actions | | https://github.com | | |
-| Gitlab CI | | https://gitlab.com | | |
-| Tekton | | Kubernetes | | |
+Lets examine a few of the available CI tools:
+
+| Tool | Hosted on | Pros | Cons |
+| --- | --- | --- | --- |
+| [Github Actions](https://github.com/features/actions) | All Github plans | <ul><li>Simple</li></ul> | <ul></ul> |
+| [Gitlab CI](https://docs.gitlab.com/ee/ci/) | All Gitlab tiers | <ul><li>Simple</li></ul> | <ul>Requires a [runner](https://docs.gitlab.com/runner/)</ul> |
+| [Tekton](https://tekton.dev/) | Kubernetes | <ul><li>More configurable</li><li>By being hosted in Kubernetes, no server is required</li></ul> | <ul><li>Requires more configuration</li></ul> |
 
 <div hidden>
 
