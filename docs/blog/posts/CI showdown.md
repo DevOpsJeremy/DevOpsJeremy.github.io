@@ -94,7 +94,7 @@ Now let's see at what a simple pipeline would look like:
     ```yaml
     workflow:
       rules:
-        - if: $CI_COMMIT_BRANCH == 'CANES-78384-air-3.25-refactor-docs-as-code-for-mkdocs'
+        - if: $CI_COMMIT_BRANCH == 'main'
     lint:
       image: markdownlint/markdownlint
       script: mdl
