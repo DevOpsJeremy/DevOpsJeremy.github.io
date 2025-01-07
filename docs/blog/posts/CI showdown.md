@@ -96,6 +96,7 @@ Now let's see at what a simple pipeline would look like:
 
     ```yaml
     workflow:
+      name: build-mkdocs
       rules:
         - if: $CI_COMMIT_BRANCH == 'main'
     lint:
@@ -113,6 +114,61 @@ Now let's see at what a simple pipeline would look like:
         - name: Build site
           script: mkdoc build
     ```
+
+=== "Tekton"
+
+```yaml
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: build-mkdocs
+spec:
+  params:
+    - name: url
+  workspaces:
+    - name: repo
+  tasks:
+    - name: Clone repository
+      taskRef:
+        name: git-clone
+        kind: ClusterTask
+      params:
+        - name: url
+          value: $(params.url)
+      workspaces:
+        - name: output
+          workspace: repo
+    - name: lint
+      workspaces:
+        - name: repo
+          workspace: repo
+      taskSpec:
+        workspaces:
+          - name: repo
+        steps:
+          - name: Run Markdown lint
+            image: markdownlint/markdownlint
+            workingDir: $(workspaces.repo.path)
+            script: mdl
+    - name: build_site
+      workspaces:
+        - name: repo
+          workspace: repo
+      taskSpec:
+        workspaces:
+          - name: repo
+        stepTemplate:
+          workingDir: $(workspaces.repo.path)
+        steps:
+          - name: Check for document
+            script: |
+              if [[ -f docs/myDoc.md ]]; then
+                echo "myDoc.md exists!"
+              fi
+          - name: Build site
+            image: squidfunk/mkdocs-material
+            script: mkdocs build
+```
 
 <div hidden>
 
