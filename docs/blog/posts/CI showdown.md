@@ -91,6 +91,25 @@ Now let's see at what a simple pipeline would look like:
 
 === "Gitlab CI/CD"
 
+    ```yaml
+    workflow:
+      rules:
+        - if: $CI_COMMIT_BRANCH == 'CANES-78384-air-3.25-refactor-docs-as-code-for-mkdocs'
+    lint:
+      image: markdownlint/markdownlint
+      script: mdl
+    build_site:
+      needs: ["lint"]
+      image: squidfunk/mkdocs-material
+      run:
+        - name: Check for document
+          script: |
+            if [[ -f docs/myDoc.md ]]; then
+              echo "myDoc.md exists!"
+            fi
+        - name: Build site
+          script: mkdoc build
+    ```
 
 <div hidden>
 
