@@ -5,12 +5,15 @@ on:
       - main
 jobs:
   lint:
+    container: markdownlint/markdownlint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Run Markdown lint
         run: mdl
   build_site:
+    needs: [lint]
+    container: squidfunk/mkdocs-material
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,3 +24,13 @@ jobs:
           fi
       - name: Build site
         run: mkdocs build
+  pwsh_test:
+    container: mcr.microsoft.com/powershell
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test powershell
+        shell: pwsh
+        run: |
+          $PSVersionTable
+          Get-ChildItem
