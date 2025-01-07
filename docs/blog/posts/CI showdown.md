@@ -59,6 +59,38 @@ Lets examine a few of the available CI tools:
 | [Gitlab CI](https://docs.gitlab.com/ee/ci/) | All Gitlab tiers | <ul><li>Simple</li></ul> | <ul>Requires a [runner](https://docs.gitlab.com/runner/)</ul> |
 | [Tekton](https://tekton.dev/) | Kubernetes | <ul><li>More configurable</li><li>By being hosted in Kubernetes, no server is required</li></ul> | <ul><li>Requires more configuration</li></ul> |
 
+Now let's see at what a simple pipeline would look like:
+
+=== "Github Actions"
+
+    name: build-mkdocs
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      lint:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          - name: Run Markdown lint
+            run: mdl
+      build_site:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          - name: Check for document
+            run: |
+              if [[ -f docs/myDoc.md ]]; then
+                echo "myDoc.md exists!"
+              fi
+          - name: Build site
+            run: mkdocs build
+
+=== "Gitlab CI/CD"
+
+    ![code](/.github/workflows/example.yml)
+
 <div hidden>
 
 #### AI

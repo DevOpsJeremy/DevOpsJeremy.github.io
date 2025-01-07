@@ -1,0 +1,23 @@
+name: build-mkdocs
+on:
+  push:
+    branches:
+      - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Markdown lint
+        run: mdl
+  build_site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for document
+        run: |
+          if [[ -f docs/myDoc.md ]]; then
+            echo "myDoc.md exists!"
+          fi
+      - name: Build site
+        run: mkdocs build
