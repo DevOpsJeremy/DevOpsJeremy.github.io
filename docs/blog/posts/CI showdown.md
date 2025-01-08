@@ -172,8 +172,8 @@ Now let's see what a simple pipeline would look like using each CI:
 
 The pipeline accomplishes the following: 
 
-```mermaid
-stateDiagram
+``` mermaid
+stateDiagram-v2
   direction LR
   A: Clone repository --> B: Run Markdown lint
   B --> build_site
