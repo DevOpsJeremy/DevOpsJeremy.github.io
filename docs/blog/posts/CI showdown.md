@@ -174,13 +174,13 @@ The pipeline accomplishes the following:
 
 ```mermaid
 stateDiagram
+  direction LR
+  A: Clone repository --> B: Run Markdown lint
+  B --> build_site
+  state build_site {
     direction LR
-    A: Clone repository --> B: Run Markdown lint
-    B --> build_site
-    state build_site {
-      direction LR
-      C: Check that a file exists --> D: Build MkDocs
-    }
+    C: Check that a file exists --> D: Build MkDocs
+  }
 ```
 
 
