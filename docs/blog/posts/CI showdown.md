@@ -181,6 +181,8 @@ stateDiagram-v2
   D: Build MkDocs
 
   A --> B
+  note left of A
+    Only Tekton
   B --> build_site
   state build_site {
     direction LR
