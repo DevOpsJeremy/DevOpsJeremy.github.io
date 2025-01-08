@@ -175,7 +175,8 @@ The pipeline accomplishes the following:
 ``` mermaid
 stateDiagram-v2
   direction LR
-  A: Clone repository --> B: Run Markdown lint
+  [*] --> A: Clone repository
+  A --> B: Run Markdown lint
   B --> build_site
   state build_site {
     direction LR
