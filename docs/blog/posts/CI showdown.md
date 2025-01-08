@@ -59,7 +59,7 @@ Lets examine a few of the available CI tools:
 | [Gitlab CI](https://docs.gitlab.com/ee/ci/) | All Gitlab tiers | <ul><li>Simple</li></ul> | <ul>Requires a [runner](https://docs.gitlab.com/runner/)</ul> |
 | [Tekton](https://tekton.dev/) | Kubernetes | <ul><li>More configurable</li><li>By being hosted in Kubernetes, no server is required</li></ul> | <ul><li>Requires more configuration</li></ul> |
 
-Now let's see at what a simple pipeline would look like:
+Now let's see what a simple pipeline would look like using each CI:
 
 === "Github Actions"
 
@@ -169,6 +169,13 @@ Now let's see at what a simple pipeline would look like:
                 image: squidfunk/mkdocs-material
                 script: mkdocs build
     ```
+
+The pipeline accomplishes the following: 
+
+```mermaid
+```
+
+
 
 <div hidden>
 
