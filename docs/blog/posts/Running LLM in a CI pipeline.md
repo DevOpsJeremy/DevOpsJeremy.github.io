@@ -61,5 +61,5 @@ To start, you'll need either a [Github](https://github.com) or [Gitlab](https://
 
 This creates a basic structure for a pipeline that runs on the `main` branch. Feel free to use whichever branch you want, or omit it entirely to run on all branches.
 
-[^1] https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories
-[^2] https://docs.gitlab.com/ee/user/project/
+[^1]: [Creating a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
+[^2]: [Creating a Gitlab project](https://docs.gitlab.com/ee/user/project/)
