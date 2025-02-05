@@ -36,6 +36,10 @@ All the tools I'm using in this article are free to use.
 | Gitlab CI | A free CI/CD pipeline system developed by Gitlab for running automated jobs in the same environment as your git repository |
 | Github Actions | Same as Gitlab CI, but provided by Github |
 
+!!! note
+
+    In this article I won't be getting too deep into exactly what Ollama is and how it works. To learn more about it, check out their [GitHub](https://github.com/ollama/ollama).
+
 ### Setup
 
 To start, you'll need either a [Github](https://github.com) or [Gitlab](https://gitlab.com) account and you'll need to create your first repository[^1][^2]. Once that's done, create a basic CI/CD pipeline:
@@ -61,5 +65,33 @@ To start, you'll need either a [Github](https://github.com) or [Gitlab](https://
 
 This creates a basic structure for a pipeline that runs on the `main` branch. Feel free to use whichever branch you want, or omit it entirely to run on all branches.
 
+### Running an LLM in a job
+
+The `ollama` CLI is great for when you want to run a local, interactive chat session in your terminal. But for a non-interactive, automated CI job it's best to interface with the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md). To do this, we need to first run Ollama as a service[^3][^4] accessible by our job.
+
+=== "Github Actions"
+
+    ```yaml
+    jobs:
+      ollama:
+        runs-on: ubuntu-latest
+        services:
+          ollama:
+            image: ollama/ollama
+            options: serve
+    ```
+
+=== "Gitlab CI"
+
+    ```yaml
+    ollama:
+      services:
+        - image: ollama/ollama
+          alias: ollama
+          command: ["serve"]
+    ```
+
 [^1]: [Creating a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
 [^2]: [Creating a Gitlab project](https://docs.gitlab.com/ee/user/project/)
+[^3]: [GitHub actions - services](https://docs.github.com/en/actions/use-cases-and-examples/using-containerized-services/about-service-containers)
+[^4]: [Gitlab CI - services](https://docs.gitlab.com/ee/ci/services/)
