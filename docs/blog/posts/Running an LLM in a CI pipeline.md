@@ -13,7 +13,7 @@ tags:
   - ai
   - ci/cd
 ---
-# Running LLMs in a CI pipeline
+# Running an LLM in a CI pipeline
 
 With the recent explosion of AI and large language models (LLM), I've been brainstorming how to take advantage of AI capabilities within a CI/CD pipeline.
 
