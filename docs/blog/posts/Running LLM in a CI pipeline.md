@@ -49,7 +49,6 @@ To start, you'll need either a [Github](https://github.com) or [Gitlab](https://
         branches:
           - main
     ```
-
 === "Gitlab CI - `.gitlab-ci.yml`
 
     ```yaml
