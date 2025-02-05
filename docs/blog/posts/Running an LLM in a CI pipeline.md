@@ -1,5 +1,5 @@
 ---
-title: Running LLMs in a CI pipeline
+title: Running an LLM in a CI pipeline
 date:
   created: 2025-02-05
 authors:
