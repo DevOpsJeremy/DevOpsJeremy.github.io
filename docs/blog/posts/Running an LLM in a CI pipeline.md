@@ -59,7 +59,7 @@ To start, you'll need either a [GitHub](https://github.com) or [Gitlab](https://
       name: ci
     ```
 
-This creates a basic structure for a pipeline that runs on all commits. To limit the pipeline to only run on a certain branch, modify GitHub's [`on.push`](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#onpushbranchestagsbranches-ignoretags-ignore) option, or Gitlab's [workflow `rules`](https://docs.gitlab.com/ee/ci/yaml/#workflowrules). For example:
+This creates a basic structure for a pipeline that runs on all commits. To limit the pipeline to only run on a certain branch, modify GitHub's [`on.push`](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#onpushbranchestagsbranches-ignoretags-ignore) option, or Gitlab's [`workflow:rules`](https://docs.gitlab.com/ee/ci/yaml/#workflowrules). For example:
 
 === "GitHub Actions"
 
@@ -236,6 +236,7 @@ Put it all together:
         curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status
         curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response
     ```
+
 
 [^1]: [Creating a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
 [^2]: [Creating a Gitlab project](https://docs.gitlab.com/ee/user/project/)
