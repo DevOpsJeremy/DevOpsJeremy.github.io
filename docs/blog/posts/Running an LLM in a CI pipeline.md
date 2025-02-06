@@ -95,3 +95,128 @@ The `ollama` CLI is great for when you want to run a local, interactive chat ses
 [^2]: [Creating a Gitlab project](https://docs.gitlab.com/ee/user/project/)
 [^3]: [GitHub actions - services](https://docs.github.com/en/actions/use-cases-and-examples/using-containerized-services/about-service-containers)
 [^4]: [Gitlab CI - services](https://docs.gitlab.com/ee/ci/services/)
+<!--
+## Overview
+
+This example shows how to run an LLM locally using [Ollama](https://ollama.com/) in a container for a Gitlab CI pipeline.
+
+This process runs Ollama as a [service](https://docs.gitlab.com/ee/ci/services/) using the `ollama serve` command. This is reachable from the CI job via the `ollama` alias. The job can then query the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md) of the service to pull model(s) from the [Ollama library](https://ollama.com/library), generate responses, etc.
+
+## Use-case
+
+One possible use-case for an LLM is generating summaries of git commits for use in release notes and/or CHANGELOG.
+
+## Output
+
+```
+$ curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull
+{"status":"success"}
+$ curl -sS -X POST -d '{ "model":"llama3.2", "stream":false, "prompt":"Hello world" }' ollama:11434/api/generate
+{"model":"llama3.2","created_at":"2025-02-04T21:01:15.78458642Z","response":"Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?","done":true,"done_reason":"stop","context":[128006,9125,128007,271,38766,1303,33025,2696,25,6790,220,2366,18,271,128009,128006,882,128007,271,9906,1917,128009,128006,78191,128007,271,9906,0,1102,596,6555,311,3449,499,13,2209,1070,2555,358,649,1520,499,449,477,1053,499,1093,311,6369,30],"total_duration":6471550508,"load_duration":1558670845,"prompt_eval_count":27,"prompt_eval_duration":1863000000,"eval_count":25,"eval_duration":3048000000}
+```
+
+## Examples
+```yaml .gitlab/ci/ollama-changelog.yml
+ollama-changelog:
+  services:
+    - name: ollama/ollama
+      alias: ollama
+      command: ["serve"]
+  variables:
+    MODEL: llama3.2
+    SYSTEM: Your response will be directly included in the CHANGELOG of a software release notes. DO NOT include the original git logs and DO NOT reveal in ANY WAY that it is an AI/LLM generating the information. DO NOT include anything like 'heres a possible summary' or 'use this in your changelog'. DO NOT include any self references to the summary you're providing or the fact that you are in fact providing a summary. Your ENTIRE response will be directly used in WHOLE and VERBATIM, so make sure every word you respond with can be appropriately included in the end product. No yapping.
+  before_script: apk add jq
+  script:
+    - IFS=$'\n'
+    # Capture the past 5 git commit titles
+    - for line in $(git log -5 --format=%s); do LOG="$LOG $line; "; done
+    - >
+      PROMPT="Given this git log: '$LOG', create a summary for use in a release notes changelog"
+    - curl -sS -X POST -d "{\"model\":\"$MODEL\",\"stream\":false}" ollama:11434/api/pull | jq -r .status
+    - curl -sS -X POST -d "{ \"model\":\"$MODEL\", \"stream\":false, \"prompt\":\"$PROMPT\", \"system\":\"$SYSTEM\" }" ollama:11434/api/generate | jq -r .response
+    # > Resolves issues related to instruction clarity and code quality, including the removal of redundant instructions, improved error handling, corrected if-conditional logic, and enhanced input validation.
+```
+```yaml .gitlab/ci/ollama-jq.yml
+ollama-jq:
+  services:
+    - name: ollama/ollama
+      alias: ollama
+      command: ["serve"]
+  variables:
+    MODEL: llama3.2
+    PROMPT: Hello world
+  # Install jq so we can parse the JSON return values
+  before_script: apk add jq
+  script:
+    - curl -sS -X POST -d "{\"model\":\"$MODEL\",\"stream\":false}" ollama:11434/api/pull | jq -r .status
+    # > success
+    - curl -sS -X POST -d "{ \"model\":\"$MODEL\", \"stream\":false, \"prompt\":\"$PROMPT\" }" ollama:11434/api/generate | jq -r .response
+    # > Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?
+```
+```yaml .gitlab/ci/ollama-minimal.yml
+ollama:
+  services:
+    - name: ollama/ollama
+      # The alias is the name we'll use to communicate with this service
+      alias: ollama
+      command: ["serve"]
+  script:
+    # First pull down the llama3.2 model
+    - curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull
+    # > {"status":"success"}
+
+    # Send the prompt to the LLM
+    # 'stream: false' ensures that we aren't constantly getting updates as the LLM generates the response
+    - curl -sS -X POST -d '{ "model":"llama3.2", "stream":false, "prompt":"Hello world" }' ollama:11434/api/generate
+    # > {"model":"llama3.2","created_at":"2025-02-04T21:01:15.78458642Z","response":"Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?","done":true,"done_reason":"stop","context":[128006,9125,128007,271,38766,1303,33025,2696,25,6790,220,2366,18,271,128009,128006,882,128007,271,9906,1917,128009,128006,78191,128007,271,9906,0,1102,596,6555,311,3449,499,13,2209,1070,2555,358,649,1520,499,449,477,1053,499,1093,311,6369,30],"total_duration":6471550508,"load_duration":1558670845,"prompt_eval_count":27,"prompt_eval_duration":1863000000,"eval_count":25,"eval_duration":3048000000}
+```
+```yaml .gitlab/ci/ollama-system.yml
+ollama-system:
+  services:
+    - name: ollama/ollama
+      alias: ollama
+      command: ["serve"]
+  variables:
+    MODEL: llama3.2
+    PROMPT: Hello world
+    # The system message used to specify custom behavior.
+    SYSTEM: Generate all responses as if you are a pirate
+  before_script: apk add jq
+  script:
+    - curl -sS -X POST -d "{\"model\":\"$MODEL\",\"stream\":false}" ollama:11434/api/pull | jq -r .status
+    - curl -sS -X POST -d "{ \"model\":\"$MODEL\", \"stream\":false, \"prompt\":\"$PROMPT\", \"system\":\"$SYSTEM\" }" ollama:11434/api/generate | jq -r .response
+    # > Yer lookin' fer a hello, eh? Well, matey, I be respondin' with a hearty "Arrrr!" and a swashbucklin' spirit! What be bringin' ye to these fair waters today? Treasure huntin', perhaps? Or just lookin' fer some pirate-sized fun?
+```
+```yaml templates/ollama-component.yml
+# Ollama can be used as a Gitlab CI component to include in a pipeline, whether in this repository or elsewhere
+spec:
+  inputs:
+    model:
+      default: llama3.2
+    prompt:
+      default: Hello world
+    system:
+      default: ""
+---
+ollama-component:
+  services:
+    - name: ollama/ollama
+      alias: ollama
+      command: ["serve"]
+  variables:
+    MODEL: $[[ inputs.model ]]
+    PROMPT: $[[ inputs.prompt ]]
+    SYSTEM: $[[ inputs.system ]]
+  before_script: apk add jq
+  script:
+    - curl -sS -X POST -d "{\"model\":\"$MODEL\",\"stream\":false}" ollama:11434/api/pull | jq -r .status
+    - curl -sS -X POST -d "{ \"model\":\"$MODEL\", \"stream\":false, \"prompt\":\"$PROMPT\", \"system\":\"$SYSTEM\" }" ollama:11434/api/generate | jq -r .response
+
+# Call this component with:
+# include:
+#   - local: templates/ollama-component.yml
+#     inputs:
+#       prompt: Hello world
+#       model: tinyllama
+```
+-->
