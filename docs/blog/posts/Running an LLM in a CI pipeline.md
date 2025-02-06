@@ -82,7 +82,7 @@ This creates a basic structure for a pipeline that runs on all commits. To limit
         - if: $CI_COMMIT_BRANCH == 'main'
     ```
 
-### Running an LLM in a job
+### Run an LLM in a job
 
 The `ollama` CLI is great for running a local, interactive chat session in your terminal. But for a non-interactive, automated CI job it's best to interface with the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md). To do this, we need to first define our `ollama` job and run Ollama as a service[^3][^4] accessible by our job.
 
@@ -166,7 +166,7 @@ That's all we need--let's see the response:
 {"model":"llama3.2","created_at":"2025-02-06T18:46:52.362892453Z","response":"Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?","done":true,"done_reason":"stop","context":[128004,9125,128007,276,39766,3303,33025,2696,22,8790,220,2366,11,271,128009,128006,882,128007,271,9906,1917,128009,128006,78191,128007,271,9906,0,1102,596,6555,311,3449,499,13,2209,1070,2555,358,649,1520,499,449,477,1053,499,1093,311,6369,30],"total_duration":9728821911,"load_duration":2319403269,"prompt_eval_count":27,"prompt_eval_duration":3406000000,"eval_count":25,"eval_duration":4001000000}
 ```
 
-### Parsing the output
+### Parse the output
 
 This is great, but the JSON output is a bit verbose. We can simplify the response and make it a bit more readable using the [`jq`](https://jqlang.org/) command.
 
