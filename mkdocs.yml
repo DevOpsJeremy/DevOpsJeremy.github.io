@@ -9,6 +9,7 @@ theme:
     - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.sections
     - toc.follow
     - content.code.copy
     - content.code.annotate
