@@ -8,6 +8,7 @@ theme:
     - navigation.instant
     - navigation.indexes
     - navigation.tabs
+    - navigation.tabs.sticky
     - toc.follow
     - content.code.copy
     - content.code.annotate
