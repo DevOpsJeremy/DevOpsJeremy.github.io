@@ -4,3 +4,4 @@ mkdocs-material
 mkdocs-markdownextradata-plugin
 pymdown-extensions
 mkdocs-rss-plugin
+mkdocs-exclude-search
