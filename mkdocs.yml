@@ -5,7 +5,10 @@ theme:
   name: material
   custom_dir: overrides
   features:
+    - navigation.instant
     - navigation.indexes
+    - navigation.tracking
+    - toc.follow
     - content.code.copy
     - content.code.annotate
   palette:
@@ -67,6 +70,8 @@ extra_css:
 hooks:
   - hooks/socialmedia.py
 markdown_extensions:
+  - toc:
+      permalink: true
   - footnotes
   - attr_list
   - pymdownx.emoji:
