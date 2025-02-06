@@ -12,7 +12,7 @@ jobs:
         item:
           - container: mcr.microsoft.com/powershell
             name: Generate PowerShell documentation
-            run: pwsh -File .github/scripts/generate_docs/generate_pwsh.ps1 -Files $GENERATE_PATH/powershell/*
+            run: pwsh -File .github/scripts/generate_docs/generate_pwsh.ps1 -Modules $GENERATE_PATH/powershell/*
     runs-on: ubuntu-latest
     container: ${{ matrix.item.container }}
     env:
