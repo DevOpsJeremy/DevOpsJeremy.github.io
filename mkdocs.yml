@@ -1,10 +1,10 @@
-site_name: !ENV [SITE_NAME, "DevOps Jeremy"]
+site_name: !ENV [SITE_NAME, "DevOps Jeremy"]
 site_url: https://DevOpsJeremy.github.io
-site_repo: https://github.com/DevOpsJeremy/DevOpsJeremy.github.io
-theme:
+site_repo: https://github.com/DevOpsJeremy/DevOpsJeremy.github.io
+theme:
   name: material
-  custom_dir: overrides
-  features:
+  custom_dir: overrides
+  features:
     - navigation.instant
     - navigation.indexes
     - toc.follow
@@ -30,51 +30,51 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-plugins:
-  - search
-  - blog:
-      blog_toc: true
-      pagination_per_page: 10
-  - tags:
-      tags_file: blog/tags.md
-  - include_dir_to_nav
-  - markdownextradata: {}
-  - rss:
-      match_path: "blog/posts/.*"
-      date_from_meta:
-        as_creation: date.created
-        as_update: date.updated
-nav:
-  - Home: index.md
-  - Posts:
-      - Posts: blog/index.md
-      - Tags: blog/tags.md
-  - Documentation: documentation
-  - About: about.md
+plugins:
+  - search
+  - blog:
+      blog_toc: true
+      pagination_per_page: 10
+  - tags:
+      tags_file: blog/tags.md
+  - include_dir_to_nav
+  - markdownextradata: {}
+  - rss:
+      match_path: "blog/posts/.*"
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
+nav:
+  - Home: index.md
+  - Posts:
+      - Posts: blog/index.md
+      - Tags: blog/tags.md
+  - Documentation: documentation
+  - About: about.md
 extra:
-  comments: true
-  generator: false
-  social:
-    - icon: fontawesome/brands/square-x-twitter
-      name: X
-      link: https://x.com/DevOpsJeremy
-    - icon: fontawesome/brands/github
-      name: Github
-      link: https://github.com/DevOpsJeremy
-    - icon: fontawesome/brands/instagram
-      name: Instagram
-      link: https://www.instagram.com/yousuckatpowershell
-extra_css:
-  - assets/stylesheets/custom.css
-hooks:
-  - hooks/socialmedia.py
-markdown_extensions:
+  comments: true
+  generator: false
+  social:
+    - icon: fontawesome/brands/square-x-twitter
+      name: X
+      link: https://x.com/DevOpsJeremy
+    - icon: fontawesome/brands/github
+      name: Github
+      link: https://github.com/DevOpsJeremy
+    - icon: fontawesome/brands/instagram
+      name: Instagram
+      link: https://www.instagram.com/yousuckatpowershell
+extra_css:
+  - assets/stylesheets/custom.css
+hooks:
+  - hooks/socialmedia.py
+markdown_extensions:
   - toc:
       permalink: true
   - footnotes
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
