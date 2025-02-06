@@ -2,9 +2,12 @@
 param (
     [string[]] $Modules
 )
-Install-PSResource platyPS -TrustRepository -PassThru | Format-List
+Install-PSResource platyPS -TrustRepository
 Import-Module platyPS -Force
 Import-Module $Modules -Force
 foreach ($module in $Modules) {
-    Get-Command -Module [IO.Path]::GetFileNameWithoutExtension($module)
+    $fname = [IO.Path]::GetFileNameWithoutExtension($module)
+    "--- $fname ---"
+    Get-Module $fname
+    Get-Command -Module $fname
 }
