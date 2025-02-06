@@ -9,13 +9,13 @@ jobs:
   documentation:
     strategy:
       matrix:
+        container: mcr.microsoft.com/powershell
         item:
           - container: mcr.microsoft.com/powershell
             name: Generate PowerShell documentation
             run: pwsh -File .github/scripts/generate_docs/generate_pwsh.ps1
     runs-on: ubuntu-latest
-    container:
-      image: "{{ matrix.item.container }}"
+    container: "{{ matrix.container }}"
     steps:
       - name: "{{ matrix.item.name }}"
         run: "{{ matrix.item.run }}"
