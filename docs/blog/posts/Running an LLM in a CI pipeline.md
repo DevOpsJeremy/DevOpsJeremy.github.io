@@ -34,7 +34,7 @@ All the tools I'm using in this article are free to use.
 | --- | --- |
 | Ollama | A free, open-source tool for running LLMs locally |
 | Gitlab CI | A free CI/CD pipeline system developed by Gitlab for running automated jobs in the same environment as your git repository |
-| Github Actions | Same as Gitlab CI, but provided by Github |
+| GitHub Actions | Same as Gitlab CI, but provided by GitHub |
 
 !!! note
 
@@ -42,9 +42,26 @@ All the tools I'm using in this article are free to use.
 
 ### Setup
 
-To start, you'll need either a [Github](https://github.com) or [Gitlab](https://gitlab.com) account and you'll need to create your first repository[^1][^2]. Once that's done, create a basic CI/CD pipeline:
+To start, you'll need either a [GitHub](https://github.com) or [Gitlab](https://gitlab.com) account and you'll need to create your first repository[^1][^2]. Once that's done, create a basic CI/CD pipeline--we'll name it `ci`:
 
-=== "Github Actions - `.github/workflows/ci.yml`"
+=== "GitHub Actions - `.github/workflows/ci.yml`"
+
+    ```yaml
+    name: ci
+    on:
+      push:
+    ```
+
+=== "Gitlab CI - `.gitlab-ci.yml`"
+
+    ```yaml
+    workflow:
+      name: ci
+    ```
+
+This creates a basic structure for a pipeline that runs on all commits. To limit the pipeline to only run on a certain branch, modify GitHub's [`on.push`](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#onpushbranchestagsbranches-ignoretags-ignore) option, or Gitlab's [workflow `rules`](https://docs.gitlab.com/ee/ci/yaml/#workflowrules). For example:
+
+=== "GitHub Actions"
 
     ```yaml
     name: ci
@@ -54,7 +71,7 @@ To start, you'll need either a [Github](https://github.com) or [Gitlab](https://
           - main
     ```
 
-=== "Gitlab CI - `.gitlab-ci.yml`"
+=== "Gitlab CI"
 
     ```yaml
     workflow:
@@ -63,22 +80,18 @@ To start, you'll need either a [Github](https://github.com) or [Gitlab](https://
         - if: $CI_COMMIT_BRANCH == 'main'
     ```
 
-This creates a basic structure for a pipeline that runs on the `main` branch. Feel free to use whichever branch you want, or omit it entirely to run on all branches.
-
 ### Running an LLM in a job
 
-The `ollama` CLI is great for when you want to run a local, interactive chat session in your terminal. But for a non-interactive, automated CI job it's best to interface with the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md). To do this, we need to first run Ollama as a service[^3][^4] accessible by our job.
+The `ollama` CLI is great for running a local, interactive chat session in your terminal. But for a non-interactive, automated CI job it's best to interface with the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md). To do this, we need to first define our `ollama` job and run Ollama as a service[^3][^4] accessible by our job.
 
-=== "Github Actions"
+=== "GitHub Actions"
 
     ```yaml
     jobs:
       ollama:
         runs-on: ubuntu-latest
         services:
-          ollama:
-            image: ollama/ollama
-            options: serve
+          ollama: ollama/ollama
     ```
 
 === "Gitlab CI"
@@ -88,7 +101,140 @@ The `ollama` CLI is great for when you want to run a local, interactive chat ses
       services:
         - image: ollama/ollama
           alias: ollama
-          command: ["serve"]
+    ```
+
+Next we'll add our script. When we request a response from the LLM we'll need to specify a large language model to generate that response. These models can be found in [Ollama's library](https://ollama.com/library). Any model will work, but keep in mind that models with more parameters, while providing much better responses, are much larger in size--the [671 billion parameter version of `deepseek-r1`](https://ollama.com/library/deepseek-r1:671b) is 404GB in size. As such, it's ideal to use smaller models such as Meta's [`llama3.2`](https://ollama.com/library/llama3.2).
+
+Prior to generating a response, we'll first need to pull the model we want using Ollama's [`pull` API](https://github.com/ollama/ollama/blob/main/docs/api.md#pull-a-model). Then we generate the response with the [`generate` API](https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-completion). Any Docker image will work for this job as long as it has the ability to send web requests with tools like [`wget`](https://www.gnu.org/software/wget/) or [`curl`](https://curl.se/). For this example we'll be using `curl` with the [`alpine/curl`](https://hub.docker.com/r/alpine/curl) image.
+
+=== "GitHub Actions"
+
+    ```yaml
+    container: alpine/curl
+    steps:
+      - name: Generate response
+        run: |
+          curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull
+          curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate
+    ```
+
+=== "Gitlab CI"
+
+    ```yaml
+    image: alpine/curl
+    script: |
+      curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull
+      curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate
+    ```
+
+!!! note
+
+    Ideally, the `pull` and `generate` operations would run in separate steps. GitHub uses the [`steps`](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps) functionality for this, however, the comparable functionality in Gitlab ([`run`](https://docs.gitlab.com/ee/ci/yaml/#run)) is still in the experimental stage. For simplicity, we'll be running the commands in a single script in both GitHub and Gitlab. To accomplish the same in separate steps would look like this:
+
+    === "GitHub Actions"
+
+        ```yaml
+        container: alpine/curl
+        steps:
+          - name: Pull model
+            run: curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull
+
+          - name: Generate response
+            run: curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate
+        ```
+
+    === "Gitlab CI"
+
+        ```yaml
+        image: alpine/curl
+        run:
+          - name: Pull model
+            script: curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull
+
+          - name: Generate response
+            script: curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate
+        ```
+
+That's all we need--let's see the response:
+
+```
+> curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull
+{"status":"success"}
+> curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate
+{"model":"llama3.2","created_at":"2025-02-06T18:46:52.362892453Z","response":"Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?","done":true,"done_reason":"stop","context":[128004,9125,128007,276,39766,3303,33025,2696,22,8790,220,2366,11,271,128009,128006,882,128007,271,9906,1917,128009,128006,78191,128007,271,9906,0,1102,596,6555,311,3449,499,13,2209,1070,2555,358,649,1520,499,449,477,1053,499,1093,311,6369,30],"total_duration":9728821911,"load_duration":2319403269,"prompt_eval_count":27,"prompt_eval_duration":3406000000,"eval_count":25,"eval_duration":4001000000}
+```
+
+This is great, but the JSON output is a bit verbose. We can simplify the response and make it a bit more readable using the [`jq`](https://jqlang.org/) command.
+
+=== "GitHub Actions"
+
+    ```yaml
+    steps:
+      - name: Install jq
+        run: apk add jq
+      - name: Generate response
+        run: |
+          curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status
+          curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response
+    ```
+
+=== "Gitlab CI"
+
+    ```yaml
+    before_script: apk add jq
+    script: |
+      curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status
+      curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response
+    ```
+
+This looks much better:
+
+```
+> curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status
+success
+> curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response
+Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?
+```
+
+Put it all together:
+
+=== "GitHub Actions"
+
+    ```yaml
+    name: ci
+    on:
+      push:
+
+    jobs:
+      ollama:
+        runs-on: ubuntu-latest
+        services:
+          ollama: ollama/ollama
+        container: alpine/curl
+        steps:
+          - name: Install jq
+            run: apk add jq
+          - name: Generate response
+            run: |
+              curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status
+              curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response
+    ```
+
+=== "Gitlab CI"
+
+    ```yaml
+    workflow:
+      name: ci
+
+    ollama:
+      image: alpine/curl
+      services:
+        - name: ollama/ollama
+          alias: ollama
+      before_script: apk add jq
+      script: |
+        curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status
+        curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response
     ```
 
 [^1]: [Creating a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
