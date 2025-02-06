@@ -8,7 +8,6 @@ theme:
     - navigation.indexes
     - content.code.copy
     - content.code.annotate
-    - content.tabs.link
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -86,8 +85,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-    #slugify: !!python/object/apply:pymdownx.slugs.slugify
-    #    kwds:
-    #      case: lower
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - admonition
   - pymdownx.details
