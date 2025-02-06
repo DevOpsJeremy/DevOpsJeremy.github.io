@@ -21,7 +21,7 @@ With the recent explosion of AI and large language models (LLM), I've been brain
 
 Most of the major AI providers have a REST API, so I could of course easily use that in a CI pipeline, but there are many situations where this isn't an option:
 
-  - **Cost**: As many "AI wrapper" companies quickly discovered, [these APIs are _expensive_](https://medium.com/@sphinxshivraj/how-much-does-ai-cost-a-comprehensive-guide-4e5836ad4e44). And running queries in a CI pipeline that could run potentially hundreds of times per day adds up quickly.
+  - **Cost**: As many "AI wrapper" companies quickly discovered, these APIs are _expensive_. And running queries in a CI pipeline that could run potentially hundreds of times per day adds up quickly.
   - **Security**: Many organizations handling sensitive or proprietary data don't want their information sent to a third party like OpenAI or Google.
 
 To solve these issues, I wanted to see if it's possible to run an LLM _locally_ in a CI job, to which I can send queries without worrying about API cost or revealing sensitive data.
