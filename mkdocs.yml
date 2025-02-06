@@ -47,8 +47,8 @@ plugins:
 nav:
   - Home: index.md
   - Posts:
-      - Posts: blog/index.md
-      - Tags: blog/tags.md
+      - Posts: posts/index.md
+      - Tags: posts/tags.md
   - Documentation: documentation
   - About: about.md
 extra:
