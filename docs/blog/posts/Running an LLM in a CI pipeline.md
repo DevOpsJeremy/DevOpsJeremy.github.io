@@ -32,9 +32,9 @@ All the tools I'm using in this article are free to use.
 
 | Name | Description |
 | --- | --- |
-| Ollama | A free, open-source tool for running LLMs locally |
-| Gitlab CI | A free CI/CD pipeline system developed by Gitlab for running automated jobs in the same environment as your git repository |
-| GitHub Actions | Same as Gitlab CI, but provided by GitHub |
+| [Ollama](https://ollama.com/) | A free, open-source tool for running LLMs locally |
+| [Gitlab CI](https://docs.gitlab.com/ee/ci/) | A free CI/CD pipeline system developed by Gitlab for running automated jobs in the same environment as your git repository |
+| [GitHub Actions](https://github.com/features/actions) | Same as Gitlab CI, but provided by GitHub |
 
 !!! note
 
