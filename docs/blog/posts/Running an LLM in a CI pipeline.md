@@ -84,7 +84,7 @@ This creates a basic structure for a pipeline that runs on all commits. To limit
 
 The `ollama` CLI is great for running a local, interactive chat session in your terminal. But for a non-interactive, automated CI job it's best to interface with the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md). To do this, we need to first define our `ollama` job and run Ollama as a service[^3][^4] accessible by our job.
 
-=== "GitHub Actions"
+===! "GitHub Actions"
 
     ```yaml
     jobs:
@@ -107,7 +107,7 @@ Next we'll add our script. When we request a response from the LLM we'll need to
 
 Prior to generating a response, we'll first need to pull the model we want using Ollama's [`pull` API](https://github.com/ollama/ollama/blob/main/docs/api.md#pull-a-model). Then we generate the response with the [`generate` API](https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-completion). Any Docker image will work for this job as long as it has the ability to send web requests with tools like [`wget`](https://www.gnu.org/software/wget/) or [`curl`](https://curl.se/). For this example we'll be using `curl` with the [`alpine/curl`](https://hub.docker.com/r/alpine/curl) image.
 
-=== "GitHub Actions"
+===! "GitHub Actions"
 
     ```yaml
     container: alpine/curl
@@ -131,7 +131,7 @@ Prior to generating a response, we'll first need to pull the model we want using
 
     Ideally, the `pull` and `generate` operations would run in separate steps. GitHub uses the [`steps`](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps) functionality for this, however, the comparable functionality in Gitlab ([`run`](https://docs.gitlab.com/ee/ci/yaml/#run)) is still in the experimental stage. For simplicity, we'll be running the commands in a single script in both GitHub and Gitlab. To accomplish the same in separate steps would look like this:
 
-    === "GitHub Actions"
+    ===! "GitHub Actions"
 
         ```yaml
         container: alpine/curl
@@ -166,7 +166,7 @@ That's all we need--let's see the response:
 
 This is great, but the JSON output is a bit verbose. We can simplify the response and make it a bit more readable using the [`jq`](https://jqlang.org/) command.
 
-=== "GitHub Actions"
+===! "GitHub Actions"
 
     ```yaml
     steps:
@@ -198,7 +198,7 @@ Hello! It's nice to meet you. Is there something I can help you with or would yo
 
 Put it all together:
 
-=== "GitHub Actions"
+===! "GitHub Actions"
 
     ```yaml
     name: ci
