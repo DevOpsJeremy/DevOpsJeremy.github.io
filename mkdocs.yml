@@ -7,7 +7,6 @@ theme:
   features:
     - navigation.instant
     - navigation.indexes
-    - navigation.tracking
     - toc.follow
     - content.code.copy
     - content.code.annotate
