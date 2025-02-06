@@ -11,13 +11,14 @@ jobs:
       matrix:
         item:
           - container: mcr.microsoft.com/powershell
-            steps:
-              - uses: actions/checkout@v4
-              - name: Generate PowerShell documentation
-                run: pwsh -File .github/scripts/generate_docs/generate_pwsh.ps1
+            name: Generate PowerShell documentation
+            run: pwsh -File .github/scripts/generate_docs/generate_pwsh.ps1
     runs-on: ubuntu-latest
     container: ${{ matrix.item.container }}
-    steps: ${{ matrix.item.steps }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: ${{ matrix.item.name }}
+        run: ${{ matrix.item.run }}
   deploy:
     runs-on: ubuntu-latest
     steps:
