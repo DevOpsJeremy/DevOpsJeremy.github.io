@@ -55,7 +55,7 @@ nav:
   - Blog:
       - Posts: blog/index.md
       - Tags: blog/tags.md
-  - Documentation: documentation
+  - Documentation: documentation/index.md
   - About: about.md
 extra:
   comments: true
