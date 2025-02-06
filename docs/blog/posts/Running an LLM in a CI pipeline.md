@@ -127,7 +127,7 @@ Prior to generating a response, we'll first need to pull the model we want using
       curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate
     ```
 
-!!! note
+??? note
 
     Ideally, the `pull` and `generate` operations would run in separate steps. GitHub uses the [`steps`](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps) functionality for this, however, the comparable functionality in Gitlab ([`run`](https://docs.gitlab.com/ee/ci/yaml/#run)) is still in the experimental stage. For simplicity, we'll be running the commands in a single script in both GitHub and Gitlab. To accomplish the same in separate steps would look like this:
 
