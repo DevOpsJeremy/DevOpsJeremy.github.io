@@ -6,6 +6,18 @@ on:
 permissions:
   contents: write
 jobs:
+  documentation:
+    strategy:
+      matrix:
+        item:
+          - container: mcr.microsoft.com/powershell
+            type: powershell
+            steps:
+              - name: Generate PowerShell documentation
+                run: pwsh -File .github/scripts/generate_docs/generate_pwsh.ps1
+    runs-on: ubuntu-latest
+    container: "{{ matrix.item.container }}"
+    steps: "{{ matrix.item.steps }}"
   deploy:
     runs-on: ubuntu-latest
     steps:
