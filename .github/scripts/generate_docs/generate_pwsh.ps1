@@ -1,1 +1,7 @@
-Install-PSResource platyPS -TrustRepository
+[CmdletBinding()]
+param (
+    [string[]] $Files
+)
+Install-PSResource platyPS -TrustRepository -PassThru
+"--- Files ---"
+$Files
