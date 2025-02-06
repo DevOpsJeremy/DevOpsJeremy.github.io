@@ -239,8 +239,8 @@ Put it all together:
 
 [^1]: [Creating a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
 [^2]: [Creating a Gitlab project](https://docs.gitlab.com/ee/user/project/)
-[^3]: [GitHub actions - services](https://docs.github.com/en/actions/use-cases-and-examples/using-containerized-services/about-service-containers)
-[^4]: [Gitlab CI - services](https://docs.gitlab.com/ee/ci/services/)
+[^3]: [GitHub actions - `services`](https://docs.github.com/en/actions/use-cases-and-examples/using-containerized-services/about-service-containers)
+[^4]: [Gitlab CI - `services`](https://docs.gitlab.com/ee/ci/services/)
 <!--
 ## Overview
 
