@@ -14,6 +14,9 @@ A recent [update](https://www.zdnet.com/article/your-android-phone-will-run-debi
 
 ## Procedures
 
+### Update Android
+
+
 
 
 1. Install update
