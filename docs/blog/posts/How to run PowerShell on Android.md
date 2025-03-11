@@ -61,7 +61,7 @@ That's all you need! Simply enter `pwsh` to run PowerShell on your Android.
 Bash is the default shell for this terminal, but you can change your default shell by running `chsh -s <shell binary> <username>`. The below example will set PowerShell as the default shell for our user (`droid`):
 
 ```shell
-chsh -s /usr/bin/pwsh droid
+sudo chsh -s /usr/bin/pwsh droid
 ```
 
 ### Copy/paste
