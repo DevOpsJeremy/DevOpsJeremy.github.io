@@ -26,15 +26,15 @@ The Linux terminal can be enabled from **Developer options**. If you don't have 
 
 Once enabled, navigate to **Settings** > **System** > **Developer options**. If you've received the latest update, you'll see the **Linux development environment** option under the Debugging section. Under this option, enable **(Experimental) Run Linux terminal on Android**.
 
-![dev options linux environment](./How_to_run_PowerShell_on_Android/dev_options_linux_environment.png)
+![dev options linux environment](./How_to_run_PowerShell_on_Android/dev_options_linux_environment.png){ width="300" }
 
-![enable linux environment](./How_to_run_PowerShell_on_Android/enable_linux_environment.png)
+![enable linux environment](./How_to_run_PowerShell_on_Android/enable_linux_environment.png){ width="300" }
 
 ### Install Linux terminal
 
 Once the **Linux development environment** is enabled, open your app drawer and open the **Terminal** app--you'll see "Install Linux terminal". In the corner of the screen, click **Install**. The install will take a few minutes.
 
-![install linux terminal](./How_to_run_PowerShell_on_Android/install_inux_terminal.png)
+![install linux terminal](./How_to_run_PowerShell_on_Android/install_inux_terminal.png){ width="300" }
 
 ### Install PowerShell
 
@@ -54,7 +54,7 @@ The Google Pixel runs on an ARM64-based processor, so we'll follow [these proced
 
 That's all you need! Simply enter `pwsh` to run PowerShell on your Android.
 
-![success](./How_to_run_PowerShell_on_Android/success.png)
+![success](./How_to_run_PowerShell_on_Android/success.png){ width="300" }
 
 ### Set PowerShell as the default shell (Optional)
 
@@ -92,11 +92,11 @@ The Linux feature is still in the experimental stage, and as such it can be pret
 
     The terminal displays a persistant notification while it's running.
 
-    ![terminal notification](./How_to_run_PowerShell_on_Android/terminal_notification.png)
+    ![terminal notification](./How_to_run_PowerShell_on_Android/terminal_notification.png){ width="300" }
 
     As a result--when notifications are disabled--the app tends to act up. Ensuring notifications are enabled avoids some of these issues.
 
-    ![allow notifications](./How_to_run_PowerShell_on_Android/allow_notifications.png)
+    ![allow notifications](./How_to_run_PowerShell_on_Android/allow_notifications.png){ width="300" }
 
 !!! tip "Pause the app"
 
@@ -106,7 +106,7 @@ The Linux feature is still in the experimental stage, and as such it can be pret
 
     If the app is still not acting properly or keeps crashing, you can reset the app's data by clicking the settings "gear" icon in the upper right corner, navigate to **Recovery** > **Reset to initial version**, and click **Reset**.
 
-    ![recovery reset](./How_to_run_PowerShell_on_Android/recovery_reset.png)
+    ![recovery reset](./How_to_run_PowerShell_on_Android/recovery_reset.png){ width="300" }
 
     !!! warning
 
