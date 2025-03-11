@@ -1,7 +1,7 @@
 ---
 title: How to run PowerShell on Android
 date:
-  created: 2025-03-04
+  created: 2025-03-10
 authors:
   - jeremy
 tags:
@@ -100,7 +100,7 @@ The Linux feature is still in the experimental stage, and as such it can be pret
 
 !!! tip "Pause the app"
 
-    If the app is not responding or is acting erratically, I've found that pausing the app can resolve some issues. Press and hold on the app icon and select **Pause app**. Then open the app again and when prompted, select **Unpause app**.
+    If the app is acting erratically or not responding, I've found that pausing the app can resolve some issues. Press and hold on the app icon and select **Pause app**. Then open the app again and when prompted, select **Unpause app**.
 
 !!! tip "Recovery"
 
