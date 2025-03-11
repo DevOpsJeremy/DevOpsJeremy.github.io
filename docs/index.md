@@ -1,5 +1,7 @@
 ---
 comments: false
+hide:
+  - navigation
 ---
 # DevOps Jeremy
 
