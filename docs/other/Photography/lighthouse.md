@@ -3,7 +3,5 @@ title: lighthouse
 tags:
   - lighthouse
 template: photo
-photo: lighthouse
+photo: lighthouse.jpg
 ---
-
-![](./images/lighthouse.jpg)

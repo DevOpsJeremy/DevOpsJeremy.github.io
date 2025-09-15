@@ -1,1 +1,16 @@
-{%- extends "main.html" -%}
+{%- extends "main.html" -%} {%- block content -%}
+{{ super() }}
+<a
+  class="glightbox"
+  data-type="image"
+  data-width="auto"
+  data-height="auto"
+  href="{{ config.site_url }}/other/Photography/images/{{ page.meta.photo }}"
+  data-desc-position="bottom"
+>
+  <img
+    alt=""
+    src="{{ config.site_url }}/other/Photography/images/{{ page.meta.photo }}"
+  />
+</a>
+{%- endblock -%}
