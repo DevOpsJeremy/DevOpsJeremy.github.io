@@ -1,27 +1,71 @@
 site_name: !ENV [SITE_NAME, "DevOps Jeremy"]
 site_url: https://DevOpsJeremy.github.io
-site_repo: https://github.com/DevOpsJeremy/DevOpsJeremy.github.io
+repo_url: https://github.com/DevOpsJeremy/DevOpsJeremy.github.io
+edit_uri: blob/main/docs
+repo_name: DevOpsJeremy
+
+nav:
+  - Home: index.md
+  - Blog:
+      - blog/index.md
+      - blog/tags.md
+  - Documentation: documentation/
+  - Other: other/
+  - About: about.md
+
+hooks:
+  - hooks/socialmedia.py
+
+exclude_docs: |
+  /includes/
+
+extra:
+  comments: true
+  generator: false
+  social:
+    - icon: fontawesome/brands/square-x-twitter
+      name: X
+      link: https://x.com/DevOpsJeremy
+    - icon: fontawesome/brands/github
+      name: Github
+      link: https://github.com/DevOpsJeremy
+    - icon: fontawesome/brands/instagram
+      name: Instagram
+      link: https://www.instagram.com/DevOpsJeremy
+
 theme:
   name: material
   custom_dir: overrides
   features:
-    - navigation.instant
-    - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
     - navigation.sections
+    - navigation.top
+    - navigation.indexes
     - toc.follow
+    - toc.integrate
     - content.code.copy
     - content.code.annotate
+    - content.action.edit
+    - header.autohide
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
+      primary: purple
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
+      primary: purple
       scheme: default
       toggle:
         icon: material/brightness-7
@@ -29,10 +73,12 @@ theme:
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
+      primary: purple
       scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+
 plugins:
   - search
   - exclude-search:
@@ -50,44 +96,45 @@ plugins:
       date_from_meta:
         as_creation: date.created
         as_update: date.updated
-nav:
-  - Home: index.md
-  - Blog:
-      - Posts: blog/index.md
-      - Tags: blog/tags.md
-  - Documentation: documentation/index.md
-  - About: about.md
-extra:
-  comments: true
-  generator: false
-  social:
-    - icon: fontawesome/brands/square-x-twitter
-      name: X
-      link: https://x.com/DevOpsJeremy
-    - icon: fontawesome/brands/github
-      name: Github
-      link: https://github.com/DevOpsJeremy
-    - icon: fontawesome/brands/instagram
-      name: Instagram
-      link: https://www.instagram.com/yousuckatpowershell
-extra_css:
-  - assets/stylesheets/custom.css
-hooks:
-  - hooks/socialmedia.py
+  - git-authors
+  - open-in-new-tab
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+
 markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
   - toc:
       permalink: true
-  - footnotes
-  - attr_list
+  - tables
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -98,5 +145,14 @@ markdown_extensions:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
-  - admonition
-  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      # All snippets will reside in the `docs/includes/` directory
+      base_path: docs/includes/
+      check_paths: true
+      dedent_subsections: true
+
+extra_css:
+  - assets/stylesheets/custom.css

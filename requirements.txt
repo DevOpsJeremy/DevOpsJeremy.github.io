@@ -1,7 +1,12 @@
 mkdocs
-mkdocs-include-dir-to-nav
 mkdocs-material
+mkdocs-include-dir-to-nav
 mkdocs-markdownextradata-plugin
 pymdown-extensions
+mkdocs-macros-plugin
 mkdocs-rss-plugin
 mkdocs-exclude-search
+mkdocs-git-revision-date-localized-plugin
+mkdocs-git-authors-plugin
+mkdocs-open-in-new-tab
+mkdocs-glightbox
