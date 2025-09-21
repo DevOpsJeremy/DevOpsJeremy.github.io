@@ -22,6 +22,8 @@ exclude_docs: |
   /includes/
 
 extra:
+  tags:
+    - ai
   comments: true
   generator: false
   social:
@@ -44,7 +46,6 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.preview
-    # - navigation.sections
     - navigation.top
     - navigation.indexes
     - toc.follow
