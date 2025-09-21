@@ -12,7 +12,7 @@ nav:
   - Documentation: documentation/
   - Other:
       - other/index.md
-      - Photography: other/Photography/
+      - Photography: other/Photography/*
   - About: about.md
 
 hooks:
