@@ -44,7 +44,7 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.preview
-    - navigation.sections
+    # - navigation.sections
     - navigation.top
     - navigation.indexes
     - toc.follow
