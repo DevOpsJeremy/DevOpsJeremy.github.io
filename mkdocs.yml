@@ -94,8 +94,8 @@ plugins:
       listings_map:
         tech:
           scope: false
-          # exclude:
-          #   - lighthouse
+          exclude:
+            - lighthouse
   - include_dir_to_nav
   - markdownextradata: {}
   - rss:
