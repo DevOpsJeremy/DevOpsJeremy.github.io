@@ -92,6 +92,11 @@ plugins:
       pagination_per_page: 10
   - tags:
       tags_file: blog/tags.md
+      listings: false
+      # listings_map:
+      #   custom-id:
+      #     scope: true
+      #     exclude: Internal
   - include_dir_to_nav
   - markdownextradata: {}
   - rss:
