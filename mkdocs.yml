@@ -10,9 +10,9 @@ nav:
       - blog/index.md
       - blog/tags.md
   - Documentation: documentation/
-  - Other:
-      - other/index.md
-      - Photography: other/Photography/*
+  - Other: other/*
+      # - other/index.md
+      # - Photography: other/Photography/*
   - About: about.md
 
 hooks:
