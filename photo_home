@@ -1,8 +1,0 @@
-{%- extends "main.html" -%}
-{%- block content -%}
-<p>Config:</p>
-{{ config }}
-<p>Photos:</p>
-{{ photos }}
-{{ super() }}
-{%- endblock -%}
