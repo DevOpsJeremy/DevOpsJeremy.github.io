@@ -12,7 +12,7 @@ nav:
   - Documentation: documentation/
   - Other:
       - other/index.md
-      - Photography: other/Photography/
+      - other/Photography/index.md
   - About: about.md
 
 hooks:
@@ -49,7 +49,6 @@ theme:
     - navigation.top
     - navigation.indexes
     - toc.follow
-    # - toc.integrate
     - content.code.copy
     - content.code.annotate
     - content.action.edit
