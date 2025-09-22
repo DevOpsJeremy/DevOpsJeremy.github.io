@@ -1,4 +1,7 @@
 .md-button {
-    "max-height": 4%;
-    "max-width": 8%;
+  "max-height":4% ;
+  "max-width":8% ;
+}
+.photo {
+  "max-height":100% ;
 }

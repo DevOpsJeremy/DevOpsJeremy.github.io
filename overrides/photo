@@ -14,6 +14,7 @@
     data-desc-position="bottom"
   >
     <img
+      class="photo"
       alt=""
       src="{{ config.site_url }}/other/Photography/images/{{ page.meta.photo }}"
     />
