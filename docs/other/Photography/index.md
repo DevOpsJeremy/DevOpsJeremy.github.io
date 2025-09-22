@@ -4,7 +4,9 @@ hide:
   - tags
 ---
 
+<div class="photo-grid">
 {{ photos }}
+</div>
 
 ## Tags
 

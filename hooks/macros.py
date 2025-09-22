@@ -45,4 +45,4 @@ def get_photos(site_uri=''):
     return photos
 
 def define_env(env):
-    env.variables['photos'] = '<br>'.join(get_photos(env.conf.get('site_url', '')))
+    env.variables['photos'] = ''.join(get_photos(env.conf.get('site_url', '')))
