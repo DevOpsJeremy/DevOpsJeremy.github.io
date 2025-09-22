@@ -90,12 +90,12 @@ plugins:
   - blog:
       blog_toc: true
       pagination_per_page: 10
+  - macros
   - tags:
       listings_map:
         tech:
           scope: false
-          exclude:
-            - lighthouse
+          include: !!python/name:hooks.tags.include
   - include_dir_to_nav
   - markdownextradata: {}
   - rss:
