@@ -93,9 +93,9 @@ plugins:
   - tags:
       listings_map:
         tech:
-          include: !!python/name:custom_hooks.variables.tags.tech
+          include: !!python/name:custom_hooks.tags_tech
         photography:
-          include: !!python/name:custom_hooks.variables.tags.photography
+          include: !!python/name:custom_hooks.tags_photography
   - include_dir_to_nav
   - markdownextradata: {}
   - rss:
@@ -108,7 +108,8 @@ plugins:
   - glightbox
   - git-revision-date-localized:
       enable_creation_date: true
-  - macros
+  - macros:
+      module_name: hooks/macros
 
 markdown_extensions:
   # Python Markdown

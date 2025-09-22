@@ -1,5 +1,8 @@
 from yaml import safe_load
 import re
+from os import getcwd
+from os.path import join
+from glob import glob
 
 def get_metadata(file):
     text = file.read()
@@ -21,3 +24,20 @@ def get_metadata(file):
         return safe_load(metadata_string)
     except:
         return {}
+
+def get_tags(paths):
+    cwd = getcwd()
+    file_paths = []
+    all_tags = []
+
+    for p in paths:
+        full_path = join(cwd, p)
+        file_paths.extend(list(set(glob(f"{full_path}/**/*.md", recursive=True))))
+
+    for f in file_paths:
+        with open(f, 'r') as file:
+            metadata = get_metadata(file)
+            if 'tags' in metadata:
+                all_tags.extend(metadata['tags'])
+    
+    return list(set(all_tags))
