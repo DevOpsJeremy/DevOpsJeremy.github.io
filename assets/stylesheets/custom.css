@@ -9,21 +9,17 @@
   max-height: 25% !important;
   max-width: 25%;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px; /* spacing between images */
-}
 
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px; /* spacing between images */
+  gap: 10px;
 }
 
 .photo-grid img {
   width: 100%;
-  height: 150px;       /* fixed height */
-  object-fit: cover;   /* crop to fit box */
-  border-radius: 8px;  /* optional rounded corners */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
