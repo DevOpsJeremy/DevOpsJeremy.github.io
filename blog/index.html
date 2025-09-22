@@ -1,0 +1,1701 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://DevOpsJeremy.github.io/blog/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="tags/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Posts - DevOps Jeremy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DevOps Jeremy" class="md-header__button md-logo" aria-label="DevOps Jeremy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DevOps Jeremy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Posts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/DevOpsJeremy/DevOpsJeremy.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    DevOpsJeremy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../documentation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../other/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DevOps Jeremy" class="md-nav__button md-logo" aria-label="DevOps Jeremy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    DevOps Jeremy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/DevOpsJeremy/DevOpsJeremy.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    DevOpsJeremy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../documentation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../other/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Other
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../other/Photography/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Photography
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Photography
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other/Photography/lighthouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lighthouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/DevOpsJeremy.png" alt="Jeremy Watkins">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-03-10 00:00:00+00:00">March 10, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="how-to-run-powershell-on-android"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/">How to run PowerShell on Android</a></h2>
+<h3 id="overview"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#overview">Overview</a></h3>
+<p>A recent <a href="https://www.zdnet.com/article/your-android-phone-will-run-debian-linux-soon-like-some-pixels-already-can/">update</a> to Android OS enables running a Debian Linux distribution on an Android phone. With a workable Linux distribution available on mobile, we now have the ability to install and run PowerShell in this Linux environment.</p>
+<h3 id="prerequisites"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#prerequisites">Prerequisites</a></h3>
+<p><strong>Google Pixel</strong>: The Linux terminal feature is still very new so Google Pixels are currently the only phones receiving the update. As with any other Android feature--non-Pixel Android phones will likely be receiving the update in the coming months.</p>
+<p><strong>March 2025 software update</strong>: The Linux terminal was included in the <a href="https://blog.google/products/pixel/pixel-drop-march-2025/">March 2025</a> Pixel update, so make sure to install the latest software update.</p>
+<h3 id="procedures"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#procedures">Procedures</a></h3>
+<h4 id="enable-the-linux-terminal"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#enable-the-linux-terminal">Enable the Linux terminal</a></h4>
+<p>The Linux terminal can be enabled from <strong>Developer options</strong>. If you don't have Developer options enabled, follow <a href="https://developer.android.com/studio/debug/dev-options#enable">these procedures</a> to enable it.</p>
+<p>Once enabled, navigate to <strong>Settings</strong> &gt; <strong>System</strong> &gt; <strong>Developer options</strong>. If you've received the latest update, you'll see the <strong>Linux development environment</strong> option under the Debugging section. Under this option, enable <strong>(Experimental) Run Linux terminal on Android</strong>.</p>
+<p><img alt="dev options linux environment" src="How_to_run_PowerShell_on_Android/dev_options_linux_environment.png" width="300"></p>
+<p><img alt="enable linux environment" src="How_to_run_PowerShell_on_Android/enable_linux_environment.png" width="300"></p>
+<h4 id="install-linux-terminal"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#install-linux-terminal">Install Linux terminal</a></h4>
+<p>Once the <strong>Linux development environment</strong> is enabled, open your app drawer and open the <strong>Terminal</strong> app--you'll see "Install Linux terminal". In the corner of the screen, click <strong>Install</strong>. The install will take a few minutes.</p>
+<p><img alt="install linux terminal" src="How_to_run_PowerShell_on_Android/install_inux_terminal.png" width="300"></p>
+<h4 id="install-powershell"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#install-powershell">Install PowerShell</a></h4>
+<p>The Google Pixel runs on an ARM64-based processor, so we'll follow <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/install-other-linux#installation-using-a-binary-archive-file">these procedures</a> for installing PowerShell as a binary archive, as opposed to from a package manager like <a href="https://en.wikipedia.org/wiki/APT_(software)">APT</a>. Simply copy the code from the procedures and paste into the terminal.</p>
+<div class="admonition info">
+<p class="admonition-title">Important</p>
+<p>The example from the above procedures specifically references the <code>x64</code> edition of the PowerShell binary (e.g.: <code>powershell-7.5.0-linux-x64.tar.gz</code>). The correct binary for <code>arm64</code> processors is <code>powershell-7.5.0-linux-arm64.tar.gz</code>. The code below are the same procedures as provided by Microsoft, but for <code>arm64</code> instead of <code>x64</code>, which will be compatible with Google Pixel:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span>/tmp/powershell.tar.gz<span class="w"> </span>https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/powershell-7.5.0-linux-arm64.tar.gz
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/microsoft/powershell/7
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>tar<span class="w"> </span>zxf<span class="w"> </span>/tmp/powershell.tar.gz<span class="w"> </span>-C<span class="w"> </span>/opt/microsoft/powershell/7
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/opt/microsoft/powershell/7/pwsh
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/opt/microsoft/powershell/7/pwsh<span class="w"> </span>/usr/bin/pwsh
+</span></code></pre></div>
+</div>
+<p>That's all you need! Simply enter <code>pwsh</code> to run PowerShell on your Android.</p>
+<p><img alt="success" src="How_to_run_PowerShell_on_Android/success.png" width="300"></p>
+<h4 id="set-powershell-as-the-default-shell-optional"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#set-powershell-as-the-default-shell-optional">Set PowerShell as the default shell (Optional)</a></h4>
+<p>Bash is the default shell for this terminal, but you can change your default shell by running <code>chsh -s &lt;shell binary&gt; &lt;username&gt;</code>. The below example will set PowerShell as the default shell for our user (<code>droid</code>):</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>chsh<span class="w"> </span>-s<span class="w"> </span>/usr/bin/pwsh<span class="w"> </span>droid
+</span></code></pre></div>
+<h4 id="copypaste"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#copypaste">Copy/paste</a></h4>
+<p>To skip all the explanitory information and simply install PowerShell, copy the following code into your Linux terminal:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span>/tmp/powershell.tar.gz<span class="w"> </span>https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/powershell-7.5.0-linux-arm64.tar.gz
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/microsoft/powershell/7
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>sudo<span class="w"> </span>tar<span class="w"> </span>zxf<span class="w"> </span>/tmp/powershell.tar.gz<span class="w"> </span>-C<span class="w"> </span>/opt/microsoft/powershell/7
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/opt/microsoft/powershell/7/pwsh
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/opt/microsoft/powershell/7/pwsh<span class="w"> </span>/usr/bin/pwsh
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>sudo<span class="w"> </span>chsh<span class="w"> </span>-s<span class="w"> </span>/usr/bin/pwsh<span class="w"> </span>droid
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>pwsh
+</span></code></pre></div>
+<h3 id="troubleshooting"><a class="toclink" href="2025/03/10/how-to-run-powershell-on-android/#troubleshooting">Troubleshooting</a></h3>
+<p>The Linux feature is still in the experimental stage, and as such it can be pretty glitchy. Below are some tips to resolve any issues you may run into.</p>
+<div class="admonition tip">
+<p class="admonition-title">Enable notifications</p>
+<p>The terminal displays a persistant notification while it's running.</p>
+<p><img alt="terminal notification" src="How_to_run_PowerShell_on_Android/terminal_notification.png" width="300"></p>
+<p>As a result--when notifications are disabled--the app tends to act up. Ensuring notifications are enabled avoids some of these issues.</p>
+<p><img alt="allow notifications" src="How_to_run_PowerShell_on_Android/allow_notifications.png" width="300"></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Pause the app</p>
+<p>If the app is acting erratically or not responding, I've found that pausing the app can resolve some issues. Press and hold on the app icon and select <strong>Pause app</strong>. Then open the app again and when prompted, select <strong>Unpause app</strong>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Recovery</p>
+<p>If the app is still not acting properly or keeps crashing, you can reset the app's data by clicking the settings "gear" icon in the upper right corner, navigate to <strong>Recovery</strong> &gt; <strong>Reset to initial version</strong>, and click <strong>Reset</strong>.</p>
+<p><img alt="recovery reset" src="How_to_run_PowerShell_on_Android/recovery_reset.png" width="300"></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will delete all data related to the Linux environment on the phone.</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Re-enable the Linux environment</p>
+<p>There are times when the app is acting up so much that Recovery isn't even an option. In this case, simply disabling, then re-enabling the Linux environment via Developer options (as described <a href="2025/03/10/how-to-run-powershell-on-android/#enable-the-linux-terminal">above</a>) will reset the app.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As with the Recovery option, this will also delete all data related to the Linux environment on the phone.</p>
+</div>
+</div>
+<p><br>
+<a class="md-button" href="https://x.com/intent/tweet?text=How%20to%20run%20PowerShell%20on%20Android%0A&amp;url=https://DevOpsJeremy.github.io/blog/2025/03/10/how-to-run-powershell-on-android/">Share on <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></span></a>
+<a class="md-button" href="https://www.facebook.com/sharer/sharer.php?u=https://DevOpsJeremy.github.io/blog/2025/03/10/how-to-run-powershell-on-android/">Share on <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a9 9 0 0 1 1.141.195v3.325a9 9 0 0 0-.653-.036 27 27 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.7 1.7 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"></path></svg></span></a></p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/DevOpsJeremy.png" alt="Jeremy Watkins">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-02-05 00:00:00+00:00">February 5, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              6 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="running-an-llm-in-a-ci-pipeline"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/">Running an LLM in a CI pipeline</a></h2>
+<h3 id="overview"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#overview">Overview</a></h3>
+<p>With the recent explosion of AI and large language models (LLM), I've been brainstorming how to take advantage of AI capabilities within a CI/CD pipeline.</p>
+<p>Most of the major AI providers have a REST API, so I could of course easily use that in a CI pipeline, but there are many situations where this isn't an option:</p>
+<ul>
+<li><strong>Cost</strong>: As many "AI wrapper" companies quickly discovered, these APIs are <em>expensive</em>. And running queries in a CI pipeline that could run potentially hundreds of times per day adds up quickly.</li>
+<li><strong>Security</strong>: Many organizations handling sensitive or proprietary data don't want their information sent to a third party like OpenAI or Google.</li>
+</ul>
+<p>To solve these issues, I wanted to see if it's possible to run an LLM <em>locally</em> in a CI job, to which I can send queries without worrying about API cost or revealing sensitive data.</p>
+<h3 id="how-its-done"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#how-its-done">How it's done</a></h3>
+<h4 id="tools"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#tools">Tools</a></h4>
+<p>All the tools I'm using in this article are free to use.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ollama.com/">Ollama</a></td>
+<td>A free, open-source tool for running LLMs locally</td>
+</tr>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/ci/">Gitlab CI</a></td>
+<td>A free CI/CD pipeline system developed by Gitlab for running automated jobs in the same environment as your git repository</td>
+</tr>
+<tr>
+<td><a href="https://github.com/features/actions">GitHub Actions</a></td>
+<td>Same as Gitlab CI, but provided by GitHub</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this article I won't be getting too deep into exactly what Ollama is and how it works. To learn more about it, check out their <a href="https://github.com/ollama/ollama">GitHub</a>.</p>
+</div>
+<h4 id="setup"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#setup">Setup</a></h4>
+<p>To start, you'll need either a <a href="https://github.com">GitHub</a> or <a href="https://gitlab.com">Gitlab</a> account and you'll need to create your first repository<sup id="fnref:1"><a class="footnote-ref" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#fn:1">1</a></sup><sup id="fnref:2"><a class="footnote-ref" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#fn:2">2</a></sup>. Once that's done, create a basic CI/CD pipeline--we'll name it <code>ci</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="github-actions---githubworkflowsciyml" name="__tabbed_1" type="radio"><input id="gitlab-ci---gitlab-ciyml" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="github-actions---githubworkflowsciyml">GitHub Actions - <code>.github/workflows/ci.yml</code></label><label for="gitlab-ci---gitlab-ciyml">Gitlab CI - <code>.gitlab-ci.yml</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">on</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">workflow</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>This creates a basic structure for a pipeline that runs on all commits. To limit the pipeline to only run on a certain branch, modify GitHub's <a href="https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#onpushbranchestagsbranches-ignoretags-ignore"><code>on.push</code></a> option, or Gitlab's <a href="https://docs.gitlab.com/ee/ci/yaml/#workflowrules"><code>workflow:rules</code></a>. For example:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="github-actions" name="__tabbed_2" type="radio"><input id="gitlab-ci" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="github-actions">GitHub Actions</label><label for="gitlab-ci">Gitlab CI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">on</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">workflow</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CI_COMMIT_BRANCH == 'main'</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="run-an-llm-in-a-job"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#run-an-llm-in-a-job">Run an LLM in a job</a></h4>
+<p>The <code>ollama</code> CLI is great for running a local, interactive chat session in your terminal. But for a non-interactive, automated CI job it's best to interface with the <a href="https://github.com/ollama/ollama/blob/main/docs/api.md">Ollama API</a>. To do this, we need to first define our <code>ollama</code> job and run Ollama as a service<sup id="fnref:3"><a class="footnote-ref" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#fn:3">3</a></sup><sup id="fnref:4"><a class="footnote-ref" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#fn:4">4</a></sup> accessible by our job.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="github-actions_1" name="__tabbed_3" type="radio"><input id="gitlab-ci_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="github-actions_1">GitHub Actions</label><label for="gitlab-ci_1">Gitlab CI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">jobs</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">ollama</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">services</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="nt">ollama</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/ollama</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">ollama</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">services</span><span class="p">:</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/ollama</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Next we'll add our script. When we request a response from the LLM we'll need to specify a large language model to generate that response. These models can be found in <a href="https://ollama.com/library">Ollama's library</a>. Any model will work, but keep in mind that models with more parameters--while providing much better responses--are much larger in size. The <a href="https://ollama.com/library/deepseek-r1:671b">671 billion parameter version of <code>deepseek-r1</code></a>, for example, is 404GB in size. As such, it's ideal to use smaller models such as Meta's <a href="https://ollama.com/library/llama3.2"><code>llama3.2</code></a>.</p>
+<p>Prior to generating a response, we'll first need to pull the model we want using Ollama's <a href="https://github.com/ollama/ollama/blob/main/docs/api.md#pull-a-model"><code>pull</code></a> API. Then we generate the response with the <a href="https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-completion"><code>generate</code></a> API. Any Docker image will work for this job as long as it has the ability to send web requests with tools like <a href="https://www.gnu.org/software/wget/"><code>wget</code></a> or <a href="https://curl.se/"><code>curl</code></a>. For this example we'll be using <code>curl</code> with the <a href="https://hub.docker.com/r/alpine/curl"><code>alpine/curl</code></a> image.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="github-actions_2" name="__tabbed_4" type="radio"><input id="gitlab-ci_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="github-actions_2">GitHub Actions</label><label for="gitlab-ci_2">Gitlab CI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">container</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine/curl</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">steps</span><span class="p">:</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate response</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">      </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine/curl</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<details class="note">
+<summary>Note</summary>
+<p>Ideally, the <code>pull</code> and <code>generate</code> operations would run in separate steps. GitHub uses the <a href="https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps"><code>steps</code></a> functionality for this, however, the comparable functionality in Gitlab (<a href="https://docs.gitlab.com/ee/ci/yaml/#run"><code>run</code></a>) is still in the experimental stage. For simplicity for the sake of this article, we'll be running the commands in a single script in both GitHub and Gitlab.</p>
+<p>To accomplish the same in separate steps would look like this:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="github-actions_3" name="__tabbed_5" type="radio"><input id="gitlab-ci_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="github-actions_3">GitHub Actions</label><label for="gitlab-ci_3">Gitlab CI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">container</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine/curl</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">steps</span><span class="p">:</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pull model</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate response</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine/curl</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">run</span><span class="p">:</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pull model</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate response</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<p>That's all we need--let's see the response:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&gt; curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>{"status":"success"}
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>&gt; curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>{"model":"llama3.2","created_at":"2025-02-06T18:46:52.362892453Z","response":"Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?","done":true,"done_reason":"stop","context":[128004,9125,128007,276,39766,3303,33025,2696,22,8790,220,2366,11,271,128009,128006,882,128007,271,9906,1917,128009,128006,78191,128007,271,9906,0,1102,596,6555,311,3449,499,13,2209,1070,2555,358,649,1520,499,449,477,1053,499,1093,311,6369,30],"total_duration":9728821911,"load_duration":2319403269,"prompt_eval_count":27,"prompt_eval_duration":3406000000,"eval_count":25,"eval_duration":4001000000}
+</span></code></pre></div>
+<h4 id="parse-the-output"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#parse-the-output">Parse the output</a></h4>
+<p>This is great, but the JSON output is a bit verbose. We can simplify the response and make it a bit more readable using the <a href="https://jqlang.org/"><code>jq</code></a> command.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="github-actions_4" name="__tabbed_6" type="radio"><input id="gitlab-ci_4" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="github-actions_4">GitHub Actions</label><label for="gitlab-ci_4">Gitlab CI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">steps</span><span class="p">:</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install jq</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apk add jq</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate response</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">      </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">      </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">before_script</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apk add jq</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>This looks much better:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&gt; curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>success
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>&gt; curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?
+</span></code></pre></div>
+<h4 id="put-it-all-together"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#put-it-all-together">Put it all together</a></h4>
+<p>This is our final product:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="github-actions---githubworkflowsciyml_1" name="__tabbed_7" type="radio"><input id="gitlab-ci---gitlab-ciyml_1" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="github-actions---githubworkflowsciyml_1">GitHub Actions - <code>.github/workflows/ci.yml</code></label><label for="gitlab-ci---gitlab-ciyml_1">Gitlab CI - <code>.gitlab-ci.yml</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nt">on</span><span class="p">:</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nt">jobs</span><span class="p">:</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="nt">ollama</span><span class="p">:</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="nt">services</span><span class="p">:</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">      </span><span class="nt">ollama</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/ollama</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="nt">container</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine/curl</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install jq</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apk add jq</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate response</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">          </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">          </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">workflow</span><span class="p">:</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nt">ollama</span><span class="p">:</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine/curl</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="nt">services</span><span class="p">:</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/ollama</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">      </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="nt">before_script</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apk add jq</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">    </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false}' ollama:11434/api/pull | jq -r .status</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">    </span><span class="no">curl -sS -X POST -d '{"model":"llama3.2","stream":false,"prompt":"Hello world"}' ollama:11434/api/generate | jq -r .response</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="summary"><a class="toclink" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#summary">Summary</a></h3>
+<p>With just a few lines of code, we're able to run an Ollama server, pull down a large language model, and generate responses--all completely local to our CI job. We can now use this capability to generate release notes, automate code review, write documentation--the possibilities are endless.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories">Creating a GitHub repository</a>&nbsp;<a class="footnote-backref" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://docs.gitlab.com/ee/user/project/">Creating a Gitlab project</a>&nbsp;<a class="footnote-backref" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://docs.github.com/en/actions/use-cases-and-examples/using-containerized-services/about-service-containers">GitHub actions - <code>services</code></a>&nbsp;<a class="footnote-backref" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://docs.gitlab.com/ee/ci/services/">Gitlab CI - <code>services</code></a>
+<br>
+<a class="md-button" href="https://x.com/intent/tweet?text=Running%20an%20LLM%20in%20a%20CI%20pipeline%0A&amp;url=https://DevOpsJeremy.github.io/blog/2025/02/05/running-an-llm-in-a-ci-pipeline/">Share on <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></span></a>
+<a class="md-button" href="https://www.facebook.com/sharer/sharer.php?u=https://DevOpsJeremy.github.io/blog/2025/02/05/running-an-llm-in-a-ci-pipeline/">Share on <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a9 9 0 0 1 1.141.195v3.325a9 9 0 0 0-.653-.036 27 27 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.7 1.7 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"></path></svg></span></a>&nbsp;<a class="footnote-backref" href="2025/02/05/running-an-llm-in-a-ci-pipeline/#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/DevOpsJeremy.png" alt="Jeremy Watkins">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2023-10-16 00:00:00+00:00">October 16, 2023</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              7 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="getting-assigned-parameters-in-powershell"><a class="toclink" href="2023/10/16/getting-assigned-parameters-in-powershell/">Getting assigned parameters in PowerShell</a></h2>
+<p>Have you ever needed to pass a number of parameter values from one function into another function with some (but not all) of the same parameters? I've run into this particular pain point multiple times when writing functions in the past so I decided to find somewhat of a workaround.</p>
+<h3 id="psboundparameters"><a class="toclink" href="2023/10/16/getting-assigned-parameters-in-powershell/#psboundparameters"><code>$PSBoundParameters</code></a></h3>
+<p>If you've spent some time writing PowerShell functions, you may be familiar with the <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables#psboundparameters"><code>$PSBoundParameters</code></a> automatic variable. As Microsoft defines it, this variable</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Contains a dictionary of the parameters that are passed to a script or function and their current values.</p>
+</div>
+<p>Let's take a look at the below example. We'll write a simple function to return the contents of the <code>$PSBoundParameters</code> variable:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="k">function</span> <span class="nb">Get-BoundParameters</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="nv">$Parameter1</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="nv">$Parameter2</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="nv">$Parameter3</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nv">$PSBoundParameters</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="nb">Get-BoundParameters</span> <span class="n">-Parameter1</span> <span class="s1">'this is param1'</span> <span class="n">-Parameter3</span> <span class="s1">'this is param3'</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">Key</span>        <span class="n">Value</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">---</span>        <span class="p">-----</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">Parameter1</span> <span class="n">this</span> <span class="n">is</span> <span class="n">param1</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">Parameter3</span> <span class="n">this</span> <span class="n">is</span> <span class="n">param3</span>
+</span></code></pre></div>
+<p>As you can see, the <code>$PSBoundParameters</code> variable contains the parameters <code>Parameter1</code> and <code>Parameter3</code> and their contents, but does <em>not</em> contain <code>Parameter2</code> since I never used that parameter.</p>
+<p><code>$PSBoundParameters</code> comes in handy quite often for things like checking whether a certain parameter has been used:</p>
+<p></p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="k">function</span> <span class="nb">Get-Foods</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span><span class="p">)]</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="nv">$Fruits</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="nv">$Vegetables</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="nv">$message</span> <span class="p">=</span> <span class="s2">"Here are the fruits"</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Vegetables'</span><span class="p">)){</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="nv">$message</span> <span class="p">+=</span> <span class="s2">" and vegetables"</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="nb">Write-Output</span> <span class="nv">$message</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="nv">$Fruits</span> <span class="p">+</span> <span class="nv">$Vegetables</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span> <span class="s2">"- $_"</span> <span class="p">}</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">}</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="nb">Get-Foods</span> <span class="n">-Fruits</span> <span class="n">apple</span><span class="p">,</span> <span class="n">orange</span> <span class="n">-Vegetables</span> <span class="n">carrot</span><span class="p">,</span> <span class="n">celery</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">Here</span> <span class="n">are</span> <span class="n">the</span> <span class="n">fruits</span> <span class="n">and</span> <span class="n">vegetables</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">-</span> <span class="n">apple</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">-</span> <span class="n">orange</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">-</span> <span class="n">carrot</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">-</span> <span class="n">celery</span>
+</span></code></pre></div>
+In this example, we use <code>$PSBoundParameters</code> to check if it contains the key 'Vegetables' (meaning the <code>$Vegetables</code> parameter was used), and if it does we add the phrase " and vegetables" to the end of the return message.<p></p>
+<p>Now that we understand how <code>$PSBoundParameters</code> works, let's examine where it falls short.</p>
+<h3 id="default-values"><a class="toclink" href="2023/10/16/getting-assigned-parameters-in-powershell/#default-values">Default Values</a></h3>
+<p>While <code>$PSBoundParameters</code> is great, the issue is that it only contains <em>bound</em> parameters (as the name suggests). This means that if a parameter has a default value the default value will never be included in the <code>$PSBoundParameters</code> dictionary.</p>
+<p>I've run into this situation many times when writing functions that pass certain parameter key/values to other commands, such as this example:</p>
+<div class="admonition info inline end">
+<p class="admonition-title">Splatting</p>
+<p>In the <code>Get-UserItemsParent</code> function, we use a method called <strong>splatting</strong> when calling the <code>Get-UserItems</code> function. Splatting is a way to pass all parameters and values to a command as a dictionary instead of writing them out the long way. As an example, this:
+</p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">$parameters</span> <span class="p">=</span> <span class="p">@{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>   <span class="n">Name</span> <span class="p">=</span> <span class="s1">'Get-UserItems'</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>   <span class="n">CommandType</span> <span class="p">=</span> <span class="s1">'Function'</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">Get-Command</span> <span class="nv">@parameters</span>
+</span></code></pre></div>
+Is the same as this:
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Get-Command</span> <span class="n">-Name</span> <span class="s1">'Get-UserItems'</span> <span class="n">-CommandType</span> <span class="s1">'Function'</span>
+</span></code></pre></div>
+Note that when splatting, the dictionary variable (in this case, <code>$parameters</code>) is written with an <code>@</code> sign instead of a <code>$</code>.<p></p>
+<p>If you're unfamiliar with splatting, I highly recommend reading <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting">the documentation</a> to learn how you can take advantage of it in your scripts. I'll likely cover it and more ways to use it in a future post.</p>
+</div>
+<p></p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="k">function</span> <span class="nb">Get-UserItems</span> <span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="nv">$Name</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="nv">$Items</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="nb">Write-Output</span> <span class="s2">"$Name has the following items:"</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$Item</span> <span class="k">in</span> <span class="nv">$Items</span><span class="p">){</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="s2">"- $Item"</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="p">}</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">}</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="k">function</span> <span class="nb">Get-UserItemsParent</span> <span class="p">{</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="nv">$Name</span> <span class="p">=</span> <span class="s2">"Bob"</span><span class="p">,</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="nv">$Items</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="p">)</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="nb">Get-UserItems</span> <span class="nv">@PSBoundParameters</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="p">}</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="nb">Get-UserItemsParent</span> <span class="n">-Items</span> <span class="n">apple</span><span class="p">,</span> <span class="n">orange</span><span class="p">,</span> <span class="n">carrot</span><span class="p">,</span> <span class="n">celery</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a> <span class="n">has</span> <span class="n">the</span> <span class="n">following</span> <span class="n">items</span><span class="p">:</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="p">-</span> <span class="n">apple</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="p">-</span> <span class="n">orange</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="p">-</span> <span class="n">carrot</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="p">-</span> <span class="n">celery</span>
+</span></code></pre></div>
+In the above example you'll notice that, while the fruits and vegetables in the <code>$Items</code> variable were passed on from the <code>Get-UserItemsParent</code> function to the <code>Get-UserItems</code> function via the <code>$PSBoundParameters</code> variable, the name Bob was not because "Bob" is the default value of the <code>$Name</code> parameter, but that parameter wasn't actually used by the user and as such is not part of <code>$PSBoundParameters</code>. This is the dilemma we're here to solve.<p></p>
+<h3 id="getting-assigned-parameters"><a class="toclink" href="2023/10/16/getting-assigned-parameters-in-powershell/#getting-assigned-parameters">Getting <em>Assigned</em> Parameters</a></h3>
+<p>What we're really looking for is akin to a <code>$PSAssignedParameters</code> variable, which in theory would contain <em>assigned</em> parameters (i.e. any parameters with values, whether from the user or from default values). Unfortunately, this isn't a real variable (at least <a href="https://github.com/PowerShell/PowerShell/issues/3285">not yet</a>), but the below code snippet is a suitable workaround:</p>
+<p></p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">$PSAssignedParameters</span> <span class="p">=</span> <span class="p">@{}</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="no">[System.Management.Automation.CommandMetaData]</span><span class="p">::</span><span class="n">new</span><span class="p">(</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="nv">$MyInvocation</span><span class="p">.</span><span class="n">MyCommand</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">).</span><span class="n">Parameters</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">()</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="nv">$var</span> <span class="p">=</span> <span class="nb">Get-Variable</span> <span class="n">-Name</span> <span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-ValueOnly</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$var</span><span class="p">){</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="nv">$PSAssignedParameters</span><span class="p">[</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$var</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="p">}</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
+</span></code></pre></div>
+Here's the breakdown of what we're doing:
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">$PSAssignedParameters</span> <span class="p">=</span> <span class="p">@{}</span>
+</span></code></pre></div>
+Here we create the <code>$PSAssignedParameters</code> hashtable to which we'll be adding the assigned parameters.
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="no">[System.Management.Automation.CommandMetaData]</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="nv">$MyInvocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">).</span><span class="n">Parameters</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">()</span>
+</span></code></pre></div>
+The <code>$MyInvocation</code> automatic variable and its <code>MyCommand</code> property represents the command that's currently running. Creating a new <code>[CommandMetaData]</code> object with the current command allows us to find <em>all</em> parameters available for the command by accessing the <code>Parameters</code> property. These parameters and information about the parameters are stored as a dictionary. Finally, <code>GetEnumerator()</code> allows us to iterate ("loop") through each of the parameters in the dictionary.
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">$var</span> <span class="p">=</span> <span class="nb">Get-Variable</span> <span class="n">-Name</span> <span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-ValueOnly</span>
+</span></code></pre></div>
+While looping through the parameters, we use the <code>Get-Variable</code> cmdlet to get the value of each parameter.
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$var</span><span class="p">){</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="nv">$PSAssignedParameters</span><span class="p">[</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$var</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">}</span>
+</span></code></pre></div>
+If the parameter value (<code>$var</code>) is not empty, add it to the <code>$PSAssignedParameters</code> hashtable.<p></p>
+<p>And that's it! All we need are 7 lines to get all parameters with assigned values. In the next section I'll discuss how we can build this into a function for reusability.</p>
+<h3 id="get-assignedparameter-function"><a class="toclink" href="2023/10/16/getting-assigned-parameters-in-powershell/#get-assignedparameter-function"><code>Get-AssignedParameter</code> Function</a></h3>
+<p>We can use this <code>Get-AssignedParameter</code> function in our scripts as a replacement for the missing <code>$PSAssignedParameters</code> variable.
+</p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">function</span> <span class="nb">Get-AssignedParameter</span> <span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        <span class="no">[System.Management.Automation.InvocationInfo]</span> <span class="nv">$Invocation</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="p">)</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="nv">$PSAssignedParameters</span> <span class="p">=</span> <span class="p">@{}</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="no">[System.Management.Automation.CommandMetaData]</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="nv">$Invocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">).</span><span class="n">Parameters</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">()</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        <span class="nv">$var</span> <span class="p">=</span> <span class="nb">Get-Variable</span> <span class="n">-Name</span> <span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-ValueOnly</span> 
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>        <span class="k">if</span> <span class="p">(</span><span class="nv">$var</span><span class="p">){</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>            <span class="nv">$PSAssignedParameters</span><span class="p">[</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$var</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        <span class="p">}</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="p">}</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    <span class="nv">$PSAssignedParameters</span><span class="p">.</span><span class="n">Clone</span><span class="p">()</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
+</span></code></pre></div>
+The function can be used as-is, but let's see if we can improve it. It occurred to me that, while getting the assigned parameters is the goal, there are times when we may want to include or exclude specific parameters. Instead of repeatedly writing code in our scripts to remove unwanted keys from <code>$PSAssignedParameters</code>, let's add that functionality to the function.<p></p>
+<p></p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">function</span> <span class="nb">Get-AssignedParameter</span> <span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        <span class="no">[System.Management.Automation.InvocationInfo]</span> <span class="nv">$Invocation</span><span class="p">,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        <span class="no">[string[]]</span> <span class="nv">$Include</span><span class="p">,</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        <span class="no">[string[]]</span> <span class="nv">$Exclude</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="p">)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="nv">$PSAssignedParameters</span> <span class="p">=</span> <span class="p">@{}</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="no">[System.Management.Automation.CommandMetaData]</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="nv">$Invocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">).</span><span class="n">Parameters</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">()</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>        <span class="k">if</span> <span class="p">(</span><span class="nv">$Include</span><span class="p">){</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>            <span class="k">if</span> <span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-in</span> <span class="nv">$Include</span><span class="p">){</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>                <span class="nv">$var</span> <span class="p">=</span> <span class="nb">Get-Variable</span> <span class="n">-Name</span> <span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-ValueOnly</span> 
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>                <span class="k">if</span> <span class="p">(</span><span class="nv">$var</span><span class="p">){</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>                    <span class="nv">$PSAssignedParameters</span><span class="p">[</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$var</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>                <span class="p">}</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>            <span class="p">}</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>        <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-notin</span> <span class="nv">$Exclude</span><span class="p">){</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>            <span class="nv">$var</span> <span class="p">=</span> <span class="nb">Get-Variable</span> <span class="n">-Name</span> <span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-ValueOnly</span> 
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>            <span class="k">if</span> <span class="p">(</span><span class="nv">$var</span><span class="p">){</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>                <span class="nv">$PSAssignedParameters</span><span class="p">[</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$var</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>            <span class="p">}</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>        <span class="p">}</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>    <span class="p">}</span>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>    <span class="nv">$PSAssignedParameters</span><span class="p">.</span><span class="n">Clone</span><span class="p">()</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="p">}</span>
+</span></code></pre></div>
+Here I added the <code>$Include</code> and <code>$Exclude</code> parameters along with the corresponding logic:
+- If <code>$Include</code> is used, only return parameters in the <code>$Include</code> array
+- If <code>$Exclude</code> is used, only return parameters <em>not</em> in the <code>$Exclude</code> array<p></p>
+<p>While we'd hope nobody would try to use the <code>$Include</code> and <code>$Exclude</code> parameters at the same time, we'll want to follow PowerShell <a href="https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Style-Guide/Function-Structure.md">best practices</a> and ensure our function can't be used in unintended ways. To accomplish this, we'll use <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parameter_sets">Parameter Sets</a>:</p>
+<p></p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="no">[System.Management.Automation.InvocationInfo]</span> <span class="nv">$Invocation</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        <span class="k">ParameterSetName</span> <span class="p">=</span> <span class="s1">'Include'</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="p">)]</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="no">[string[]]</span> <span class="nv">$Include</span><span class="p">,</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        <span class="k">ParameterSetName</span> <span class="p">=</span> <span class="s1">'Exclude'</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="p">)]</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="no">[string[]]</span> <span class="nv">$Exclude</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="p">)</span>
+</span></code></pre></div>
+By defining the <code>$Include</code> and <code>$Exclude</code> parameters as two different parameter sets, we allow PowerShell to do the work for us. As we can see when we run <code>Get-Help</code> against our function:<p></p>
+<p></p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">NAME</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="nb">Get-AssignedParameter</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">SYNTAX</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="nb">Get-AssignedParameter</span> <span class="p">[</span><span class="n">-Invocation</span> <span class="p">&lt;</span><span class="n">InvocationInfo</span><span class="p">&gt;]</span> <span class="p">[</span><span class="n">-Include</span> <span class="p">&lt;</span><span class="n">string</span><span class="p">[]&gt;]</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="nb">Get-AssignedParameter</span> <span class="p">[</span><span class="n">-Invocation</span> <span class="p">&lt;</span><span class="n">InvocationInfo</span><span class="p">&gt;]</span> <span class="p">[</span><span class="n">-Exclude</span> <span class="p">&lt;</span><span class="n">string</span><span class="p">[]&gt;]</span>
+</span></code></pre></div>
+The two parameters are part of separate parameter sets and thus it's impossible to use both parameters at the same time.<p></p>
+<p>Finally, we'll add our <code>CmdletBinding</code> and some comments:</p>
+<p></p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">function</span> <span class="nb">Get-AssignedParameter</span> <span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="cm">&lt;#</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="cm">    </span><span class="sd">.SYNOPSIS</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="cm">        Gets all parameters with assigned values.</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="cm">    </span><span class="sd">.DESCRIPTION</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="cm">        This function returns any parameters from a provided invocation with assigned values--whether that be bound parameter values provided by the user, or default values.</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Invocation</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="cm">        The invocation from which to find the parameters. Typically this will be the automatic variable `$MyInvocation` within a function or script.</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Include</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="cm">        A string array of parameter names to include in the returned result. If this parameter is used, only parameters in this list will be returned.</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Exclude</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="cm">        A string array of parameter names to exclude from the returned result. If this parameter is used, any parameters in this list will not be returned.</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="cm">    </span><span class="sd">.OUTPUTS</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="cm">        System.Collections.Hashtable</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="cm">    </span><span class="sd">.LINK</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="cm">        https://DevOpsJeremy.github.io/documentation/powershell/Get-AssignedParameter.html</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="cm">    </span><span class="sd">.LINK</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="cm">        Getting Assigned Parameters in PowerShell: https://devopsjeremy.github.io/powershell/2023/10/16/getting-assigned-parameters.html</span>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="cm">    </span><span class="sd">.EXAMPLE</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="cm">        Get-AssignedParameter -Invocation $MyInvocation</span>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="cm">        Gets any assigned parameter key/values.</span>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="cm">    </span><span class="sd">.EXAMPLE</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="cm">        Get-AssignedParameter -Invocation $MyInvocation -Include Name,Status</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="cm">        Gets the 'Name' and 'Status' parameter key/values if they are assigned.</span>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="cm">    </span><span class="sd">.EXAMPLE</span>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="cm">        Get-AssignedParameter -Invocation $MyInvocation -Exclude ComputerName</span>
+</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>
+</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="cm">        Gets any parameter key/values which are assigned, excluding the 'ComputerName' parameter.</span>
+</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="cm">    #&gt;</span>
+</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>    <span class="p">[</span><span class="k">CmdletBinding</span><span class="p">(</span>
+</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>        <span class="n">DefaultParameterSetName</span> <span class="p">=</span> <span class="s1">'Exclude'</span>
+</span><span id="__span-14-34"><a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>    <span class="p">)]</span>
+</span><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-14-36"><a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>        <span class="no">[System.Management.Automation.InvocationInfo]</span> <span class="nv">$Invocation</span><span class="p">,</span>
+</span><span id="__span-14-37"><a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span>
+</span><span id="__span-14-38"><a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>            <span class="k">ParameterSetName</span> <span class="p">=</span> <span class="s1">'Include'</span>
+</span><span id="__span-14-39"><a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>        <span class="p">)]</span>
+</span><span id="__span-14-40"><a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>        <span class="no">[string[]]</span> <span class="nv">$Include</span><span class="p">,</span>
+</span><span id="__span-14-41"><a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a>        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span>
+</span><span id="__span-14-42"><a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a>            <span class="k">ParameterSetName</span> <span class="p">=</span> <span class="s1">'Exclude'</span>
+</span><span id="__span-14-43"><a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>        <span class="p">)]</span>
+</span><span id="__span-14-44"><a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a>        <span class="no">[string[]]</span> <span class="nv">$Exclude</span>
+</span><span id="__span-14-45"><a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a>    <span class="p">)</span>
+</span><span id="__span-14-46"><a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a>    <span class="nv">$PSAssignedParameters</span> <span class="p">=</span> <span class="p">@{}</span>
+</span><span id="__span-14-47"><a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>    <span class="no">[System.Management.Automation.CommandMetaData]</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="nv">$Invocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">).</span><span class="n">Parameters</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">()</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+</span><span id="__span-14-48"><a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a>        <span class="k">if</span> <span class="p">(</span><span class="nv">$Include</span><span class="p">){</span>
+</span><span id="__span-14-49"><a id="__codelineno-14-49" name="__codelineno-14-49" href="#__codelineno-14-49"></a>            <span class="k">if</span> <span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-in</span> <span class="nv">$Include</span><span class="p">){</span>
+</span><span id="__span-14-50"><a id="__codelineno-14-50" name="__codelineno-14-50" href="#__codelineno-14-50"></a>                <span class="nv">$var</span> <span class="p">=</span> <span class="nb">Get-Variable</span> <span class="n">-Name</span> <span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-ValueOnly</span> 
+</span><span id="__span-14-51"><a id="__codelineno-14-51" name="__codelineno-14-51" href="#__codelineno-14-51"></a>                <span class="k">if</span> <span class="p">(</span><span class="nv">$var</span><span class="p">){</span>
+</span><span id="__span-14-52"><a id="__codelineno-14-52" name="__codelineno-14-52" href="#__codelineno-14-52"></a>                    <span class="nv">$PSAssignedParameters</span><span class="p">[</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$var</span>
+</span><span id="__span-14-53"><a id="__codelineno-14-53" name="__codelineno-14-53" href="#__codelineno-14-53"></a>                <span class="p">}</span>
+</span><span id="__span-14-54"><a id="__codelineno-14-54" name="__codelineno-14-54" href="#__codelineno-14-54"></a>            <span class="p">}</span>
+</span><span id="__span-14-55"><a id="__codelineno-14-55" name="__codelineno-14-55" href="#__codelineno-14-55"></a>        <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-notin</span> <span class="nv">$Exclude</span><span class="p">){</span>
+</span><span id="__span-14-56"><a id="__codelineno-14-56" name="__codelineno-14-56" href="#__codelineno-14-56"></a>            <span class="nv">$var</span> <span class="p">=</span> <span class="nb">Get-Variable</span> <span class="n">-Name</span> <span class="nv">$_</span><span class="p">.</span><span class="n">key</span> <span class="n">-ValueOnly</span> 
+</span><span id="__span-14-57"><a id="__codelineno-14-57" name="__codelineno-14-57" href="#__codelineno-14-57"></a>            <span class="k">if</span> <span class="p">(</span><span class="nv">$var</span><span class="p">){</span>
+</span><span id="__span-14-58"><a id="__codelineno-14-58" name="__codelineno-14-58" href="#__codelineno-14-58"></a>                <span class="nv">$PSAssignedParameters</span><span class="p">[</span><span class="nv">$_</span><span class="p">.</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$var</span>
+</span><span id="__span-14-59"><a id="__codelineno-14-59" name="__codelineno-14-59" href="#__codelineno-14-59"></a>            <span class="p">}</span>
+</span><span id="__span-14-60"><a id="__codelineno-14-60" name="__codelineno-14-60" href="#__codelineno-14-60"></a>        <span class="p">}</span>
+</span><span id="__span-14-61"><a id="__codelineno-14-61" name="__codelineno-14-61" href="#__codelineno-14-61"></a>    <span class="p">}</span>
+</span><span id="__span-14-62"><a id="__codelineno-14-62" name="__codelineno-14-62" href="#__codelineno-14-62"></a>    <span class="nv">$PSAssignedParameters</span><span class="p">.</span><span class="n">Clone</span><span class="p">()</span>
+</span><span id="__span-14-63"><a id="__codelineno-14-63" name="__codelineno-14-63" href="#__codelineno-14-63"></a><span class="p">}</span>
+</span></code></pre></div>
+<sup><a href="https://gist.github.com/DevOpsJeremy/db0b082b39ac10533de09a83b43640e0">Gist</a></sup><p></p>
+<p>And now our function is complete! Let's test it out using our function from earlier:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="k">function</span> <span class="nb">Get-UserItems</span> <span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        <span class="nv">$Name</span><span class="p">,</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        <span class="nv">$Items</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="p">)</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="nb">Write-Output</span> <span class="s2">"$Name has the following items:"</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$Item</span> <span class="k">in</span> <span class="nv">$Items</span><span class="p">){</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        <span class="s2">"- $Item"</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    <span class="p">}</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="p">}</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="k">function</span> <span class="nb">Get-UserItemsParent</span> <span class="p">{</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>    <span class="k">param</span> <span class="p">(</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>        <span class="nv">$Name</span> <span class="p">=</span> <span class="s2">"Bob"</span><span class="p">,</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>        <span class="nv">$Items</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    <span class="p">)</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>    <span class="nv">$PSAssignedParameters</span> <span class="p">=</span> <span class="nb">Get-AssignedParameters</span> <span class="n">-Invocation</span> <span class="nv">$MyInvocation</span>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>    <span class="nb">Get-UserItems</span> <span class="nv">@PSAssignedParameters</span>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="p">}</span>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="nb">PS </span><span class="p">&gt;</span> <span class="nb">Get-UserItemsParent</span> <span class="n">-Items</span> <span class="n">apple</span><span class="p">,</span> <span class="n">orange</span><span class="p">,</span> <span class="n">carrot</span><span class="p">,</span> <span class="n">celery</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="n">Bob</span> <span class="n">has</span> <span class="n">the</span> <span class="n">following</span> <span class="n">items</span><span class="p">:</span>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="p">-</span> <span class="n">apple</span>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="p">-</span> <span class="n">orange</span>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="p">-</span> <span class="n">carrot</span>
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="p">-</span> <span class="n">celery</span>
+</span></code></pre></div>
+<p>As we can see, not only did the <code>$Items</code> parameter get passed to the child function, but so did the default value of <code>$Name</code>.</p>
+<p>I hope you found this article helpful--be sure to follow the socials below to keep up with future posts.</p>
+<p>For further information, check out <a href="/documentation/powershell/Get-AssignedParameter.html">the documentation</a> for this function.
+<br>
+<a class="md-button" href="https://x.com/intent/tweet?text=Getting%20assigned%20parameters%20in%20PowerShell%0A&amp;url=https://DevOpsJeremy.github.io/blog/2023/10/16/getting-assigned-parameters-in-powershell/">Share on <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></span></a>
+<a class="md-button" href="https://www.facebook.com/sharer/sharer.php?u=https://DevOpsJeremy.github.io/blog/2023/10/16/getting-assigned-parameters-in-powershell/">Share on <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a9 9 0 0 1 1.141.195v3.325a9 9 0 0 0-.653-.036 27 27 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.7 1.7 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"></path></svg></span></a></p>
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="tags/" class="md-footer__link md-footer__link--next" aria-label="Next: Tags">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Tags
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://x.com/DevOpsJeremy" target="_blank" rel="noopener" title="X" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm297.1 84L257.3 234.6 379.4 396h-95.6L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5 78.2-89.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/DevOpsJeremy" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/DevOpsJeremy" target="_blank" rel="noopener" title="Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.top", "navigation.indexes", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate", "content.action.edit", "header.autohide", "navigation.footer", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": ["ai"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

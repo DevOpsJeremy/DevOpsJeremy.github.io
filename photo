@@ -1,0 +1,25 @@
+{%- extends "main.html" -%}
+{%- block content -%}
+  {% include "partials/tags.html" %}
+  {% include "partials/actions.html" %}
+  {% if "\u003ch1" not in page.content %}
+    <h1>{{ page.title | d(config.site_name, true)}}</h1>
+  {% endif %}
+  <a
+    class="glightbox"
+    data-type="image"
+    data-width="auto"
+    data-height="auto"
+    href="{{ config.site_url }}/other/Photography/images/{{ page.meta.photo }}"
+    data-desc-position="bottom"
+  >
+    <img
+      class="photo"
+      alt=""
+      src="{{ config.site_url }}/other/Photography/images/{{ page.meta.photo }}"
+    />
+  </a>
+  {% include "partials/source-file.html" %}
+  {% include "partials/feedback.html" %}
+  {% include "partials/comments.html" %}
+{%- endblock -%}
