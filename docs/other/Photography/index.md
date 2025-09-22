@@ -5,6 +5,10 @@ hide:
   - tags
 ---
 
+Photos (in doc):
+
+{{ photos }}
+
 ## Tags
 
 <!-- material/tags photography -->
