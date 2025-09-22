@@ -1,2 +1,0 @@
-def include():
-    return ['lighthouse']

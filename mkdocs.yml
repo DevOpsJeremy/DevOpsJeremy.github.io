@@ -90,13 +90,11 @@ plugins:
   - blog:
       blog_toc: true
       pagination_per_page: 10
-  - macros:
-      module_name: hooks/tags
   - tags:
       listings_map:
         tech:
           scope: false
-          include: !!python/name:tags.include
+          include: !!python/name:custom_hooks.variables.include
   - include_dir_to_nav
   - markdownextradata: {}
   - rss:

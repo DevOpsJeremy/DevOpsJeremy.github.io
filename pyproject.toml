@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+  "hatchling",
+  "hatch-requirements-txt"
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "devopsjeremy-github-io"
+description = "Github Pages site project."
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "DevOps Jeremy", email = "DevOpsJeremy@gmail.com"},
+]
+dynamic = [
+  "version",
+  "dependencies"
+]
+
+[project.urls]
+Documentation = "https://devopsjeremy.github.io/documentation"
+Source = "https://github.com/DevOpsJeremy/DevOpsJeremy.github.io"
+Issues = "https://github.com/DevOpsJeremy/DevOpsJeremy.github.io/issues"
+
+[tool.hatch.version]
+path = "hooks/custom_hooks/__init__.py"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+filename = "requirements.txt"
+
+[tool.hatch.build]
+sources = ["hooks"]
+
+[tool.hatch.build.targets.wheel]
+include = ["custom_hooks"]
+
+[tool.hatch.build.targets.sdist]
+include = ["custom_hooks", "/requirements.txt"]
