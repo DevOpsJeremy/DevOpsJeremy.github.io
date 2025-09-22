@@ -93,8 +93,9 @@ plugins:
   - tags:
       listings_map:
         tech:
-          scope: false
           include: !!python/name:custom_hooks.variables.tags.tech
+        photography:
+          include: !!python/name:custom_hooks.variables.tags.photography
   - include_dir_to_nav
   - markdownextradata: {}
   - rss:
