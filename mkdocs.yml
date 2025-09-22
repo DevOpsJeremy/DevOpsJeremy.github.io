@@ -96,7 +96,7 @@ plugins:
       listings_map:
         tech:
           scope: false
-          include: !!python/name:tags.include
+          include: !!python/name:.hooks.tags.include
   - include_dir_to_nav
   - markdownextradata: {}
   - rss:
