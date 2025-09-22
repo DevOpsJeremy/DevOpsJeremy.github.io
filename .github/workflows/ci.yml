@@ -6,21 +6,21 @@ on:
 permissions:
   contents: write
 jobs:
-  documentation:
-    strategy:
-      matrix:
-        item:
-          - container: mcr.microsoft.com/powershell
-            name: Generate PowerShell documentation
-            run: pwsh -File .github/scripts/generate_docs/generate_pwsh.ps1 -Modules $(pwd)/$GENERATE_PATH/powershell/*
-    runs-on: ubuntu-latest
-    container: ${{ matrix.item.container }}
-    env:
-      GENERATE_PATH: docs/documentation/generate
-    steps:
-      - uses: actions/checkout@v4
-      - name: ${{ matrix.item.name }}
-        run: ${{ matrix.item.run }}
+  # documentation:
+  #   strategy:
+  #     matrix:
+  #       item:
+  #         - container: mcr.microsoft.com/powershell
+  #           name: Generate PowerShell documentation
+  #           run: pwsh -File .github/scripts/generate_docs/generate_pwsh.ps1 -Modules $(pwd)/$GENERATE_PATH/powershell/*
+  #   runs-on: ubuntu-latest
+  #   container: ${{ matrix.item.container }}
+  #   env:
+  #     GENERATE_PATH: docs/documentation/generate
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: ${{ matrix.item.name }}
+  #       run: ${{ matrix.item.run }}
   deploy:
     runs-on: ubuntu-latest
     needs: documentation
