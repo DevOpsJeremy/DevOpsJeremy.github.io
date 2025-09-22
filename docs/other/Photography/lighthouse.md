@@ -2,7 +2,9 @@
 title: lighthouse
 tags:
   - lighthouse
-  - googlepixel
+  - Google Pixel
+  - San Diego
+  - Cabrillo National Monument
 template: photo
 photo: lighthouse.jpg
 ---
