@@ -2,14 +2,20 @@ from os import getcwd
 from os.path import join
 from glob import glob
 from custom_hooks.utils import get_metadata
+from dateutil import parser
+from datetime import date, datetime
 
 DOCS_ROOT = 'docs'
 DOCS_PATH = join(getcwd(), DOCS_ROOT)
 
 class Img:
-    def __init__(self, path, alt='', site_uri=''):
+    def __init__(self, path, alt='', date_val='', site_uri=''):
         self.site_uri = site_uri
         self.path = path
+        if date_val == '' or date_val is None:
+            self.date = date.min
+        else:
+            self.date = date_val if isinstance(date_val, date) else parser.parse(date_val)
         self.alt = alt if alt is not None else ''
     
     def to_url(self, path):
@@ -21,7 +27,7 @@ class Img:
         return f'<img class="photo-preview" src="{self.to_url(self.path)}" alt="{self.alt}" />'
     
     def __repr__(self):
-        return f'{{path: {self.path}, alt: {self.label}}}'
+        return f'{{path: {self.path}, alt: {self.alt}, date: {self.date}}}'
 
 def get_photos(site_uri=''):
     PHOTOGRAPHY_ROOT = "other/Photography"
@@ -38,11 +44,14 @@ def get_photos(site_uri=''):
         if 'photo' in metadata:
             photo_path = join(IMAGES_PATH_SHORT, metadata['photo'])
             alt = ''
+            date_val = ''
             if 'title' in metadata:
                 alt = metadata['title']
-            image = Img(photo_path, alt, site_uri)
-            photos.append(image.to_string())
-    return photos
+            if 'date' in metadata:
+                date_val = metadata["date"]['created']
+            image = Img(photo_path, alt, date_val, site_uri)
+            photos.append(image)
+    return sorted(photos, key=lambda e: e.date, reverse=True)
 
 def define_env(env):
-    env.variables['photos'] = ''.join(get_photos(env.conf.get('site_url', '')))
+    env.variables['photos'] = ''.join([i.to_string() for i in get_photos(env.conf.get('site_url', ''))])
