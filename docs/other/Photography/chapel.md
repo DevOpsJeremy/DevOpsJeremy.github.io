@@ -4,7 +4,7 @@ tags:
   - chapel
   - Samsung Galaxy Note
   - Felicity
-  - Church
+  - church
 template: photo
 photo: chapel.jpg
 date:

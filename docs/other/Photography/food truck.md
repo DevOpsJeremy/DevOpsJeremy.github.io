@@ -8,5 +8,5 @@ tags:
 template: photo
 photo: food truck.jpg
 date:
-  created: 
+  created: 2022-08-26
 ---

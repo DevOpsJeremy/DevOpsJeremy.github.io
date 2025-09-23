@@ -11,5 +11,5 @@ tags:
 template: photo
 photo: mannequins.jpg
 date:
-  created: 
+  created: 2022-05-30
 ---
