@@ -92,9 +92,9 @@ plugins:
   - tags:
       listings_map:
         tech:
-          include: !!python/name:custom_hooks.tags_tech
+          include: !!python/name:custom_hooks.tags.tech
         photography:
-          include: !!python/name:custom_hooks.tags_photography
+          include: !!python/name:custom_hooks.tags.photography
   - include_dir_to_nav
   - markdownextradata: {}
   - rss:
@@ -109,6 +109,11 @@ plugins:
       enable_creation_date: true
   - macros:
       module_name: hooks/macros
+  - resize-images:
+      source-dir: other/Photography/images
+      target-dir: images-resized
+      size: [100, 100]
+  - custom-hooks
 
 markdown_extensions:
   # Python Markdown

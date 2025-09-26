@@ -37,3 +37,6 @@ include = ["custom_hooks"]
 
 [tool.hatch.build.targets.sdist]
 include = ["custom_hooks", "/requirements.txt"]
+
+[project.entry-points."mkdocs.plugins"]
+custom-hooks = "custom_hooks.plugin:CustomHooksPlugin"

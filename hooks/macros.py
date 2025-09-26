@@ -25,7 +25,8 @@ class Img:
         return path
     
     def to_string(self):
-        return f'<div class="{self.class_name}"><img class="photo-preview" src="{self.to_url(self.path)}" alt="{self.alt}" /></div>'
+        return f'<div class="{self.class_name}"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/{self.path}" data-desc-position="bottom"><img class="photo-preview" loading="lazy" src="/{self.path.replace('images', 'images-resized')}" alt="{self.alt}" /></a></div>'
+        return f'<div class="{self.class_name}"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="{self.to_url(self.path)}" data-desc-position="bottom"><img class="photo-preview" loading="lazy" src="{self.to_url(self.path.replace('images', 'images-resized'))}" alt="{self.alt}" /></a></div>'
     
     def __repr__(self):
         return f'{{path: {self.path}, alt: {self.alt}, date: {self.date}}}'
