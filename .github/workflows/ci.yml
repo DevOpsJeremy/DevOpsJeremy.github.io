@@ -44,3 +44,11 @@ jobs:
             mkdocs-material-
       - run: pip install .
       - run: mkdocs gh-deploy --force
+      - run: |
+          pwd
+          ls
+          ls docs/other/Photography/ || echo "No Photography yet"
+          ls docs/other/Photography/images-resized/ || echo "No resized images yet"
+          ls site/ || echo "No site yet"
+          ls site/other/Photography/ || echo "No Photography yet"
+          ls site/other/Photography/images-resized/ || echo "No resized images yet"
