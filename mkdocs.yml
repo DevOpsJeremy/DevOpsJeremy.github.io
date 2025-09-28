@@ -112,7 +112,7 @@ plugins:
   - resize-images:
       source-dir: other/Photography/images
       target-dir: images-resized
-      size: [200, 200]
+      size: [300, 300]
   - custom-hooks
 
 markdown_extensions:
