@@ -45,6 +45,7 @@ jobs:
       - run: pip install .
       - run: mkdocs gh-deploy --force
       - run: |
+          set -x
           pwd
           ls
           ls docs/other/Photography/ || echo "No Photography yet"
