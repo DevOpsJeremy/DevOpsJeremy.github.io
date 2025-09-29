@@ -112,7 +112,7 @@ plugins:
   - resize-images:
       source-dir: other/Photography/images
       target-dir: images-resized
-      size: [300, 300]
+      size: [350, 350]
       enable_cache: False
   - custom-hooks
 
