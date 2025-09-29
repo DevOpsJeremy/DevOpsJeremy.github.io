@@ -43,9 +43,7 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install .
-      - run: |
-          mkdocs build
-          mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --force
       - run: |
           set -x
           pwd
