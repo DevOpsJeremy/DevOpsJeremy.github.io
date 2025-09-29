@@ -2,5 +2,9 @@
 
 from mkdocs.plugins import BasePlugin
 
+log: logging.Logger = logging.getLogger("mkdocs")
+
 class CustomHooksPlugin(BasePlugin):
-    pass
+	def on_files(self, files, config):
+        for f in files:
+            log.info(f"File: {[i for i in dir(f) if not i.startswith('_')]}")
