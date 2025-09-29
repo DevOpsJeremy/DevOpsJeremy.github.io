@@ -2,13 +2,14 @@
   max-height: 4%;
   max-width: 8%;
 }
+
 .photo {
   max-height: 100%;
 }
 
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
   grid-auto-rows: auto;
   gap: 10px;
 }
