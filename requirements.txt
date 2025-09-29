@@ -11,4 +11,4 @@ mkdocs-git-authors-plugin
 mkdocs-open-in-new-tab
 mkdocs-glightbox
 pyyaml
-mkdocs-resize-images
+pillow

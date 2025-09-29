@@ -1,15 +1,19 @@
-# Author: Jakub Andrýsek
+# Original author: Jakub Andrýsek
 # Email: email@kubaandrysek.cz
 # Website: https://kubaandrysek.cz
 # License: MIT
 # GitHub: https://github.com/JakubAndrysek/mkdocs-resize-images
 # PyPI: https://pypi.org/project/mkdocs-resize-images/
 
+# Modified by DevOps Jeremy
+
 from pathlib import Path
 from itertools import chain
 from PIL import Image
 import hashlib
 import logging
+from os import makedirs
+from os.path import relpath, abspath, join
 
 from mkdocs.plugins import BasePlugin
 from mkdocs.config import config_options
@@ -31,8 +35,14 @@ class ResizeImagesPlugin(BasePlugin):
 		base_dir = Path(config['docs_dir'])
 		for source_dir in base_dir.rglob(self.config['source-dir']):
 			content_changed = False
-			target_dir = source_dir.parent / self.config['target-dir']
-			target_dir.mkdir(parents=True, exist_ok=True)
+			target_dir = Path(
+				join(
+					config.site_dir,
+					relpath(source_dir.parent, config.docs_dir),
+					self.config["target-dir"]
+				)
+			)
+			makedirs(target_dir, exist_ok=True)
 
 			hash_file_path = source_dir / '.resize-hash'
 			existing_hashes = self.get_existing_hashes(hash_file_path)
