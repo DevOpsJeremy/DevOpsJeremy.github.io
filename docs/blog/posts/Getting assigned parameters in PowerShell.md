@@ -8,7 +8,8 @@ authors:
 tags:
   - powershell
 ---
-# Getting assigned parameters in PowerShell
+
+## Overview
 
 Have you ever needed to pass a number of parameter values from one function into another function with some (but not all) of the same parameters? I've run into this particular pain point multiple times when writing functions in the past so I decided to find somewhat of a workaround.
 
