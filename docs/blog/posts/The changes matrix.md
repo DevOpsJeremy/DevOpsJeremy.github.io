@@ -101,3 +101,50 @@ image3-build:
 
 As you can see, this is cumbersome, not very scalable, and results in quite a bit of duplicated code.
 
+## The solution
+
+We can solve this with clever use of the [`matrix`](https://docs.gitlab.com/ci/yaml/#parallelmatrix) configuration. But first, you'll need to understand what matrix is used for.
+
+### What is matrix?
+
+Typically `matrix` is used to run multiple jobs in parallel with varying values. See this example from Gitlab's documentation:
+
+```yaml
+matrix test:
+  parallel:
+    matrix:
+      - VALUE: [value1, value2, value3]
+  script: "echo Test value: $VALUE"
+```
+
+This creates 3 separate jobs, outputting the respective value:
+
+> Test value: value1
+
+> Test value: value2
+
+> Test value: value3
+
+### How does this help us?
+
+With `parallel:matrix` we can create individual jobs for each of our Docker contexts:
+
+```yaml
+docker:
+  image: docker:cli
+  variables:
+    CONTEXT_ROOT: src
+    CONTEXT: $CONTEXT_ROOT/$IMAGE
+  parallel:
+    matrix:
+      - IMAGE:
+          - image1
+          - image2
+          - image3
+  script:
+    - docker build -t gitlab.org/my-user/my-repo/image3 src/image3/
+    - docker push gitlab.org/my-user/my-repo/image3
+  rules:
+    - changes:
+        - Dockerfile
+```
