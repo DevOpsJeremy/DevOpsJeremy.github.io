@@ -2,6 +2,7 @@
   max-height: 4%;
   max-width: 8%;
 }
+
 .photo {
   max-height: 100%;
 }
@@ -17,10 +18,11 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 8px;
-}
 
-.photo img {
-  width: 100%;
-  object-fit: cover;
-  display: block;
+  img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  }
 }

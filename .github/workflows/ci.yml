@@ -43,15 +43,4 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install .
-      - run: |
-          mkdocs build
-          mkdocs gh-deploy --force
-      - run: |
-          set -x
-          pwd
-          ls
-          ls docs/other/Photography/ || echo "No Photography yet"
-          ls docs/other/Photography/images-resized/ || echo "No resized images yet"
-          ls site/ || echo "No site yet"
-          ls site/other/Photography/ || echo "No Photography yet"
-          ls site/other/Photography/images-resized/ || echo "No resized images yet"
+      - run: mkdocs gh-deploy --force
