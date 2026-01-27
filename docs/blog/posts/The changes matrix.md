@@ -48,4 +48,56 @@ I recently discovered a neat trick for conditionally running the same job based 
 
 ## The problem
 
-I have a repository with a number of Docker image definitions
+I have a repository with a number of Docker image definitions. In my case, these images each have their own context directory. My repository structure looks something like this:
+
+```text
+/
+|__ src/
+    |
+    |__ image1/
+    |   |__ Dockerfile
+    |
+    |__ image2/
+    |   |__ Dockerfile
+    |   |__ package.json
+    |
+    |__ image3/
+        |__ Dockerfile
+        |__ requirements.txt
+```
+
+I want to run a Docker build whenever each respective image is changed, and then push that image to my registry. But of course, it wouldn't make sense to build and publish all 3 images every time **_one_** of them is modified. When I make a change to `image1`, I _only_ want `image1` to be built and published. And the same for the other images.
+
+I suppose I could have a separate job for each image:
+
+```yaml
+image1-build:
+  image: docker:cli
+  script:
+    - docker build -t gitlab.org/my-user/my-repo/image1 src/image1/
+    - docker push gitlab.org/my-user/my-repo/image1
+  rules:
+    - changes:
+        - src/image1/**/*
+
+image2-build:
+  image: docker:cli
+  script:
+    - docker build -t gitlab.org/my-user/my-repo/image2 src/image2/
+    - docker push gitlab.org/my-user/my-repo/image2
+  rules:
+    - changes:
+        - src/image2/**/*
+
+image3-build:
+  image: docker:cli
+  script:
+    - docker build -t gitlab.org/my-user/my-repo/image3 src/image3/
+    - docker push gitlab.org/my-user/my-repo/image3
+  rules:
+    - changes:
+        - src/image3/**/*
+```
+
+As you can see, this is cumbersome, not very scalable, and results in quite a bit of duplicated code.
+
