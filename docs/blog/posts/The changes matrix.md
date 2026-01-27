@@ -1,5 +1,6 @@
 ---
-title: 'The changes matrix: Running a job for multiple paths'
+title: The changes matrix
+summary: Running a job for multiple paths
 date:
   created: 2026-01-26
 authors:
