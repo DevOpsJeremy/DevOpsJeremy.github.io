@@ -132,9 +132,6 @@ With `parallel:matrix` we can create individual jobs for each of our Docker cont
 ```yaml
 docker:
   image: docker:cli
-  variables:
-    CONTEXT_ROOT: src
-    CONTEXT: $CONTEXT_ROOT/$IMAGE
   parallel:
     matrix:
       - IMAGE:
@@ -142,9 +139,20 @@ docker:
           - image2
           - image3
   script:
-    - docker build -t gitlab.org/my-user/my-repo/image3 src/image3/
-    - docker push gitlab.org/my-user/my-repo/image3
+    - docker build -t gitlab.org/my-user/my-repo/$IMAGE src/$IMAGE/
+    - docker push gitlab.org/my-user/my-repo/$IMAGE
   rules:
     - changes:
-        - Dockerfile
+        - src/$IMAGE/**/*
 ```
+
+#### What does this do?
+
+This job creates 3 parallel jobs: one for `image1`, `image2`, and `image3`. _However_ the `$IMAGE` variable is also used in `rules:changes` to determine whether or not to run the job.
+
+Say we modified `src/image2/Dockerfile` in our most recent commit. When Gitlab evaluates the pipeline, it sees that we have a matrix of the 3 values under the `$IMAGE` variable. It then evaluates the `rules` for each job:
+
+- Was `src/image1/**/*` changed? No. Result: We don't run the `image1` job.
+- Was `src/image2/**/*` changed? Yes. Result: The `image2` job runs.
+- Was `src/image3/**/*` changed? No. Result: We don't run the `image3` job.
+
