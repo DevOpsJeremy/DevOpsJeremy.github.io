@@ -117,7 +117,7 @@ plugins:
   - custom-hooks
   - redirects:
       redirect_maps:
-        'setup/android': 'https://raw.githubusercontent.com/DevOpsJeremy/scripts/refs/heads/main/android/setup.sh'
+        'setup/android.sh': 'https://raw.githubusercontent.com/DevOpsJeremy/scripts/refs/heads/main/android/setup.sh'
 
 markdown_extensions:
   # Python Markdown
