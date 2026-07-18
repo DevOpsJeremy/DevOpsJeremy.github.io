@@ -1,5 +1,5 @@
 site_name: !ENV [SITE_NAME, "DevOps Jeremy"]
-site_url: https://DevOpsJeremy.github.io
+site_url: https://DevOpsJeremy.com
 repo_url: https://github.com/DevOpsJeremy/DevOpsJeremy.github.io
 edit_uri: blob/main/docs
 repo_name: DevOpsJeremy
