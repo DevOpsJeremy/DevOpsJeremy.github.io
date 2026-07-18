@@ -115,6 +115,9 @@ plugins:
       size: [350, 350]
       enable_cache: False
   - custom-hooks
+  - redirects:
+      redirect_maps:
+        'setup/android': 'https://raw.githubusercontent.com/DevOpsJeremy/scripts/refs/heads/main/android/setup.sh'
 
 markdown_extensions:
   # Python Markdown
